@@ -1,0 +1,59 @@
+{
+  "detection_thresholds": {
+    "port_scan_threshold": 5,
+    "port_scan_window": 15,
+    "brute_force_threshold": 3,
+    "brute_force_window": 30,
+    "connection_flood_threshold": 20,
+    "connection_flood_window": 5,
+    "suspicious_ip_threshold": 2
+  },
+  "monitored_ports": {
+    "auth_ports": [
+      22,
+      23,
+      21,
+      3389,
+      25,
+      110,
+      143,
+      993,
+      995,
+      465,
+      587
+    ],
+    "web_ports": [
+      80,
+      443,
+      8080,
+      8443
+    ],
+    "critical_ports": [
+      22,
+      3389,
+      21,
+      23
+    ]
+  },
+  "network_settings": {
+    "local_networks": [
+      "192.168.0.0/16",
+      "10.0.0.0/8",
+      "172.16.0.0/12"
+    ],
+    "whitelist_ips": [
+      "127.0.0.1"
+    ],
+    "blacklist_ips": []
+  },
+  "alert_settings": {
+    "max_alerts_stored": 1000,
+    "auto_cleanup_days": 7,
+    "severity_levels": {
+      "PORT_SCAN": "MEDIUM",
+      "BRUTE_FORCE": "HIGH",
+      "CONNECTION_FLOOD": "HIGH",
+      "SUSPICIOUS_ACTIVITY": "MEDIUM"
+    }
+  }
+}

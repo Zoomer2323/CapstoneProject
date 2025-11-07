@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDS Security Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .dashboard-container {
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 15px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 25px;
+            color: #22c55e;
+            font-weight: 500;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(100, 116, 139, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .high-severity { color: #ef4444; }
+        .medium-severity { color: #f59e0b; }
+        .low-severity { color: #22c55e; }
+
+        .alerts-section {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(100, 116, 139, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(100, 116, 139, 0.2);
+            color: #e2e8f0;
+            border: 1px solid rgba(100, 116, 139, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(100, 116, 139, 0.3);
+        }
+
+        .filter-select {
+            padding: 10px 15px;
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 8px;
+            color: #e2e8f0;
+            outline: none;
+        }
+
+        .alerts-container {
+            max-height: 600px;
+            overflow-y: auto;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+            border-radius: 10px;
+            background: rgba(30, 41, 59, 0.3);
+        }
+
+        .alert-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .alert-item:hover {
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .alert-item:last-child {
+            border-bottom: none;
+        }
+
+        .alert-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .alert-type {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .alert-type.PORT_SCAN {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .alert-type.BRUTE_FORCE, .alert-type.CONNECTION_FLOOD, .alert-type.SUSPICIOUS_PORT, .alert-type.EXTERNAL_ACCESS, 
+        .alert-type.DDoS, .alert-type.DoS, .alert-type.INFILTRATION, .alert-type.BOTNET, .alert-type.WEB_ATTACK, .alert-type.HEARTBLEED {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        
+        .detection-method {
+            padding: 6px 12px;
+            margin: 8px 0;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        .detection-method.rule-based {
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        
+        .detection-method.ml {
+            background: rgba(168, 85, 247, 0.2);
+            color: #a78bfa;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+        
+        .alert-time {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-left: auto;
+        }
+
+        .alert-details {
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+
+        .alert-details strong {
+            color: #f1f5f9;
+        }
+
+        .no-alerts {
+            text-align: center;
+            padding: 40px;
+            color: #64748b;
+            font-style: italic;
+        }
+        
+        .chart-container {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(100, 116, 139, 0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            height: 400px; /* Give canvas a fixed height */
+            position: relative;
+        }
+
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #64748b;
+        }
+
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(100, 116, 139, 0.3);
+            border-top: 2px solid #3b82f6;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .alerts-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .alerts-container::-webkit-scrollbar-track {
+            background: rgba(30, 41, 59, 0.5);
+        }
+
+        .alerts-container::-webkit-scrollbar-thumb {
+            background: rgba(100, 116, 139, 0.5);
+            border-radius: 4px;
+        }
+
+        .alerts-container::-webkit-scrollbar-thumb:hover {
+            background: rgba(100, 116, 139, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+            }
+            .alert-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .alert-time {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="header">
+            <h1>🛡️ Network IDS Dashboard</h1>
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span id="statusText">Monitoring Active</span>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number high-severity" id="totalAlerts">0</div>
+                <div class="stat-label">Total Alerts</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number high-severity" id="highSeverity">0</div>
+                <div class="stat-label">High Severity</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number medium-severity" id="mediumSeverity">0</div>
+                <div class="stat-label">Medium Severity</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="lastUpdate">Never</div>
+                <div class="stat-label">Last Update</div>
+            </div>
+        </div>
+
+        <div class="alerts-section">
+            <div class="section-title">
+                🚨 Security Alerts
+            </div>
+            
+            <div class="controls">
+                <button class="btn btn-primary" onclick="loadAlerts()">
+                    🔄 Refresh Now
+                </button>
+                <button class="btn btn-info" onclick="startAutoRefresh()" id="autoRefreshBtn">
+                    ▶️ Start Auto-Refresh
+                </button>
+                <button class="btn btn-warning" onclick="stopAutoRefresh()" id="stopRefreshBtn" style="display:none;">
+                    ⏸️ Stop Auto-Refresh
+                </button>
+                <button class="btn btn-secondary" onclick="clearDisplay()">
+                    🗑️ Clear Display
+                </button>
+                <select class="filter-select" id="severityFilter" onchange="filterAlerts()">
+                    <option value="all">All Severities</option>
+                    <option value="HIGH">High Severity</option>
+                    <option value="MEDIUM">Medium Severity</option>
+                    <option value="LOW">Low Severity</option>
+                </select>
+                <select class="filter-select" id="typeFilter" onchange="filterAlerts()">
+                    <option value="all" selected>All Types</option>
+                </select>
+            </div>
+
+            <div class="alerts-container" id="alertsContainer">
+                <div class="no-alerts">
+                    No alerts loaded. Click "Refresh Alerts" to fetch data from ids_alerts.json.
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div class="section-title">📊 Alert Timeline (Last 24 Hours)</div>
+            <canvas id="alertChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        let alertsData = [];
+        let filteredAlerts = [];
+        let autoRefreshInterval = null;
+        let alertChartInstance = null; // Store chart instance to prevent duplicates
+        let lastAlertCount = 0;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            startAutoRefresh(); // Start real-time monitoring (refreshes every 2 seconds)
+        });
+
+        async function loadAlerts() {
+            try {
+                showLoading(true);
+                // Fetch the JSON file. The cachebust prevents the browser from using an old cached version.
+                const response = await fetch('ids_alerts.json?cachebust=' + new Date().getTime());
+                
+                if (!response.ok) {
+                    throw new Error(`File not found or server error! Status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                // Check if new alerts were added
+                if (data.length > lastAlertCount) {
+                    const newAlerts = data.length - lastAlertCount;
+                    if (newAlerts > 0 && lastAlertCount > 0) {
+                        showNotification(`${newAlerts} new alert(s) detected!`, 'success');
+                    }
+                }
+                lastAlertCount = data.length;
+                
+                // Sort data by timestamp (newest first)
+                alertsData = data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+                filteredAlerts = [...alertsData];
+                
+                populateFilters();
+                updateDashboard();
+                
+                if (lastAlertCount === 0) {
+                    showNotification('Monitoring for attacks...', 'info');
+                }
+
+            } catch (error) {
+                // Don't show error if file doesn't exist yet (IDS might not have started)
+                if (error.message.includes('404') || error.message.includes('not found')) {
+                    clearDisplay();
+                } else {
+                    showNotification('Error: ' + error.message, 'error');
+                }
+            } finally {
+                showLoading(false);
+            }
+        }
+        
+        function startAutoRefresh() {
+            // Load alerts immediately
+            loadAlerts();
+            
+            // Then refresh every 2 seconds for real-time updates
+            if (autoRefreshInterval) {
+                clearInterval(autoRefreshInterval);
+            }
+            autoRefreshInterval = setInterval(loadAlerts, 2000);
+            
+            // Update button states
+            document.getElementById('autoRefreshBtn').style.display = 'none';
+            document.getElementById('stopRefreshBtn').style.display = 'inline-block';
+            showNotification('Real-time monitoring started (refreshing every 2 seconds)', 'success');
+        }
+        
+        function stopAutoRefresh() {
+            if (autoRefreshInterval) {
+                clearInterval(autoRefreshInterval);
+                autoRefreshInterval = null;
+            }
+            
+            // Update button states
+            document.getElementById('autoRefreshBtn').style.display = 'inline-block';
+            document.getElementById('stopRefreshBtn').style.display = 'none';
+            showNotification('Auto-refresh stopped', 'info');
+        }
+        
+        function populateFilters() {
+            const typeFilter = document.getElementById('typeFilter');
+            const uniqueTypes = [...new Set(alertsData.map(alert => alert.type))].sort();
+            
+            // Keep existing "All Types" option
+            typeFilter.innerHTML = '<option value="all">All Types</option>';
+            
+            // Add all attack types
+            uniqueTypes.forEach(type => {
+                const option = document.createElement('option');
+                option.value = type;
+                option.textContent = type.replace(/_/g, ' ');
+                typeFilter.appendChild(option);
+            });
+            
+            // Show count of each type in the dropdown
+            uniqueTypes.forEach(type => {
+                const count = alertsData.filter(a => a.type === type).length;
+                const option = Array.from(typeFilter.options).find(opt => opt.value === type);
+                if (option) {
+                    option.textContent = `${type.replace(/_/g, ' ')} (${count})`;
+                }
+            });
+        }
+
+        function updateDashboard() {
+            updateStats();
+            renderAlerts();
+            renderChart();
+        }
+
+        function updateStats() {
+            document.getElementById('totalAlerts').textContent = alertsData.length;
+            document.getElementById('highSeverity').textContent = alertsData.filter(a => a.severity === 'HIGH').length;
+            document.getElementById('mediumSeverity').textContent = alertsData.filter(a => a.severity === 'MEDIUM').length;
+            document.getElementById('lastUpdate').textContent = alertsData.length > 0 ? 
+                formatTime(new Date(alertsData[0].timestamp)) : 'Never';
+        }
+
+        function renderAlerts() {
+            const container = document.getElementById('alertsContainer');
+            
+            if (filteredAlerts.length === 0) {
+                container.innerHTML = '<div class="no-alerts">No alerts match the current filters.</div>';
+                return;
+            }
+
+            container.innerHTML = filteredAlerts.map(alert => {
+                const time = new Date(alert.timestamp);
+                const timeStr = formatTime(time);
+                
+                // Get detection method - default to Rule-Based for older alerts
+                const detectionMethod = alert.details.detection_method || 'Rule-Based';
+                // Normalize method class name for styling
+                let methodClass = detectionMethod.toLowerCase().replace(/\s+/g, '-');
+                if (methodClass.includes('rule') || methodClass === 'rule-based') methodClass = 'rule-based';
+                if (methodClass.includes('ml') && !methodClass.includes('rule')) methodClass = 'ml';
+                
+                // Generic way to display all details from the details object
+                let detailsHtml = Object.entries(alert.details)
+                    .filter(([key]) => key !== 'detection_method') // Show detection method separately
+                    .map(([key, value]) => `<strong>${key.replace(/_/g, ' ')}:</strong> ${Array.isArray(value) ? value.join(', ') : value}`)
+                    .join('<br>');
+
+                return `
+                    <div class="alert-item">
+                        <div class="alert-header">
+                            <div class="alert-type ${alert.type}">${alert.type.replace(/_/g, ' ')}</div>
+                            <div class="alert-time">${timeStr}</div>
+                        </div>
+                        <div class="detection-method ${methodClass}">🔍 Detection: ${detectionMethod}</div>
+                        <div class="alert-details">${detailsHtml}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function filterAlerts() {
+            const severityFilter = document.getElementById('severityFilter').value;
+            const typeFilter = document.getElementById('typeFilter').value;
+
+            filteredAlerts = alertsData.filter(alert => {
+                const severityMatch = severityFilter === 'all' || alert.severity === severityFilter;
+                const typeMatch = typeFilter === 'all' || alert.type === typeFilter;
+                return severityMatch && typeMatch;
+            });
+
+            renderAlerts();
+        }
+
+        function clearDisplay() {
+            alertsData = [];
+            filteredAlerts = [];
+            updateDashboard();
+            showNotification('Display cleared', 'info');
+        }
+
+        function renderChart() {
+            const ctx = document.getElementById('alertChart').getContext('2d');
+            
+            if (alertChartInstance) {
+                alertChartInstance.destroy(); // Clear the old chart before drawing a new one
+            }
+
+            if (alertsData.length === 0) {
+                 // You can add a "No data" message on the canvas if you want
+                return;
+            }
+
+            // Group data by hour for the last 24 hours
+            const hourlyData = {};
+            const labels = [];
+            const now = new Date();
+            for (let i = 23; i >= 0; i--) {
+                const hour = new Date(now.getTime() - (i * 3600000));
+                const hourKey = hour.toLocaleTimeString('en-US', { hour: 'numeric', hour12: true });
+                labels.push(hourKey);
+                hourlyData[hourKey] = { HIGH: 0, MEDIUM: 0, LOW: 0 };
+            }
+
+            alertsData.forEach(alert => {
+                const alertTime = new Date(alert.timestamp);
+                if ((now - alertTime) < 86400000) { // 24 hours in milliseconds
+                    const hourKey = alertTime.toLocaleTimeString('en-US', { hour: 'numeric', hour12: true });
+                    if (hourlyData[hourKey] && alert.severity) {
+                        hourlyData[hourKey][alert.severity]++;
+                    }
+                }
+            });
+
+            alertChartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        { label: 'High', data: labels.map(l => hourlyData[l].HIGH), backgroundColor: '#ef4444' },
+                        { label: 'Medium', data: labels.map(l => hourlyData[l].MEDIUM), backgroundColor: '#f59e0b' },
+                        { label: 'Low', data: labels.map(l => hourlyData[l].LOW), backgroundColor: '#22c55e' }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { stacked: true, ticks: { color: '#94a3b8' } },
+                        y: { stacked: true, ticks: { color: '#94a3b8', stepSize: 1 } }
+                    },
+                    plugins: {
+                        legend: { labels: { color: '#e2e8f0' } },
+                        tooltip: { titleFont: { size: 14 }, bodyFont: { size: 12 } }
+                    }
+                }
+            });
+        }
+
+        function formatTime(date) {
+            return date.toLocaleString('en-US', {
+                month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true
+            });
+        }
+
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed; top: 20px; right: 20px; padding: 15px 20px;
+                border-radius: 8px; color: white; font-weight: 500; z-index: 1000;
+                opacity: 0; transform: translateX(100%); transition: all 0.3s ease;
+            `;
+            const colors = { success: '#22c55e', error: '#ef4444', info: '#3b82f6' };
+            notification.style.background = colors[type] || colors.info;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.style.opacity = '1';
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => document.body.removeChild(notification), 300);
+            }, 3000);
+        }
+
+        function showLoading(show) {
+            const container = document.getElementById('alertsContainer');
+            if (show) {
+                container.innerHTML = `
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        Loading alerts...
+                    </div>`;
+            }
+        }
+    </script>
+</body>
+</html>
