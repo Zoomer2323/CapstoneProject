@@ -21826,3 +21826,159 @@
 2025-11-08 00:26:29,976 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD (Rule-Based) | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
 2025-11-08 00:26:30,321 - NetworkIDS - INFO - [STATS] Real-time: 83,132 packets | 639.3 pps | 49 sources | 6 alerts
 2025-11-08 00:26:40,326 - NetworkIDS - INFO - [STATS] Real-time: 89,596 packets | 639.7 pps | 51 sources | 6 alerts
+2025-11-08 05:05:56,400 - NetworkIDS - INFO - [SHIELD] Starting Enhanced Network IDS (Scapy Engine)...
+2025-11-08 05:05:56,402 - NetworkIDS - INFO - Writing alerts to: D:\CapstoneProject-main\CapstoneProject-main\ids-dashboard-frontend\public\ids_alerts.json
+2025-11-08 05:05:56,403 - NetworkIDS - INFO - [OK] IDS started successfully. Monitoring network traffic...
+2025-11-08 05:05:56,403 - NetworkIDS - INFO - [STOP] Press Ctrl+C to stop.
+2025-11-08 05:06:06,404 - NetworkIDS - INFO - [STATS] Real-time: 2,134 packets | 213.3 pps | 12 sources | 0 alerts
+2025-11-08 05:06:16,405 - NetworkIDS - INFO - [STATS] Real-time: 4,764 packets | 238.2 pps | 20 sources | 0 alerts
+2025-11-08 05:06:26,411 - NetworkIDS - INFO - [STATS] Real-time: 7,235 packets | 241.1 pps | 23 sources | 0 alerts
+2025-11-08 05:06:30,263 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-08 05:06:36,412 - NetworkIDS - INFO - [STATS] Real-time: 9,915 packets | 247.8 pps | 37 sources | 1 alerts
+2025-11-08 05:06:46,423 - NetworkIDS - INFO - [STATS] Real-time: 11,900 packets | 237.9 pps | 40 sources | 1 alerts
+2025-11-08 05:06:56,424 - NetworkIDS - INFO - [STATS] Real-time: 14,110 packets | 235.1 pps | 41 sources | 1 alerts
+2025-11-08 05:07:06,424 - NetworkIDS - INFO - [STATS] Real-time: 16,615 packets | 237.3 pps | 43 sources | 1 alerts
+2025-11-08 05:07:16,428 - NetworkIDS - INFO - [STATS] Real-time: 19,669 packets | 245.8 pps | 43 sources | 1 alerts
+2025-11-08 05:07:26,427 - NetworkIDS - INFO - [STATS] Real-time: 22,317 packets | 247.9 pps | 46 sources | 1 alerts
+2025-11-08 05:07:36,437 - NetworkIDS - INFO - [STATS] Real-time: 24,977 packets | 249.7 pps | 50 sources | 1 alerts
+2025-11-08 05:07:46,444 - NetworkIDS - INFO - [STATS] Real-time: 27,731 packets | 252.0 pps | 51 sources | 1 alerts
+2025-11-08 05:07:56,452 - NetworkIDS - INFO - [STATS] Real-time: 30,012 packets | 250.0 pps | 52 sources | 1 alerts
+2025-11-08 05:08:06,454 - NetworkIDS - INFO - [STATS] Real-time: 31,904 packets | 245.3 pps | 55 sources | 1 alerts
+2025-11-08 05:08:16,454 - NetworkIDS - INFO - [STATS] Real-time: 34,225 packets | 244.4 pps | 55 sources | 1 alerts
+2025-11-08 05:08:26,457 - NetworkIDS - INFO - [STATS] Real-time: 36,570 packets | 243.7 pps | 56 sources | 1 alerts
+2025-11-08 05:08:36,458 - NetworkIDS - INFO - [STATS] Real-time: 38,579 packets | 241.0 pps | 57 sources | 1 alerts
+2025-11-08 05:08:46,458 - NetworkIDS - INFO - [STATS] Real-time: 41,077 packets | 241.5 pps | 58 sources | 1 alerts
+2025-11-08 05:08:47,521 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-08 05:08:50,409 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 216.24.57.251 -> 192.168.1.102
+2025-11-08 05:08:56,464 - NetworkIDS - INFO - [STATS] Real-time: 43,114 packets | 239.4 pps | 59 sources | 3 alerts
+2025-11-08 05:09:06,477 - NetworkIDS - INFO - [STATS] Real-time: 45,109 packets | 237.3 pps | 60 sources | 3 alerts
+2025-11-08 05:09:16,488 - NetworkIDS - INFO - [STATS] Real-time: 47,275 packets | 236.3 pps | 61 sources | 3 alerts
+2025-11-08 05:09:26,488 - NetworkIDS - INFO - [STATS] Real-time: 50,023 packets | 238.1 pps | 61 sources | 3 alerts
+2025-11-08 05:09:36,488 - NetworkIDS - INFO - [STATS] Real-time: 51,969 packets | 236.1 pps | 63 sources | 3 alerts
+2025-11-08 05:09:46,489 - NetworkIDS - INFO - [STATS] Real-time: 54,492 packets | 236.8 pps | 66 sources | 3 alerts
+2025-11-08 05:09:56,497 - NetworkIDS - INFO - [STATS] Real-time: 57,098 packets | 237.8 pps | 72 sources | 3 alerts
+2025-11-08 05:10:06,497 - NetworkIDS - INFO - [STATS] Real-time: 59,161 packets | 236.6 pps | 72 sources | 3 alerts
+2025-11-08 05:10:16,499 - NetworkIDS - INFO - [STATS] Real-time: 61,231 packets | 235.4 pps | 72 sources | 3 alerts
+2025-11-08 05:10:26,523 - NetworkIDS - INFO - [STATS] Real-time: 63,183 packets | 233.9 pps | 72 sources | 3 alerts
+2025-11-08 05:10:36,524 - NetworkIDS - INFO - [STATS] Real-time: 65,058 packets | 232.2 pps | 72 sources | 3 alerts
+2025-11-08 05:10:46,537 - NetworkIDS - INFO - [STATS] Real-time: 66,944 packets | 230.7 pps | 73 sources | 3 alerts
+2025-11-08 05:10:56,555 - NetworkIDS - INFO - [STATS] Real-time: 68,982 packets | 229.8 pps | 73 sources | 3 alerts
+2025-11-08 05:11:06,556 - NetworkIDS - INFO - [STATS] Real-time: 71,657 packets | 231.0 pps | 75 sources | 3 alerts
+2025-11-08 05:11:11,970 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-08 05:11:16,557 - NetworkIDS - INFO - [STATS] Real-time: 73,343 packets | 229.1 pps | 76 sources | 4 alerts
+2025-11-08 05:11:26,557 - NetworkIDS - INFO - [STATS] Real-time: 75,531 packets | 228.8 pps | 76 sources | 4 alerts
+2025-11-08 05:11:36,557 - NetworkIDS - INFO - [STATS] Real-time: 78,387 packets | 230.4 pps | 76 sources | 4 alerts
+2025-11-08 05:11:46,558 - NetworkIDS - INFO - [STATS] Real-time: 81,668 packets | 233.2 pps | 76 sources | 4 alerts
+2025-11-08 05:11:56,576 - NetworkIDS - INFO - [STATS] Real-time: 84,117 packets | 233.5 pps | 80 sources | 4 alerts
+2025-11-08 05:12:06,577 - NetworkIDS - INFO - [STATS] Real-time: 86,380 packets | 233.3 pps | 81 sources | 4 alerts
+2025-11-08 05:12:16,579 - NetworkIDS - INFO - [STATS] Real-time: 88,987 packets | 234.1 pps | 82 sources | 4 alerts
+2025-11-08 05:12:26,578 - NetworkIDS - INFO - [STATS] Real-time: 90,778 packets | 232.7 pps | 82 sources | 4 alerts
+2025-11-08 05:12:36,583 - NetworkIDS - INFO - [STATS] Real-time: 92,568 packets | 231.3 pps | 82 sources | 4 alerts
+2025-11-08 05:12:46,587 - NetworkIDS - INFO - [STATS] Real-time: 94,751 packets | 231.0 pps | 82 sources | 4 alerts
+2025-11-08 05:12:56,590 - NetworkIDS - INFO - [STATS] Real-time: 96,932 packets | 230.7 pps | 82 sources | 4 alerts
+2025-11-08 05:13:06,591 - NetworkIDS - INFO - [STATS] Real-time: 98,786 packets | 229.6 pps | 82 sources | 4 alerts
+2025-11-08 05:13:16,592 - NetworkIDS - INFO - [STATS] Real-time: 100,993 packets | 229.4 pps | 84 sources | 4 alerts
+2025-11-08 05:13:26,599 - NetworkIDS - INFO - [STATS] Real-time: 103,330 packets | 229.5 pps | 85 sources | 4 alerts
+2025-11-08 05:13:35,169 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-08 05:13:36,607 - NetworkIDS - INFO - [STATS] Real-time: 105,526 packets | 229.3 pps | 89 sources | 5 alerts
+2025-11-08 05:13:46,608 - NetworkIDS - INFO - [STATS] Real-time: 107,571 packets | 228.8 pps | 91 sources | 5 alerts
+2025-11-08 05:13:56,609 - NetworkIDS - INFO - [STATS] Real-time: 110,504 packets | 230.1 pps | 92 sources | 5 alerts
+2025-11-08 05:14:06,610 - NetworkIDS - INFO - [STATS] Real-time: 112,339 packets | 229.2 pps | 93 sources | 5 alerts
+2025-11-08 05:14:16,614 - NetworkIDS - INFO - [STATS] Real-time: 114,495 packets | 228.9 pps | 93 sources | 5 alerts
+2025-11-08 05:14:26,615 - NetworkIDS - INFO - [STATS] Real-time: 116,447 packets | 228.2 pps | 94 sources | 5 alerts
+2025-11-08 05:14:36,617 - NetworkIDS - INFO - [STATS] Real-time: 118,477 packets | 227.7 pps | 95 sources | 5 alerts
+2025-11-08 05:14:46,617 - NetworkIDS - INFO - [STATS] Real-time: 121,024 packets | 228.3 pps | 96 sources | 5 alerts
+2025-11-08 05:14:56,638 - NetworkIDS - INFO - [STATS] Real-time: 123,463 packets | 228.5 pps | 98 sources | 5 alerts
+2025-11-08 05:15:06,638 - NetworkIDS - INFO - [STATS] Real-time: 125,406 packets | 227.9 pps | 98 sources | 5 alerts
+2025-11-08 05:15:16,642 - NetworkIDS - INFO - [STATS] Real-time: 127,426 packets | 227.4 pps | 98 sources | 5 alerts
+2025-11-08 05:15:26,657 - NetworkIDS - INFO - [STATS] Real-time: 129,070 packets | 226.3 pps | 98 sources | 5 alerts
+2025-11-08 05:15:36,668 - NetworkIDS - INFO - [STATS] Real-time: 131,172 packets | 226.1 pps | 98 sources | 5 alerts
+2025-11-08 05:15:46,674 - NetworkIDS - INFO - [STATS] Real-time: 133,465 packets | 226.1 pps | 100 sources | 5 alerts
+2025-11-08 05:15:53,608 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.100 -> 192.168.1.102
+2025-11-08 05:15:53,633 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD (Rule-Based) | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-08 05:15:56,281 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-08 05:15:56,675 - NetworkIDS - INFO - [STATS] Real-time: 137,077 packets | 228.4 pps | 101 sources | 8 alerts
+2025-11-08 05:16:22,946 - NetworkIDS - INFO - [SHIELD] Starting Enhanced Network IDS (Scapy Engine)...
+2025-11-08 05:16:22,947 - NetworkIDS - INFO - Writing alerts to: D:\CapstoneProject-main\CapstoneProject-main\ids-dashboard-frontend\public\ids_alerts.json
+2025-11-08 05:16:22,947 - NetworkIDS - INFO - [OK] IDS started successfully. Monitoring network traffic...
+2025-11-08 05:16:22,948 - NetworkIDS - INFO - [STOP] Press Ctrl+C to stop.
+2025-11-08 05:16:23,006 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.100 -> 192.168.1.102
+2025-11-08 05:16:23,035 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD (Rule-Based) | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-08 05:16:32,953 - NetworkIDS - INFO - [STATS] Real-time: 7,760 packets | 775.5 pps | 14 sources | 2 alerts
+2025-11-08 05:16:34,736 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-08 05:16:42,958 - NetworkIDS - INFO - [STATS] Real-time: 15,656 packets | 782.4 pps | 21 sources | 3 alerts
+2025-11-08 05:16:50,345 - NetworkIDS - INFO - [SHIELD] Starting Enhanced Network IDS (Scapy Engine)...
+2025-11-08 05:16:50,347 - NetworkIDS - INFO - Writing alerts to: D:\CapstoneProject-main\CapstoneProject-main\ids-dashboard-frontend\public\ids_alerts.json
+2025-11-08 05:16:50,348 - NetworkIDS - INFO - [OK] IDS started successfully. Monitoring network traffic...
+2025-11-08 05:16:50,348 - NetworkIDS - INFO - [STOP] Press Ctrl+C to stop.
+2025-11-08 05:17:00,353 - NetworkIDS - INFO - [STATS] Real-time: 3,128 packets | 312.6 pps | 12 sources | 0 alerts
+2025-11-08 05:17:10,356 - NetworkIDS - INFO - [STATS] Real-time: 5,341 packets | 266.9 pps | 16 sources | 0 alerts
+2025-11-08 05:17:20,357 - NetworkIDS - INFO - [STATS] Real-time: 7,972 packets | 265.6 pps | 20 sources | 0 alerts
+2025-11-08 05:17:30,368 - NetworkIDS - INFO - [STATS] Real-time: 10,306 packets | 257.5 pps | 21 sources | 0 alerts
+2025-11-08 05:17:40,375 - NetworkIDS - INFO - [STATS] Real-time: 12,650 packets | 252.9 pps | 24 sources | 0 alerts
+2025-11-08 05:17:50,376 - NetworkIDS - INFO - [STATS] Real-time: 15,500 packets | 258.2 pps | 25 sources | 0 alerts
+2025-11-08 05:18:00,378 - NetworkIDS - INFO - [STATS] Real-time: 17,565 packets | 250.8 pps | 25 sources | 0 alerts
+2025-11-08 05:18:10,397 - NetworkIDS - INFO - [STATS] Real-time: 20,303 packets | 253.6 pps | 27 sources | 0 alerts
+2025-11-08 05:18:20,398 - NetworkIDS - INFO - [STATS] Real-time: 22,718 packets | 252.3 pps | 27 sources | 0 alerts
+2025-11-08 05:18:23,898 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-08 05:18:23,927 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 49.44.63.33 -> 192.168.1.102
+2025-11-08 05:18:30,398 - NetworkIDS - INFO - [STATS] Real-time: 27,242 packets | 272.3 pps | 31 sources | 2 alerts
+2025-11-08 05:18:40,398 - NetworkIDS - INFO - [STATS] Real-time: 29,325 packets | 266.5 pps | 32 sources | 2 alerts
+2025-11-08 05:18:50,404 - NetworkIDS - INFO - [STATS] Real-time: 31,269 packets | 260.5 pps | 33 sources | 2 alerts
+2025-11-08 05:19:00,408 - NetworkIDS - INFO - [STATS] Real-time: 33,547 packets | 257.9 pps | 37 sources | 2 alerts
+2025-11-08 05:19:10,417 - NetworkIDS - INFO - [STATS] Real-time: 35,589 packets | 254.1 pps | 37 sources | 2 alerts
+2025-11-08 05:19:20,441 - NetworkIDS - INFO - [STATS] Real-time: 37,748 packets | 251.5 pps | 37 sources | 2 alerts
+2025-11-08 05:19:30,443 - NetworkIDS - INFO - [STATS] Real-time: 39,497 packets | 246.7 pps | 38 sources | 2 alerts
+2025-11-08 05:19:33,944 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.100 -> 192.168.1.102
+2025-11-08 05:19:33,980 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD (Rule-Based) | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-08 05:19:40,443 - NetworkIDS - INFO - [STATS] Real-time: 44,257 packets | 260.2 pps | 41 sources | 4 alerts
+2025-11-08 05:19:50,444 - NetworkIDS - INFO - [STATS] Real-time: 51,775 packets | 287.5 pps | 43 sources | 4 alerts
+2025-11-08 05:20:00,444 - NetworkIDS - INFO - [STATS] Real-time: 59,786 packets | 314.5 pps | 43 sources | 4 alerts
+2025-11-08 05:20:10,446 - NetworkIDS - INFO - [STATS] Real-time: 66,930 packets | 334.5 pps | 43 sources | 4 alerts
+2025-11-08 05:20:20,447 - NetworkIDS - INFO - [STATS] Real-time: 74,317 packets | 353.7 pps | 44 sources | 4 alerts
+2025-11-08 05:20:30,458 - NetworkIDS - INFO - [STATS] Real-time: 82,019 packets | 372.6 pps | 45 sources | 4 alerts
+2025-11-08 05:20:37,424 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-08 05:20:40,459 - NetworkIDS - INFO - [STATS] Real-time: 88,916 packets | 386.4 pps | 45 sources | 5 alerts
+2025-11-08 05:20:50,460 - NetworkIDS - INFO - [STATS] Real-time: 95,771 packets | 398.9 pps | 45 sources | 5 alerts
+2025-11-08 05:21:00,460 - NetworkIDS - INFO - [STATS] Real-time: 102,386 packets | 409.4 pps | 45 sources | 5 alerts
+2025-11-08 05:21:10,463 - NetworkIDS - INFO - [STATS] Real-time: 109,679 packets | 421.7 pps | 45 sources | 5 alerts
+2025-11-08 05:21:20,463 - NetworkIDS - INFO - [STATS] Real-time: 116,715 packets | 432.1 pps | 45 sources | 5 alerts
+2025-11-08 05:21:30,464 - NetworkIDS - INFO - [STATS] Real-time: 123,960 packets | 442.5 pps | 45 sources | 5 alerts
+2025-11-08 05:21:33,958 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.100 -> 192.168.1.102
+2025-11-08 05:21:34,042 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD (Rule-Based) | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-08 05:21:40,466 - NetworkIDS - INFO - [STATS] Real-time: 131,645 packets | 453.8 pps | 46 sources | 7 alerts
+2025-11-08 05:21:50,467 - NetworkIDS - INFO - [STATS] Real-time: 139,559 packets | 465.0 pps | 47 sources | 7 alerts
+2025-11-08 05:22:00,468 - NetworkIDS - INFO - [STATS] Real-time: 147,335 packets | 475.1 pps | 48 sources | 7 alerts
+2025-11-08 05:22:10,472 - NetworkIDS - INFO - [STATS] Real-time: 154,821 packets | 483.6 pps | 48 sources | 7 alerts
+2025-11-08 05:22:20,479 - NetworkIDS - INFO - [STATS] Real-time: 164,123 packets | 497.1 pps | 50 sources | 7 alerts
+2025-11-08 05:22:30,480 - NetworkIDS - INFO - [STATS] Real-time: 167,237 packets | 491.7 pps | 51 sources | 7 alerts
+2025-11-08 05:22:40,480 - NetworkIDS - INFO - [STATS] Real-time: 170,792 packets | 487.8 pps | 54 sources | 7 alerts
+2025-11-08 05:22:57,704 - NetworkIDS - INFO - [SHIELD] Starting Enhanced Network IDS (Scapy Engine)...
+2025-11-08 05:22:57,706 - NetworkIDS - INFO - Writing alerts to: D:\CapstoneProject-main\CapstoneProject-main\ids-dashboard-frontend\public\ids_alerts.json
+2025-11-08 05:22:57,707 - NetworkIDS - INFO - [OK] IDS started successfully. Monitoring network traffic...
+2025-11-08 05:22:57,707 - NetworkIDS - INFO - [STOP] Press Ctrl+C to stop.
+2025-11-08 05:23:07,708 - NetworkIDS - INFO - [STATS] Real-time: 2,395 packets | 239.5 pps | 12 sources | 0 alerts
+2025-11-08 05:23:14,780 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 192.168.1.100 -> 192.168.1.102
+2025-11-08 05:23:14,810 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-08 05:23:17,718 - NetworkIDS - INFO - [STATS] Real-time: 6,039 packets | 301.8 pps | 18 sources | 2 alerts
+2025-11-08 05:23:27,718 - NetworkIDS - INFO - [STATS] Real-time: 9,177 packets | 305.8 pps | 21 sources | 2 alerts
+2025-11-08 05:23:29,846 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-08 05:23:37,718 - NetworkIDS - INFO - [STATS] Real-time: 12,395 packets | 309.8 pps | 26 sources | 3 alerts
+2025-11-08 05:23:47,718 - NetworkIDS - INFO - [STATS] Real-time: 17,079 packets | 341.5 pps | 28 sources | 3 alerts
+2025-11-08 05:23:57,718 - NetworkIDS - INFO - [STATS] Real-time: 21,330 packets | 355.4 pps | 29 sources | 3 alerts
+2025-11-08 05:24:07,724 - NetworkIDS - INFO - [STATS] Real-time: 25,974 packets | 371.0 pps | 32 sources | 3 alerts
+2025-11-08 05:24:17,729 - NetworkIDS - INFO - [STATS] Real-time: 30,409 packets | 380.0 pps | 32 sources | 3 alerts
+2025-11-08 05:24:27,731 - NetworkIDS - INFO - [STATS] Real-time: 33,192 packets | 368.7 pps | 32 sources | 3 alerts
+2025-11-08 05:24:37,732 - NetworkIDS - INFO - [STATS] Real-time: 35,891 packets | 358.8 pps | 35 sources | 3 alerts
+2025-11-08 05:24:47,733 - NetworkIDS - INFO - [STATS] Real-time: 39,761 packets | 361.4 pps | 35 sources | 3 alerts
+2025-11-08 05:24:57,737 - NetworkIDS - INFO - [STATS] Real-time: 42,754 packets | 356.2 pps | 39 sources | 3 alerts
+2025-11-08 05:25:07,738 - NetworkIDS - INFO - [STATS] Real-time: 45,944 packets | 353.3 pps | 49 sources | 3 alerts
+2025-11-08 05:25:17,757 - NetworkIDS - INFO - [STATS] Real-time: 48,349 packets | 345.2 pps | 49 sources | 3 alerts
+2025-11-08 05:25:27,758 - NetworkIDS - INFO - [STATS] Real-time: 50,649 packets | 337.5 pps | 51 sources | 3 alerts
+2025-11-08 05:25:37,758 - NetworkIDS - INFO - [STATS] Real-time: 52,867 packets | 330.3 pps | 51 sources | 3 alerts
+2025-11-08 05:25:47,761 - NetworkIDS - INFO - [STATS] Real-time: 54,996 packets | 323.4 pps | 51 sources | 3 alerts
+2025-11-08 05:25:57,764 - NetworkIDS - INFO - [STATS] Real-time: 56,916 packets | 316.1 pps | 51 sources | 3 alerts
+2025-11-08 05:25:57,841 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 192.168.1.100 -> 192.168.1.102
+2025-11-08 05:25:57,873 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-08 05:26:07,765 - NetworkIDS - INFO - [STATS] Real-time: 64,323 packets | 338.4 pps | 51 sources | 5 alerts
+2025-11-08 05:26:17,767 - NetworkIDS - INFO - [STATS] Real-time: 68,984 packets | 344.8 pps | 52 sources | 5 alerts

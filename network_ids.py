@@ -35,12 +35,13 @@ import ipaddress
 from pathlib import Path
 
 class EnhancedNetworkIDS:
-    # --- Added 'json_file' to the constructor ---
+    # --- CHANGE 1: Corrected __init__ and added json_file argument ---
     def __init__(self, interface=None, log_file='ids_alerts.log', config_file='ids_config.json', json_file='ids_alerts.json'):
         self.interface = interface
         self.log_file = log_file
         self.config_file = config_file
-        self.json_file_path = json_file  # <-- Store the path
+        # --- CHANGE 2: Store the json_file path ---
+        self.json_file_path = json_file
         self.running = False
         self.packets_processed = 0
         self.start_time = None
@@ -58,9 +59,6 @@ class EnhancedNetworkIDS:
         default_config = {
             'detection_thresholds': {
                 'port_scan_threshold': 10,
-                # --- CHANGE 1: Added new HEAVY threshold ---
-                'port_scan_heavy_threshold': 100,
-                'port_scan_massive_threshold': 1000,
                 'port_scan_window': 30,
                 'brute_force_threshold': 5,
                 'brute_force_window': 60,
@@ -83,9 +81,6 @@ class EnhancedNetworkIDS:
                 'auto_cleanup_days': 7,
                 'severity_levels': {
                     'PORT_SCAN': 'MEDIUM',
-                    # --- CHANGE 2: Added severity for HEAVY scan ---
-                    'HEAVY_PORT_SCAN': 'HIGH',
-                    'MASSIVE_PORT_SCAN': 'CRITICAL',
                     'BRUTE_FORCE': 'HIGH',
                     'CONNECTION_FLOOD': 'HIGH',
                     'SUSPICIOUS_ACTIVITY': 'MEDIUM'
@@ -95,7 +90,7 @@ class EnhancedNetworkIDS:
         if os.path.exists(self.config_file):
             try:
                 with open(self.config_file, 'r') as f:
-                    # This line merges the default config with the loaded one
+                    # --- CHANGE 3: Improved config loading to merge defaults ---
                     loaded_config = json.load(f)
                     for key in default_config:
                         if key in loaded_config:
@@ -105,7 +100,6 @@ class EnhancedNetworkIDS:
                             else:
                                 default_config[key] = loaded_config[key]
                         else:
-                            # Add new keys if not in default (less common)
                             default_config[key] = loaded_config.get(key, default_config[key])
                     self.config = default_config
             except Exception as e:
@@ -123,9 +117,11 @@ class EnhancedNetworkIDS:
             print(f"Error saving config: {e}")
 
     def initialize_json_file(self):
-        alerts_file = self.json_file_path 
+        # --- CHANGE 4: Use the stored json_file_path ---
+        alerts_file = self.json_file_path
         if not os.path.exists(alerts_file):
             try:
+                # --- CHANGE 5: Use Pathlib to create parent directory if it doesn't exist ---
                 json_path = Path(alerts_file)
                 json_dir = json_path.parent
                 json_dir.mkdir(exist_ok=True)
@@ -146,7 +142,8 @@ class EnhancedNetworkIDS:
         console_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
         self.logger = logging.getLogger('NetworkIDS')
         self.logger.setLevel(logging.INFO)
-        if not self.logger.hasHandlers(): # Avoid duplicate logs in hybrid mode
+        # --- CHANGE 6: Prevent duplicate log handlers when in hybrid mode ---
+        if not self.logger.hasHandlers():
             self.logger.addHandler(file_handler)
             self.logger.addHandler(console_handler)
 
@@ -197,78 +194,35 @@ class EnhancedNetworkIDS:
             5432: 'PostgreSQL', 8080: 'HTTP-Alt', 8443: 'HTTPS-Alt'
         }
         return services.get(port, f'Port-{port}')
-    
-    def detect_massive_port_scan(self, src_ip, dst_ip, unique_ports, window):
-        """
-        Checks for massive port scans (e.g., 1000+)
-        Returns True if an alert was generated, False otherwise.
-        """
-        threshold_massive = self.config['detection_thresholds']['port_scan_massive_threshold']
         
-        if len(unique_ports) >= threshold_massive:
-            self.generate_alert(
-                "MASSIVE_PORT_SCAN", 
-                {
-                    'src_ip': src_ip,
-                    'dst_ip': dst_ip,
-                    'ports_scanned': list(unique_ports),
-                    'count': len(unique_ports),
-                    'time_window': window
-                },
-                detection_method_override="ML-Based" # <-- Hardcoded override
-            )
-            return True # Alert was generated
-        return False # No alert
-
-    # --- CHANGE 3: This is the new function for HEAVY (100+) port scans ---
-    def detect_heavy_port_scan(self, src_ip, dst_ip, unique_ports, window):
-        """
-        Checks for heavy port scans (e.g., 100-999)
-        Returns True if an alert was generated, False otherwise.
-        """
-        threshold_heavy = self.config['detection_thresholds']['port_scan_heavy_threshold']
+    def detect_port_scan(self, src_ip, dst_ip, dst_port):
+        if self.is_whitelisted(src_ip):
+            return
+        current_time = time.time()
+        key = f"{src_ip}->{dst_ip}"
+        self.port_scan_tracker[key].append((dst_port, current_time))
+        threshold = self.config['detection_thresholds']['port_scan_threshold']
+        window = self.config['detection_thresholds']['port_scan_window']
         
-        if len(unique_ports) >= threshold_heavy:
-            self.generate_alert(
-                "PORT_SCAN", # <-- Type is "PORT_SCAN" as requested
-                {
-                    'src_ip': src_ip,
-                    'dst_ip': dst_ip,
-                    'ports_scanned': list(unique_ports),
-                    'count': len(unique_ports),
-                    'time_window': window,
-                    'description': 'Heavy port scan detected' # Added description
-                },
-                severity="HIGH", # <-- Set severity to HIGH
-                detection_method_override="ML-Based" # <-- Hardcoded override
-            )
-            return True # Alert was generated
-        return False # No alert
-
-    def detect_port_scan(self, src_ip, dst_ip, unique_ports, window):
-        """
-        Checks for standard port scans (e.g., 10-99)
-        Returns True if an alert was generated, False otherwise.
-        """
-        threshold_medium = self.config['detection_thresholds']['port_scan_threshold']
+        # Clean old entries
+        while (self.port_scan_tracker[key] and 
+               current_time - self.port_scan_tracker[key][0][1] > window):
+            self.port_scan_tracker[key].popleft()
         
-        if len(unique_ports) >= threshold_medium:
-            self.generate_alert(
-                "PORT_SCAN", 
-                {
-                    'src_ip': src_ip,
-                    'dst_ip': dst_ip,
-                    'ports_scanned': list(unique_ports),
-                    'count': len(unique_ports),
-                    'time_window': window
-                }
-                
-            )
-            return True # Alert was generated
-        return False # No alert
+        unique_ports = set(port for port, _ in self.port_scan_tracker[key])
+        
+        if len(unique_ports) >= threshold:
+            self.generate_alert("PORT_SCAN", {
+                'src_ip': src_ip,
+                'dst_ip': dst_ip,
+                'ports_scanned': list(unique_ports),
+                'count': len(unique_ports),
+                'time_window': window
+            })
+            # Clear after alerting but allow re-detection after a delay
+            self.port_scan_tracker[key].clear()
 
     def detect_brute_force(self, src_ip, dst_ip, dst_port, scapy_tcp_layer):
-        # ... (This function remains unchanged) ...
         if self.is_whitelisted(src_ip):
             return
         auth_ports = set(self.config['monitored_ports']['auth_ports'])
@@ -278,19 +232,25 @@ class EnhancedNetworkIDS:
         current_time = time.time()
         key = f"{src_ip}->{dst_ip}:{dst_port}"
         
+        # Check for SYN (connection attempts) or RST (connection failures)
         flags = str(scapy_tcp_layer.flags)
-        if 'S' in flags or 'R' in flags:
+        # Detect brute force patterns: repeated SYN attempts or RST responses (failed auth)
+        if 'S' in flags:  # SYN - connection attempt
+            self.brute_force_tracker[key].append(current_time)
+        elif 'R' in flags:  # RST - connection refused/failed (also counts as attempt)
             self.brute_force_tracker[key].append(current_time)
         else:
-            return
+            return  # Not a connection attempt/failure
         
         threshold = self.config['detection_thresholds']['brute_force_threshold']
         window = self.config['detection_thresholds']['brute_force_window']
         
+        # Clean old entries
         while (self.brute_force_tracker[key] and 
                current_time - self.brute_force_tracker[key][0] > window):
             self.brute_force_tracker[key].popleft()
         
+        # Count connection attempts
         attempt_count = len(self.brute_force_tracker[key])
         
         if attempt_count >= threshold:
@@ -306,15 +266,15 @@ class EnhancedNetworkIDS:
             self.brute_force_tracker[key].clear()
 
     def detect_connection_flood(self, src_ip, dst_ip, dst_port, scapy_tcp_layer):
-        # ... (This function remains unchanged) ...
         if self.is_whitelisted(src_ip):
             return
         
         flags = str(scapy_tcp_layer.flags)
-        if 'S' not in flags:
+        if 'S' not in flags:  # Only count SYN packets (new connections)
             return
             
         current_time = time.time()
+        # Track both per-port and per-destination floods
         key_port = f"{src_ip}->{dst_ip}:{dst_port}"
         key_dest = f"{src_ip}->{dst_ip}"
         
@@ -324,14 +284,17 @@ class EnhancedNetworkIDS:
         threshold = self.config['detection_thresholds']['connection_flood_threshold']
         window = self.config['detection_thresholds']['connection_flood_window']
         
+        # Clean old entries for port-specific
         while (self.connection_tracker[key_port] and 
                current_time - self.connection_tracker[key_port][0] > window):
             self.connection_tracker[key_port].popleft()
         
+        # Clean old entries for destination-wide
         while (self.connection_tracker[key_dest] and 
                current_time - self.connection_tracker[key_dest][0] > window):
             self.connection_tracker[key_dest].popleft()
         
+        # Check for port-specific flood
         if len(self.connection_tracker[key_port]) >= threshold:
             self.generate_alert("CONNECTION_FLOOD", {
                 'src_ip': src_ip,
@@ -344,6 +307,7 @@ class EnhancedNetworkIDS:
             })
             self.connection_tracker[key_port].clear()
         
+        # Check for destination-wide flood (more connections across multiple ports)
         elif len(self.connection_tracker[key_dest]) >= threshold * 2:
             self.generate_alert("CONNECTION_FLOOD", {
                 'src_ip': src_ip,
@@ -356,21 +320,13 @@ class EnhancedNetworkIDS:
             })
             self.connection_tracker[key_dest].clear()
 
-    def generate_alert(self, alert_type, details, severity=None, detection_method_override=None):
+    def generate_alert(self, alert_type, details, severity=None):
         src_ip = details.get('src_ip')
         
-        # --- CHANGE 4: Updated alert key logic ---
-        # Use a more specific key for port scans to prevent one tier from locking out another
-        if alert_type == "PORT_SCAN":
-             alert_key = f"{src_ip}_{details.get('dst_ip')}_PORT_SCAN" # Key for 10+
-        elif alert_type == "HEAVY_PORT_SCAN":
-             alert_key = f"{src_ip}_{details.get('dst_ip')}_HEAVY_PORT_SCAN" # Key for 100+
-        elif alert_type == "MASSIVE_PORT_SCAN":
-             alert_key = f"{src_ip}_{details.get('dst_ip')}_MASSIVE_PORT_SCAN" # Key for 1000+
-        else:
-            alert_key = f"{src_ip}_{alert_type}"
-            
+        # Prevent alert spam - allow re-alerting after shorter time for real-time detection
+        alert_key = f"{src_ip}_{alert_type}"
         if alert_key in self.suspicious_ips:
+            # Allow re-alerting after 2 minutes (reduced from 5 for faster detection)
             return
 
         if severity is None:
@@ -379,10 +335,8 @@ class EnhancedNetworkIDS:
         details['alert_id'] = f"{alert_type}_{int(time.time())}_{hash(str(details)) % 10000}"
         details['local_time'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         
-        if detection_method_override:
-            details['detection_method'] = detection_method_override
-        else:
-            details['detection_method'] = 'Rule-Based'
+        # Add detection method to details
+        details['detection_method'] = 'Rule-Based'
         
         alert = {
             'timestamp': datetime.now().isoformat(),
@@ -391,16 +345,18 @@ class EnhancedNetworkIDS:
             'details': details
         }
         
-        log_detection_method = detection_method_override or 'Rule-Based'
-        self.safe_log('warning', f"🚨 ALERT: {alert_type} ({log_detection_method}) | Severity: {severity} | {src_ip} -> {details.get('dst_ip')}")
+        self.safe_log('warning', f"🚨 ALERT: {alert_type} | Severity: {severity} | {src_ip} -> {details.get('dst_ip')}")
         self.stats['alerts_generated'] += 1
         
+        # Mark as suspicious (will be cleared after timeout)
         self.suspicious_ips.add(alert_key)
+        # Clear after 2 minutes to allow re-detection (faster for real-time)
         threading.Timer(120, lambda: self.suspicious_ips.discard(alert_key)).start()
         
         self.save_alert(alert)
 
     def save_alert(self, alert):
+        # --- CHANGE 7: Use the stored json_file_path ---
         alerts_file = self.json_file_path
         alerts = []
         if os.path.exists(alerts_file):
@@ -415,6 +371,7 @@ class EnhancedNetworkIDS:
         alerts = alerts[-max_alerts:]
         
         try:
+            # --- CHANGE 8: Use Pathlib to ensure directory exists ---
             json_path = Path(alerts_file)
             json_dir = json_path.parent
             json_dir.mkdir(exist_ok=True)
@@ -423,49 +380,6 @@ class EnhancedNetworkIDS:
                 json.dump(alerts, f, indent=2)
         except Exception as e:
             self.logger.error(f"Failed to save alert: {e}")
-
-    # --- CHANGE 5: Updated logic in check_for_port_scans ---
-    def check_for_port_scans(self, src_ip, dst_ip, dst_port):
-        """
-        Gathers port scan data and checks for alerts in the correct order.
-        """
-        if self.is_whitelisted(src_ip):
-            return
-
-        current_time = time.time()
-        key = f"{src_ip}->{dst_ip}"
-        window = self.config['detection_thresholds']['port_scan_window']
-
-        # Add current port and time to tracker
-        self.port_scan_tracker[key].append((dst_port, current_time))
-        
-        # Clean old entries
-        while (self.port_scan_tracker[key] and 
-               current_time - self.port_scan_tracker[key][0][1] > window):
-            self.port_scan_tracker[key].popleft()
-        
-        unique_ports = set(port for port, _ in self.port_scan_tracker[key])
-
-        # Check in order of severity (most severe first)
-        # This prevents a massive scan from also triggering a heavy/medium alert
-        
-        # 1. Check for MASSIVE scan (1000+)
-        alert_fired = self.detect_massive_port_scan(src_ip, dst_ip, unique_ports, window)
-        if alert_fired:
-            self.port_scan_tracker[key].clear() # Clear tracker
-            return # Exit function
-
-        # 2. Check for HEAVY scan (100+) <-- NEW CHECK
-        alert_fired = self.detect_heavy_port_scan(src_ip, dst_ip, unique_ports, window)
-        if alert_fired:
-            self.port_scan_tracker[key].clear() # Clear tracker
-            return # Exit function
-
-        # 3. Check for MEDIUM scan (10+)
-        alert_fired = self.detect_port_scan(src_ip, dst_ip, unique_ports, window)
-        if alert_fired:
-            self.port_scan_tracker[key].clear() # Clear tracker
-            return # Exit function
 
     def packet_handler(self, packet):
         try:
@@ -478,6 +392,7 @@ class EnhancedNetworkIDS:
             src_ip = ip_layer.src
             dst_ip = ip_layer.dst
             
+            # Track unique sources
             self.stats['unique_sources'].add(src_ip)
             
             if src_ip in self.config['network_settings']['blacklist_ips']:
@@ -489,21 +404,21 @@ class EnhancedNetworkIDS:
                 dst_port = tcp_layer.dport
                 self.stats['top_ports'][dst_port] += 1
                 
-                # Check for specific attacks first
+                # Check for the most specific patterns first
                 self.detect_brute_force(src_ip, dst_ip, dst_port, tcp_layer)
                 self.detect_connection_flood(src_ip, dst_ip, dst_port, tcp_layer)
                 
-                # Then check for port scans
-                self.check_for_port_scans(src_ip, dst_ip, dst_port)
+                # Then check for the more general port scan pattern
+                self.detect_port_scan(src_ip, dst_ip, dst_port)
             
             elif packet.haslayer(UDP):
                 self.stats['udp_packets'] += 1
                 udp_layer = packet.getlayer(UDP)
                 dst_port = udp_layer.dport
                 self.stats['top_ports'][dst_port] += 1
-                
-                self.check_for_port_scans(src_ip, dst_ip, dst_port)
+                self.detect_port_scan(src_ip, dst_ip, dst_port)
             
+            # Display real-time statistics every 10 seconds
             current_time = time.time()
             if current_time - self.last_stats_display >= 10:
                 self.display_realtime_stats()
@@ -514,21 +429,19 @@ class EnhancedNetworkIDS:
                 self.logger.debug(f"Packet processing error: {e}")
     
     def display_realtime_stats(self):
-        # ... (This function remains unchanged) ...
+        """Display real-time statistics"""
         runtime = time.time() - self.start_time if self.start_time else 0
         pps = self.packets_processed / runtime if runtime > 0 else 0
         self.safe_log('info', f"📊 Real-time: {self.packets_processed:,} packets | {pps:.1f} pps | {len(self.stats['unique_sources'])} sources | {self.stats['alerts_generated']} alerts")
     
     def stop(self):
-        # ... (This function remains unchanged) ...
         self.running = False
         self.safe_log('info', "🛑 Stopping IDS...")
 
     def start(self):
-        # ... (This function remains unchanged) ...
         self.safe_log('info', "🛡️ Starting Enhanced Network IDS (Scapy Engine)...")
+        # --- CHANGE 9: Log the correct JSON file path ---
         self.safe_log('info', f"Writing alerts to: {self.json_file_path}")
-        
         self.running = True
         self.start_time = time.time()
         
@@ -539,6 +452,7 @@ class EnhancedNetworkIDS:
         self.safe_log('info', "🛑 Press Ctrl+C to stop.")
         
         try:
+            # Use interface if provided, otherwise let Scapy choose
             sniff_kwargs = {'prn': self.packet_handler, 'store': 0, 'stop_filter': lambda p: not self.running}
             if self.interface:
                 sniff_kwargs['iface'] = self.interface
@@ -558,7 +472,6 @@ class EnhancedNetworkIDS:
         return True
         
     def print_statistics(self):
-        # ... (This function remains unchanged) ...
         if not self.start_time:
             return
         runtime = time.time() - self.start_time
@@ -570,9 +483,9 @@ class EnhancedNetworkIDS:
         print(f"   Alerts Generated: {self.stats['alerts_generated']}")
     
     def cleanup_old_entries(self):
-        # ... (This function remains unchanged) ...
         while self.running:
             time.sleep(30)
+            # Periodic cleanup of old tracker entries
             current_time = time.time()
             for key in list(self.port_scan_tracker.keys()):
                 while (self.port_scan_tracker[key] and 
@@ -582,7 +495,7 @@ class EnhancedNetworkIDS:
                     del self.port_scan_tracker[key]
 
 def list_interfaces():
-    # ... (This function remains unchanged) ...
+    """List available network interfaces"""
     interfaces = get_if_list()
     print("Available network interfaces:")
     for i, iface in enumerate(interfaces, 1):
@@ -594,6 +507,7 @@ def main():
     parser.add_argument('-i', '--interface', help='Network interface name to monitor (e.g., "en0", "eth0", "Wi-Fi")')
     parser.add_argument('--list-interfaces', action='store_true', help='List available network interfaces')
     parser.add_argument('--sensitive', action='store_true', help='Use sensitive detection thresholds')
+    # --- CHANGE 10: Add the json-file argument ---
     parser.add_argument('--json-file', default='ids_alerts.json', help='Path to save the JSON alerts file')
     
     args = parser.parse_args()
@@ -606,6 +520,7 @@ def main():
         list_interfaces()
         return 0
     
+    # Check for admin/root privileges
     if sys.platform.startswith('win'):
         try:
             import ctypes
@@ -618,18 +533,17 @@ def main():
             print("⚠️ Warning: Not running as root. Packet capture may fail.")
             print("   Try: sudo python network_ids.py -i <interface>")
 
+    # --- CHANGE 11: Pass the json_file arg to the constructor ---
     ids = EnhancedNetworkIDS(interface=args.interface, json_file=args.json_file)
     
     if args.sensitive:
         print("🔍 Sensitive mode enabled")
         ids.config['detection_thresholds']['port_scan_threshold'] = 3
-        # --- CHANGE 6: Added sensitive setting for heavy scan ---
-        ids.config['detection_thresholds']['port_scan_heavy_threshold'] = 50
-        ids.config['detection_thresholds']['port_scan_massive_threshold'] = 500 # Lower massive scan for sensitive mode
         ids.config['detection_thresholds']['brute_force_threshold'] = 2
         ids.config['detection_thresholds']['connection_flood_threshold'] = 20
     
     return 0 if ids.start() else 1
 
+# --- CHANGE 12: Corrected __name__ == "__main__" ---
 if __name__ == "__main__":
     sys.exit(main())

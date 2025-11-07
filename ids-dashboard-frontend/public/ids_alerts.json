@@ -297,5 +297,464 @@
       "local_time": "2025-11-08 00:26:29",
       "detection_method": "Rule-Based"
     }
+  },
+  {
+    "timestamp": "2025-11-08T05:06:30.263984",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        52293,
+        63592,
+        60237,
+        49392,
+        50072
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762558590_1648",
+      "local_time": "2025-11-08 05:06:30",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:08:47.521836",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        49664,
+        64265,
+        59821,
+        62967,
+        64444
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762558727_3651",
+      "local_time": "2025-11-08 05:08:47",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:08:50.409576",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "216.24.57.251",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        45280,
+        45281,
+        51271,
+        51273,
+        51274
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762558730_8280",
+      "local_time": "2025-11-08 05:08:50",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:11:11.970851",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        60992,
+        50823,
+        51126,
+        62967,
+        57403
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762558871_8802",
+      "local_time": "2025-11-08 05:11:11",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:13:35.169007",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        65126,
+        62122,
+        56948,
+        62967,
+        50488
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762559015_8852",
+      "local_time": "2025-11-08 05:13:35",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:15:53.608149",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.100",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762559153_4261",
+      "local_time": "2025-11-08 05:15:53",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:15:53.633928",
+    "type": "CONNECTION_FLOOD",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "192.168.1.100",
+      "dst_ip": "192.168.1.102",
+      "dst_port": "multiple",
+      "service": "Multiple services",
+      "connection_count": 40,
+      "time_window": 5,
+      "flood_type": "Destination-wide flood",
+      "alert_id": "CONNECTION_FLOOD_1762559153_8083",
+      "local_time": "2025-11-08 05:15:53",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:15:56.281556",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        49664,
+        68,
+        55716,
+        61255,
+        57165
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762559156_7736",
+      "local_time": "2025-11-08 05:15:56",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:16:23.006740",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.100",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        11252,
+        11221,
+        11256,
+        11228,
+        11229
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762559183_9543",
+      "local_time": "2025-11-08 05:16:23",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:16:23.035445",
+    "type": "CONNECTION_FLOOD",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "192.168.1.100",
+      "dst_ip": "192.168.1.102",
+      "dst_port": "multiple",
+      "service": "Multiple services",
+      "connection_count": 40,
+      "time_window": 5,
+      "flood_type": "Destination-wide flood",
+      "alert_id": "CONNECTION_FLOOD_1762559183_998",
+      "local_time": "2025-11-08 05:16:23",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:16:34.736349",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        57262,
+        50229,
+        62967,
+        52120,
+        54751
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762559194_5695",
+      "local_time": "2025-11-08 05:16:34",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:18:23.898746",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        62828,
+        51183,
+        57810,
+        59956,
+        50203
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762559303_4034",
+      "local_time": "2025-11-08 05:18:23",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:18:23.927678",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "49.44.63.33",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        57093,
+        26758,
+        39346,
+        40468,
+        6780
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762559303_8075",
+      "local_time": "2025-11-08 05:18:23",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:19:33.944281",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.100",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        6,
+        20,
+        22,
+        25,
+        26
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762559373_8227",
+      "local_time": "2025-11-08 05:19:33",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:19:33.980439",
+    "type": "CONNECTION_FLOOD",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "192.168.1.100",
+      "dst_ip": "192.168.1.102",
+      "dst_port": "multiple",
+      "service": "Multiple services",
+      "connection_count": 40,
+      "time_window": 5,
+      "flood_type": "Destination-wide flood",
+      "alert_id": "CONNECTION_FLOOD_1762559373_5189",
+      "local_time": "2025-11-08 05:19:33",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:20:37.424098",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        55683,
+        65096,
+        64525,
+        55954,
+        49886
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762559437_2247",
+      "local_time": "2025-11-08 05:20:37",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:21:33.958153",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.100",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        47217,
+        47218,
+        47223,
+        47224,
+        47225
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762559493_3541",
+      "local_time": "2025-11-08 05:21:33",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:21:34.042327",
+    "type": "CONNECTION_FLOOD",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "192.168.1.100",
+      "dst_ip": "192.168.1.102",
+      "dst_port": "multiple",
+      "service": "Multiple services",
+      "connection_count": 40,
+      "time_window": 5,
+      "flood_type": "Destination-wide flood",
+      "alert_id": "CONNECTION_FLOOD_1762559494_5189",
+      "local_time": "2025-11-08 05:21:34",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:23:14.780426",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.100",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        1,
+        6,
+        9,
+        13,
+        23
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762559594_3149",
+      "local_time": "2025-11-08 05:23:14",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:23:14.810291",
+    "type": "CONNECTION_FLOOD",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "192.168.1.100",
+      "dst_ip": "192.168.1.102",
+      "dst_port": "multiple",
+      "service": "Multiple services",
+      "connection_count": 40,
+      "time_window": 5,
+      "flood_type": "Destination-wide flood",
+      "alert_id": "CONNECTION_FLOOD_1762559594_1807",
+      "local_time": "2025-11-08 05:23:14",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:23:29.846826",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        55593,
+        63274,
+        60916,
+        64923,
+        62941
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762559609_7836",
+      "local_time": "2025-11-08 05:23:29",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:25:57.841583",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.100",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762559757_3199",
+      "local_time": "2025-11-08 05:25:57",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:25:57.873201",
+    "type": "CONNECTION_FLOOD",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "192.168.1.100",
+      "dst_ip": "192.168.1.102",
+      "dst_port": "multiple",
+      "service": "Multiple services",
+      "connection_count": 40,
+      "time_window": 5,
+      "flood_type": "Destination-wide flood",
+      "alert_id": "CONNECTION_FLOOD_1762559757_1807",
+      "local_time": "2025-11-08 05:25:57",
+      "detection_method": "Rule-Based"
+    }
   }
 ]
