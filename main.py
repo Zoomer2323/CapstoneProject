@@ -27,9 +27,12 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
+  # Run hybrid mode and output alerts to the React dashboard
+  python main.py --mode hybrid -i "Intel(R) Wi-Fi 6 AX201 160MHz" --json-file "ids-dashboard-frontend/public/ids_alerts.json"
+
   # Use rule-based detection (Scapy)
   python main.py --mode rule -i en0
-  
+
   # Use ML-based detection
   python main.py --mode ml -i en0
   
@@ -73,6 +76,14 @@ Examples:
         default='ids_scaler_MULTI_CLASS.pkl',
         help='Path to scaler file (ML mode only)'
     )
+    
+    # --- NEW ARGUMENT ADDED ---
+    parser.add_argument(
+        '--json-file',
+        default='ids_alerts.json',
+        help='Path to save the JSON alerts file (e.g., "ids-dashboard-frontend/public/ids_alerts.json")'
+    )
+    # --- END OF NEW ARGUMENT ---
     
     args = parser.parse_args()
     
@@ -133,6 +144,8 @@ Examples:
                     self.ml_only = False
                     self.model = args.model
                     self.scaler = args.scaler
+                    # --- PASS JSON-FILE ARGUMENT ---
+                    self.json_file = args.json_file
             
             hybrid_args = HybridArgs()
             return hybrid_main(hybrid_args)
@@ -161,7 +174,8 @@ Examples:
             ids = CrossPlatformMLIDS(
                 interface=args.interface,
                 model_path=args.model,
-                scaler_path=args.scaler
+                scaler_path=args.scaler,
+                json_file=args.json_file  # <-- PASS JSON-FILE ARGUMENT
             )
             return 0 if ids.start() else 1
             
@@ -170,7 +184,14 @@ Examples:
             print("🔄 Trying NFStreamer-based ML...")
             
             try:
+                # --- PASS JSON-FILE ARGUMENT ---
+                import ml_ids # Import module
                 from ml_ids import NetworkIDS, get_default_interface
+                
+                # Set the global variables in ml_ids before initializing
+                ml_ids.JSON_FILE = args.json_file
+                ml_ids.LOG_FILE = 'logs/ml_ids_alerts.log'
+                # --- END OF FIX ---
                 
                 # Auto-detect interface if not provided
                 interface = args.interface
@@ -216,7 +237,11 @@ Examples:
         try:
             from network_ids import EnhancedNetworkIDS
             
-            ids = EnhancedNetworkIDS(interface=args.interface)
+            # --- PASS JSON-FILE ARGUMENT ---
+            ids = EnhancedNetworkIDS(
+                interface=args.interface,
+                json_file=args.json_file
+            )
             
             if args.sensitive:
                 print("🔍 Sensitive mode enabled")
@@ -238,4 +263,3 @@ Examples:
 
 if __name__ == "__main__":
     sys.exit(main())
-

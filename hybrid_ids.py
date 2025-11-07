@@ -27,6 +27,12 @@ def main(args=None):
         parser.add_argument('--ml-only', action='store_true', help='Use only ML-based detection')
         parser.add_argument('--model', default='rf_model_MULTI_CLASS.pkl', help='ML model path')
         parser.add_argument('--scaler', default='ids_scaler_MULTI_CLASS.pkl', help='Scaler path')
+        
+        # --- NEW ARGUMENT ---
+        # This one path will be used by BOTH detection engines
+        parser.add_argument('--json-file', default='ids_alerts.json', 
+                            help='Path to save the COMBINED JSON alerts file')
+        
         args = parser.parse_args()
     
     print("=" * 70)
@@ -34,6 +40,12 @@ def main(args=None):
     print("=" * 70)
     print()
     
+    # --- CRITICAL: Define the single JSON file path for both engines ---
+    # We resolve the full path to avoid any ambiguity between scripts
+    json_output_path = os.path.abspath(args.json_file)
+    print(f"Unified JSON Output Path: {json_output_path}")
+    print()
+
     threads = []
     
     # Start Rule-Based IDS
@@ -41,7 +53,12 @@ def main(args=None):
         try:
             from network_ids import EnhancedNetworkIDS
             print("✅ Starting Rule-Based Detection (Scapy)...")
-            rule_ids = EnhancedNetworkIDS(interface=args.interface)
+            
+            # --- MODIFIED: Pass the json_file path to the constructor ---
+            rule_ids = EnhancedNetworkIDS(
+                interface=args.interface,
+                json_file=json_output_path  # Pass the unified path
+            )
             
             def run_rule_based():
                 rule_ids.start()
@@ -59,6 +76,8 @@ def main(args=None):
     # Start ML-Based IDS
     if not args.rule_only:
         try:
+            # --- MODIFIED: Import the module, not just the class ---
+            import ml_ids 
             from ml_ids import NetworkIDS, get_default_interface
             
             # Check if model files exist
@@ -71,14 +90,20 @@ def main(args=None):
                     interface = get_default_interface()
                 
                 print("✅ Starting ML-Based Detection (NFStreamer)...")
-                ml_ids = NetworkIDS(
+                
+                # --- MODIFIED: Set the global variables in ml_ids BEFORE starting ---
+                # This tells ml_ids where to write its files
+                ml_ids.JSON_FILE = json_output_path # Pass the unified path
+                ml_ids.LOG_FILE = 'logs/ml_ids_alerts.log' # Give it a unique log file
+                
+                ml_ids_instance = NetworkIDS(
                     model_path=args.model,
                     scaler_path=args.scaler,
                     interface=interface
                 )
                 
                 def run_ml_based():
-                    ml_ids.start()
+                    ml_ids_instance.start()
                 
                 ml_thread = threading.Thread(target=run_ml_based, daemon=True)
                 ml_thread.start()
@@ -86,9 +111,11 @@ def main(args=None):
                 print("✅ ML-Based IDS started")
         except ImportError as e:
             print(f"⚠️  ML-Based IDS dependencies not available: {e}")
-            print("   Install with: pip install nfstream lightgbm")
+            print("   Install with: pip install nfstream joblib pandas")
         except Exception as e:
             print(f"⚠️  ML-Based IDS failed to start: {e}")
+            import traceback
+            traceback.print_exc() # Print full error
             if args.ml_only:
                 print("❌ ML-only mode requested but failed. Exiting.")
                 return 1
@@ -101,8 +128,7 @@ def main(args=None):
     print("=" * 70)
     print("✅ Hybrid IDS is running!")
     print("=" * 70)
-    print("📊 Both detection methods are active and saving to ids_alerts.json")
-    print("🌐 View alerts in real-time at: http://localhost:8000/dashboard.html")
+    print(f"📊 Both detection methods are active and saving to: {json_output_path}")
     print("🛑 Press Ctrl+C to stop")
     print("=" * 70)
     print()
@@ -119,4 +145,3 @@ def main(args=None):
 
 if __name__ == "__main__":
     sys.exit(main())
-

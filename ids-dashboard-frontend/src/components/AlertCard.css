@@ -1,0 +1,134 @@
+.alert-card {
+  background: #f8f9fa;
+  border-left: 5px solid #667eea;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  animation: slideIn 0.5s;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.alert-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateX(5px);
+}
+
+.alert-card.critical {
+  border-left-color: #e74c3c;
+  background: #fee;
+}
+
+.alert-card.high {
+  border-left-color: #f39c12;
+  background: #fef8e7;
+}
+
+.alert-card.medium {
+  border-left-color: #3498db;
+  background: #eef5fb;
+}
+
+.alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.alert-type {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.alert-badge {
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.badge-ml {
+  background: #667eea;
+  color: white;
+}
+
+.badge-rule {
+  background: #27ae60;
+  color: white;
+}
+
+.badge-hybrid {
+  background: #f39c12;
+  color: white;
+}
+
+.alert-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 0.85em;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.detail-value {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #2c3e50;
+  word-break: break-all;
+}
+
+.confidence-wrapper {
+  margin-top: 15px;
+}
+
+.confidence-bar {
+  width: 100%;
+  height: 20px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.confidence-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #27ae60, #2ecc71);
+  transition: width 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.timestamp {
+  font-size: 0.9em;
+  color: #999;
+  margin-top: 10px;
+}

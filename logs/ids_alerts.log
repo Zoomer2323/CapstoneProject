@@ -20801,3 +20801,1027 @@
 2025-11-07 21:13:25,724 - NetworkIDS - INFO - [STATS] Real-time: 458,237 packets | 180.2 pps | 201 sources | 11 alerts
 2025-11-07 21:13:35,732 - NetworkIDS - INFO - [STATS] Real-time: 460,035 packets | 180.2 pps | 201 sources | 11 alerts
 2025-11-07 21:13:43,167 - INFO - ✓ Processed 68460 flows | Alerts: 0
+2025-11-07 22:58:42,825 - NetworkIDS - INFO - [SHIELD] Starting Enhanced Network IDS (Scapy Engine)...
+2025-11-07 22:58:42,826 - NetworkIDS - INFO - [OK] IDS started successfully. Monitoring network traffic...
+2025-11-07 22:58:42,826 - NetworkIDS - INFO - [STOP] Press Ctrl+C to stop.
+2025-11-07 22:58:45,583 - INFO - ======================================================================
+2025-11-07 22:58:45,583 - INFO - 🛡️  Network IDS Initializing...
+2025-11-07 22:58:45,583 - INFO - ======================================================================
+2025-11-07 22:58:45,583 - INFO - Loading model: rf_model_MULTI_CLASS.pkl
+2025-11-07 22:58:49,262 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 34.149.206.255 -> 192.168.1.102
+2025-11-07 22:58:49,350 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-07 22:58:51,827 - INFO - Loading scaler: ids_scaler_MULTI_CLASS.pkl
+2025-11-07 22:58:51,842 - INFO - ✓ Model and scaler loaded successfully
+2025-11-07 22:58:51,844 - INFO - Starting packet capture on: Intel(R) Wi-Fi 6 AX201 160MHz
+2025-11-07 22:58:51,844 - INFO - 🔍 Monitoring network traffic...
+2025-11-07 22:58:51,844 - INFO - Press Ctrl+C to stop.
+
+2025-11-07 22:58:51,879 - INFO - ✓ Capture started!
+
+2025-11-07 22:58:52,832 - NetworkIDS - INFO - [STATS] Real-time: 731 packets | 73.1 pps | 19 sources | 2 alerts
+2025-11-07 22:59:02,848 - NetworkIDS - INFO - [STATS] Real-time: 1,519 packets | 75.9 pps | 23 sources | 2 alerts
+2025-11-07 22:59:07,724 - INFO - ✓ Processed 10 flows | Alerts: 0
+2025-11-07 22:59:09,481 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 22:59:11,000 - INFO - ✓ Processed 20 flows | Alerts: 0
+2025-11-07 22:59:12,851 - NetworkIDS - INFO - [STATS] Real-time: 2,385 packets | 79.4 pps | 31 sources | 3 alerts
+2025-11-07 22:59:17,005 - INFO - ✓ Processed 30 flows | Alerts: 0
+2025-11-07 22:59:18,995 - INFO - ✓ Processed 40 flows | Alerts: 0
+2025-11-07 22:59:22,669 - INFO - ✓ Processed 50 flows | Alerts: 0
+2025-11-07 22:59:22,868 - NetworkIDS - INFO - [STATS] Real-time: 3,154 packets | 78.8 pps | 36 sources | 3 alerts
+2025-11-07 22:59:32,173 - INFO - ✓ Processed 60 flows | Alerts: 0
+2025-11-07 22:59:32,876 - NetworkIDS - INFO - [STATS] Real-time: 3,775 packets | 75.4 pps | 38 sources | 3 alerts
+2025-11-07 22:59:40,426 - INFO - ✓ Processed 70 flows | Alerts: 0
+2025-11-07 22:59:42,876 - NetworkIDS - INFO - [STATS] Real-time: 5,397 packets | 89.9 pps | 40 sources | 3 alerts
+2025-11-07 22:59:45,960 - INFO - ✓ Processed 80 flows | Alerts: 0
+2025-11-07 22:59:52,886 - NetworkIDS - INFO - [STATS] Real-time: 7,055 packets | 100.7 pps | 42 sources | 3 alerts
+2025-11-07 22:59:54,431 - INFO - ✓ Processed 90 flows | Alerts: 0
+2025-11-07 22:59:57,148 - INFO - ✓ Processed 100 flows | Alerts: 0
+2025-11-07 22:59:57,191 - INFO - ✓ Processed 110 flows | Alerts: 0
+2025-11-07 22:59:59,524 - INFO - ✓ Processed 120 flows | Alerts: 0
+2025-11-07 23:00:02,890 - NetworkIDS - INFO - [STATS] Real-time: 8,717 packets | 108.9 pps | 42 sources | 3 alerts
+2025-11-07 23:00:05,071 - INFO - ✓ Processed 130 flows | Alerts: 0
+2025-11-07 23:00:11,435 - INFO - ✓ Processed 140 flows | Alerts: 0
+2025-11-07 23:00:11,488 - INFO - ✓ Processed 150 flows | Alerts: 0
+2025-11-07 23:00:12,893 - NetworkIDS - INFO - [STATS] Real-time: 10,529 packets | 116.9 pps | 42 sources | 3 alerts
+2025-11-07 23:00:15,332 - INFO - ✓ Processed 160 flows | Alerts: 0
+2025-11-07 23:00:19,918 - INFO - ✓ Processed 170 flows | Alerts: 0
+2025-11-07 23:00:22,897 - NetworkIDS - INFO - [STATS] Real-time: 11,708 packets | 117.0 pps | 45 sources | 3 alerts
+2025-11-07 23:00:25,965 - INFO - ✓ Processed 180 flows | Alerts: 0
+2025-11-07 23:00:32,918 - NetworkIDS - INFO - [STATS] Real-time: 12,437 packets | 113.0 pps | 45 sources | 3 alerts
+2025-11-07 23:00:37,019 - INFO - ✓ Processed 190 flows | Alerts: 0
+2025-11-07 23:00:40,669 - INFO - ✓ Processed 200 flows | Alerts: 0
+2025-11-07 23:00:42,921 - NetworkIDS - INFO - [STATS] Real-time: 13,562 packets | 112.9 pps | 48 sources | 3 alerts
+2025-11-07 23:00:47,539 - INFO - ✓ Processed 210 flows | Alerts: 0
+2025-11-07 23:00:52,933 - NetworkIDS - INFO - [STATS] Real-time: 15,115 packets | 116.2 pps | 50 sources | 3 alerts
+2025-11-07 23:00:56,454 - INFO - ✓ Processed 220 flows | Alerts: 0
+2025-11-07 23:00:57,334 - INFO - ✓ Processed 230 flows | Alerts: 0
+2025-11-07 23:00:59,573 - INFO - ✓ Processed 240 flows | Alerts: 0
+2025-11-07 23:01:02,937 - NetworkIDS - INFO - [STATS] Real-time: 16,378 packets | 116.9 pps | 51 sources | 3 alerts
+2025-11-07 23:01:09,415 - INFO - ✓ Processed 250 flows | Alerts: 0
+2025-11-07 23:01:10,739 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 23:01:12,953 - NetworkIDS - INFO - [STATS] Real-time: 17,924 packets | 119.4 pps | 51 sources | 4 alerts
+2025-11-07 23:01:16,296 - INFO - ✓ Processed 260 flows | Alerts: 0
+2025-11-07 23:01:16,323 - INFO - ✓ Processed 270 flows | Alerts: 0
+2025-11-07 23:01:18,458 - INFO - ✓ Processed 280 flows | Alerts: 0
+2025-11-07 23:01:22,493 - INFO - ✓ Processed 290 flows | Alerts: 0
+2025-11-07 23:01:22,953 - NetworkIDS - INFO - [STATS] Real-time: 19,557 packets | 122.1 pps | 51 sources | 4 alerts
+2025-11-07 23:01:29,257 - INFO - ✓ Processed 300 flows | Alerts: 0
+2025-11-07 23:01:32,972 - NetworkIDS - INFO - [STATS] Real-time: 20,538 packets | 120.7 pps | 53 sources | 4 alerts
+2025-11-07 23:01:33,505 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-07 23:01:37,634 - INFO - ✓ Processed 310 flows | Alerts: 0
+2025-11-07 23:01:39,479 - INFO - ✓ Processed 320 flows | Alerts: 0
+2025-11-07 23:01:42,045 - INFO - ✓ Processed 330 flows | Alerts: 0
+2025-11-07 23:01:42,972 - NetworkIDS - INFO - [STATS] Real-time: 21,470 packets | 119.2 pps | 60 sources | 5 alerts
+2025-11-07 23:01:47,309 - INFO - ✓ Processed 340 flows | Alerts: 0
+2025-11-07 23:01:49,650 - INFO - ✓ Processed 350 flows | Alerts: 0
+2025-11-07 23:01:52,972 - NetworkIDS - INFO - [STATS] Real-time: 22,585 packets | 118.8 pps | 62 sources | 5 alerts
+2025-11-07 23:01:53,282 - INFO - ✓ Processed 360 flows | Alerts: 0
+2025-11-07 23:01:55,530 - INFO - ✓ Processed 370 flows | Alerts: 0
+2025-11-07 23:01:59,249 - INFO - ✓ Processed 380 flows | Alerts: 0
+2025-11-07 23:02:02,117 - INFO - ✓ Processed 390 flows | Alerts: 0
+2025-11-07 23:02:02,984 - NetworkIDS - INFO - [STATS] Real-time: 23,527 packets | 117.5 pps | 65 sources | 5 alerts
+2025-11-07 23:02:05,521 - INFO - ✓ Processed 400 flows | Alerts: 0
+2025-11-07 23:02:12,047 - INFO - ✓ Processed 410 flows | Alerts: 0
+2025-11-07 23:02:12,994 - NetworkIDS - INFO - [STATS] Real-time: 24,638 packets | 117.2 pps | 66 sources | 5 alerts
+2025-11-07 23:02:15,295 - INFO - ✓ Processed 420 flows | Alerts: 0
+2025-11-07 23:02:16,326 - INFO - ✓ Processed 430 flows | Alerts: 0
+2025-11-07 23:02:17,314 - INFO - ✓ Processed 440 flows | Alerts: 0
+2025-11-07 23:02:23,013 - NetworkIDS - INFO - [STATS] Real-time: 25,417 packets | 115.4 pps | 66 sources | 5 alerts
+2025-11-07 23:02:24,041 - INFO - ✓ Processed 450 flows | Alerts: 0
+2025-11-07 23:02:31,936 - INFO - ✓ Processed 460 flows | Alerts: 0
+2025-11-07 23:02:33,032 - NetworkIDS - INFO - [STATS] Real-time: 26,291 packets | 114.2 pps | 69 sources | 5 alerts
+2025-11-07 23:02:37,685 - INFO - ✓ Processed 470 flows | Alerts: 0
+2025-11-07 23:02:39,543 - INFO - ✓ Processed 480 flows | Alerts: 0
+2025-11-07 23:02:43,032 - NetworkIDS - INFO - [STATS] Real-time: 27,190 packets | 113.2 pps | 70 sources | 5 alerts
+2025-11-07 23:02:45,001 - INFO - ✓ Processed 490 flows | Alerts: 0
+2025-11-07 23:02:48,657 - INFO - ✓ Processed 500 flows | Alerts: 0
+2025-11-07 23:02:53,036 - NetworkIDS - INFO - [STATS] Real-time: 27,883 packets | 111.4 pps | 70 sources | 5 alerts
+2025-11-07 23:02:54,830 - INFO - ✓ Processed 510 flows | Alerts: 0
+2025-11-07 23:02:59,990 - INFO - ✓ Processed 520 flows | Alerts: 0
+2025-11-07 23:03:01,987 - INFO - ✓ Processed 530 flows | Alerts: 0
+2025-11-07 23:03:02,972 - INFO - ✓ Processed 540 flows | Alerts: 0
+2025-11-07 23:03:03,053 - NetworkIDS - INFO - [STATS] Real-time: 28,553 packets | 109.7 pps | 71 sources | 5 alerts
+2025-11-07 23:03:12,259 - INFO - ✓ Processed 550 flows | Alerts: 0
+2025-11-07 23:03:13,058 - NetworkIDS - INFO - [STATS] Real-time: 29,207 packets | 108.1 pps | 71 sources | 5 alerts
+2025-11-07 23:03:17,174 - INFO - ✓ Processed 560 flows | Alerts: 0
+2025-11-07 23:03:18,478 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 23:03:20,177 - INFO - ✓ Processed 570 flows | Alerts: 0
+2025-11-07 23:03:23,077 - NetworkIDS - INFO - [STATS] Real-time: 29,826 packets | 106.4 pps | 71 sources | 6 alerts
+2025-11-07 23:03:30,262 - INFO - ✓ Processed 580 flows | Alerts: 0
+2025-11-07 23:03:33,093 - NetworkIDS - INFO - [STATS] Real-time: 30,467 packets | 105.0 pps | 71 sources | 6 alerts
+2025-11-07 23:03:40,115 - INFO - ✓ Processed 590 flows | Alerts: 0
+2025-11-07 23:03:43,096 - NetworkIDS - INFO - [STATS] Real-time: 31,155 packets | 103.8 pps | 71 sources | 6 alerts
+2025-11-07 23:03:43,141 - INFO - ✓ Processed 600 flows | Alerts: 0
+2025-11-07 23:03:49,610 - INFO - ✓ Processed 610 flows | Alerts: 0
+2025-11-07 23:03:53,113 - NetworkIDS - INFO - [STATS] Real-time: 32,157 packets | 103.6 pps | 71 sources | 6 alerts
+2025-11-07 23:03:55,235 - INFO - ✓ Processed 620 flows | Alerts: 0
+2025-11-07 23:03:58,548 - INFO - ✓ Processed 630 flows | Alerts: 0
+2025-11-07 23:04:02,087 - INFO - ✓ Processed 640 flows | Alerts: 0
+2025-11-07 23:04:03,113 - NetworkIDS - INFO - [STATS] Real-time: 32,931 packets | 102.8 pps | 72 sources | 6 alerts
+2025-11-07 23:04:04,939 - INFO - ✓ Processed 650 flows | Alerts: 0
+2025-11-07 23:04:13,117 - NetworkIDS - INFO - [STATS] Real-time: 33,903 packets | 102.6 pps | 72 sources | 6 alerts
+2025-11-07 23:04:16,525 - INFO - ✓ Processed 660 flows | Alerts: 0
+2025-11-07 23:04:16,549 - INFO - ✓ Processed 670 flows | Alerts: 0
+2025-11-07 23:04:22,729 - INFO - ✓ Processed 680 flows | Alerts: 0
+2025-11-07 23:04:23,121 - NetworkIDS - INFO - [STATS] Real-time: 34,810 packets | 102.3 pps | 72 sources | 6 alerts
+2025-11-07 23:04:23,209 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-07 23:04:30,223 - INFO - ✓ Processed 690 flows | Alerts: 0
+2025-11-07 23:04:33,132 - NetworkIDS - INFO - [STATS] Real-time: 35,659 packets | 101.8 pps | 73 sources | 7 alerts
+2025-11-07 23:04:35,406 - INFO - ✓ Processed 700 flows | Alerts: 0
+2025-11-07 23:04:36,435 - INFO - ✓ Processed 710 flows | Alerts: 0
+2025-11-07 23:04:41,265 - INFO - ✓ Processed 720 flows | Alerts: 0
+2025-11-07 23:04:43,133 - NetworkIDS - INFO - [STATS] Real-time: 36,862 packets | 102.3 pps | 74 sources | 7 alerts
+2025-11-07 23:04:44,296 - INFO - ✓ Processed 730 flows | Alerts: 0
+2025-11-07 23:04:49,302 - INFO - ✓ Processed 740 flows | Alerts: 0
+2025-11-07 23:04:53,135 - NetworkIDS - INFO - [STATS] Real-time: 37,690 packets | 101.8 pps | 76 sources | 7 alerts
+2025-11-07 23:04:57,131 - INFO - ✓ Processed 750 flows | Alerts: 0
+2025-11-07 23:05:02,664 - INFO - ✓ Processed 760 flows | Alerts: 0
+2025-11-07 23:05:03,153 - NetworkIDS - INFO - [STATS] Real-time: 38,354 packets | 100.8 pps | 77 sources | 7 alerts
+2025-11-07 23:05:03,666 - INFO - ✓ Processed 770 flows | Alerts: 0
+2025-11-07 23:05:05,691 - INFO - ✓ Processed 780 flows | Alerts: 0
+2025-11-07 23:05:13,171 - NetworkIDS - INFO - [STATS] Real-time: 39,043 packets | 100.0 pps | 77 sources | 7 alerts
+2025-11-07 23:05:16,426 - INFO - ✓ Processed 790 flows | Alerts: 0
+2025-11-07 23:05:16,458 - INFO - ✓ Processed 800 flows | Alerts: 0
+2025-11-07 23:05:22,485 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 23:05:23,171 - NetworkIDS - INFO - [STATS] Real-time: 39,718 packets | 99.2 pps | 77 sources | 8 alerts
+2025-11-07 23:05:24,197 - INFO - ✓ Processed 810 flows | Alerts: 0
+2025-11-07 23:05:33,172 - NetworkIDS - INFO - [STATS] Real-time: 41,431 packets | 101.0 pps | 77 sources | 8 alerts
+2025-11-07 23:05:34,994 - INFO - ✓ Processed 820 flows | Alerts: 0
+2025-11-07 23:05:43,174 - NetworkIDS - INFO - [STATS] Real-time: 43,582 packets | 103.7 pps | 77 sources | 8 alerts
+2025-11-07 23:05:43,659 - INFO - ✓ Processed 830 flows | Alerts: 0
+2025-11-07 23:05:50,625 - INFO - ✓ Processed 840 flows | Alerts: 0
+2025-11-07 23:05:53,175 - NetworkIDS - INFO - [STATS] Real-time: 45,868 packets | 106.6 pps | 79 sources | 8 alerts
+2025-11-07 23:05:54,900 - INFO - ✓ Processed 850 flows | Alerts: 0
+2025-11-07 23:05:57,103 - INFO - ✓ Processed 860 flows | Alerts: 0
+2025-11-07 23:06:03,177 - NetworkIDS - INFO - [STATS] Real-time: 47,970 packets | 108.9 pps | 79 sources | 8 alerts
+2025-11-07 23:06:05,004 - INFO - ✓ Processed 870 flows | Alerts: 0
+2025-11-07 23:06:13,101 - INFO - ✓ Processed 880 flows | Alerts: 0
+2025-11-07 23:06:13,181 - NetworkIDS - INFO - [STATS] Real-time: 49,418 packets | 109.7 pps | 80 sources | 8 alerts
+2025-11-07 23:06:16,776 - INFO - ✓ Processed 890 flows | Alerts: 0
+2025-11-07 23:06:18,719 - INFO - ✓ Processed 900 flows | Alerts: 0
+2025-11-07 23:06:23,193 - NetworkIDS - INFO - [STATS] Real-time: 50,123 packets | 108.9 pps | 80 sources | 8 alerts
+2025-11-07 23:06:26,946 - INFO - ✓ Processed 910 flows | Alerts: 0
+2025-11-07 23:06:32,254 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-07 23:06:32,703 - INFO - ✓ Processed 920 flows | Alerts: 0
+2025-11-07 23:06:33,195 - NetworkIDS - INFO - [STATS] Real-time: 50,997 packets | 108.4 pps | 82 sources | 9 alerts
+2025-11-07 23:06:35,887 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 13.107.5.93 -> 192.168.1.102
+2025-11-07 23:06:38,135 - INFO - ✓ Processed 930 flows | Alerts: 0
+2025-11-07 23:06:40,393 - INFO - ✓ Processed 940 flows | Alerts: 0
+2025-11-07 23:06:43,213 - NetworkIDS - INFO - [STATS] Real-time: 51,840 packets | 107.9 pps | 83 sources | 10 alerts
+2025-11-07 23:06:49,266 - INFO - ✓ Processed 950 flows | Alerts: 0
+2025-11-07 23:06:53,232 - NetworkIDS - INFO - [STATS] Real-time: 52,568 packets | 107.2 pps | 83 sources | 10 alerts
+2025-11-07 23:06:55,585 - INFO - ✓ Processed 960 flows | Alerts: 0
+2025-11-07 23:06:59,636 - INFO - ✓ Processed 970 flows | Alerts: 0
+2025-11-07 23:07:00,585 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 34.149.206.255 -> 192.168.1.102
+2025-11-07 23:07:02,309 - INFO - ✓ Processed 980 flows | Alerts: 0
+2025-11-07 23:07:02,346 - INFO - ✓ Processed 990 flows | Alerts: 0
+2025-11-07 23:07:03,242 - NetworkIDS - INFO - [STATS] Real-time: 53,535 packets | 107.0 pps | 83 sources | 11 alerts
+2025-11-07 23:07:07,265 - INFO - ✓ Processed 1000 flows | Alerts: 0
+2025-11-07 23:07:09,394 - INFO - ✓ Processed 1010 flows | Alerts: 0
+2025-11-07 23:07:13,252 - NetworkIDS - INFO - [STATS] Real-time: 54,832 packets | 107.4 pps | 87 sources | 11 alerts
+2025-11-07 23:07:14,398 - INFO - ✓ Processed 1020 flows | Alerts: 0
+2025-11-07 23:07:16,748 - INFO - ✓ Processed 1030 flows | Alerts: 0
+2025-11-07 23:07:21,758 - INFO - ✓ Processed 1040 flows | Alerts: 0
+2025-11-07 23:07:23,257 - NetworkIDS - INFO - [STATS] Real-time: 56,039 packets | 107.7 pps | 87 sources | 11 alerts
+2025-11-07 23:07:25,489 - INFO - ✓ Processed 1050 flows | Alerts: 0
+2025-11-07 23:07:26,483 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 23:07:33,270 - NetworkIDS - INFO - [STATS] Real-time: 56,761 packets | 107.0 pps | 87 sources | 12 alerts
+2025-11-07 23:07:33,527 - INFO - ✓ Processed 1060 flows | Alerts: 0
+2025-11-07 23:07:39,164 - INFO - ✓ Processed 1070 flows | Alerts: 0
+2025-11-07 23:07:43,272 - NetworkIDS - INFO - [STATS] Real-time: 57,433 packets | 106.3 pps | 87 sources | 12 alerts
+2025-11-07 23:07:47,069 - INFO - ✓ Processed 1080 flows | Alerts: 0
+2025-11-07 23:07:51,702 - INFO - ✓ Processed 1090 flows | Alerts: 0
+2025-11-07 23:07:53,284 - NetworkIDS - INFO - [STATS] Real-time: 58,096 packets | 105.5 pps | 87 sources | 12 alerts
+2025-11-07 23:07:57,674 - INFO - ✓ Processed 1100 flows | Alerts: 0
+2025-11-07 23:08:02,363 - INFO - ✓ Processed 1110 flows | Alerts: 0
+2025-11-07 23:08:02,387 - INFO - ✓ Processed 1120 flows | Alerts: 0
+2025-11-07 23:08:03,292 - NetworkIDS - INFO - [STATS] Real-time: 59,154 packets | 105.5 pps | 87 sources | 12 alerts
+2025-11-07 23:08:04,008 - INFO - ✓ Processed 1130 flows | Alerts: 0
+2025-11-07 23:08:04,176 - INFO - ✓ Processed 1140 flows | Alerts: 0
+2025-11-07 23:08:11,061 - INFO - ✓ Processed 1150 flows | Alerts: 0
+2025-11-07 23:08:13,297 - NetworkIDS - INFO - [STATS] Real-time: 60,092 packets | 105.3 pps | 87 sources | 12 alerts
+2025-11-07 23:08:16,120 - INFO - ✓ Processed 1160 flows | Alerts: 0
+2025-11-07 23:08:17,809 - INFO - ✓ Processed 1170 flows | Alerts: 0
+2025-11-07 23:08:23,317 - NetworkIDS - INFO - [STATS] Real-time: 60,768 packets | 104.7 pps | 89 sources | 12 alerts
+2025-11-07 23:08:24,444 - INFO - ✓ Processed 1180 flows | Alerts: 0
+2025-11-07 23:08:30,029 - INFO - ✓ Processed 1190 flows | Alerts: 0
+2025-11-07 23:08:33,334 - NetworkIDS - INFO - [STATS] Real-time: 61,450 packets | 104.1 pps | 89 sources | 12 alerts
+2025-11-07 23:08:36,254 - INFO - ✓ Processed 1200 flows | Alerts: 0
+2025-11-07 23:08:42,195 - INFO - ✓ Processed 1210 flows | Alerts: 0
+2025-11-07 23:08:43,352 - NetworkIDS - INFO - [STATS] Real-time: 62,389 packets | 103.9 pps | 90 sources | 12 alerts
+2025-11-07 23:08:47,372 - INFO - ✓ Processed 1220 flows | Alerts: 0
+2025-11-07 23:08:53,357 - NetworkIDS - INFO - [STATS] Real-time: 63,502 packets | 104.0 pps | 90 sources | 12 alerts
+2025-11-07 23:08:54,599 - INFO - ✓ Processed 1230 flows | Alerts: 0
+2025-11-07 23:08:57,260 - INFO - ✓ Processed 1240 flows | Alerts: 0
+2025-11-07 23:09:02,322 - INFO - ✓ Processed 1250 flows | Alerts: 0
+2025-11-07 23:09:03,371 - NetworkIDS - INFO - [STATS] Real-time: 64,278 packets | 103.6 pps | 90 sources | 12 alerts
+2025-11-07 23:09:11,030 - INFO - ✓ Processed 1260 flows | Alerts: 0
+2025-11-07 23:09:13,373 - NetworkIDS - INFO - [STATS] Real-time: 65,665 packets | 104.1 pps | 90 sources | 12 alerts
+2025-11-07 23:09:15,809 - INFO - ✓ Processed 1270 flows | Alerts: 0
+2025-11-07 23:09:21,495 - INFO - ✓ Processed 1280 flows | Alerts: 0
+2025-11-07 23:09:23,373 - NetworkIDS - INFO - [STATS] Real-time: 67,309 packets | 105.1 pps | 91 sources | 12 alerts
+2025-11-07 23:09:29,250 - INFO - ✓ Processed 1290 flows | Alerts: 0
+2025-11-07 23:09:30,475 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 23:09:33,391 - NetworkIDS - INFO - [STATS] Real-time: 68,744 packets | 105.7 pps | 91 sources | 13 alerts
+2025-11-07 23:09:40,413 - INFO - ✓ Processed 1300 flows | Alerts: 0
+2025-11-07 23:09:43,392 - NetworkIDS - INFO - [STATS] Real-time: 70,261 packets | 106.4 pps | 91 sources | 13 alerts
+2025-11-07 23:09:44,955 - INFO - ✓ Processed 1310 flows | Alerts: 0
+2025-11-07 23:09:53,393 - NetworkIDS - INFO - [STATS] Real-time: 71,676 packets | 106.9 pps | 92 sources | 13 alerts
+2025-11-07 23:09:54,013 - INFO - ✓ Processed 1320 flows | Alerts: 0
+2025-11-07 23:09:58,123 - INFO - ✓ Processed 1330 flows | Alerts: 0
+2025-11-07 23:10:02,088 - INFO - ✓ Processed 1340 flows | Alerts: 0
+2025-11-07 23:10:03,398 - NetworkIDS - INFO - [STATS] Real-time: 72,829 packets | 107.0 pps | 92 sources | 13 alerts
+2025-11-07 23:10:07,469 - INFO - ✓ Processed 1350 flows | Alerts: 0
+2025-11-07 23:10:12,961 - INFO - ✓ Processed 1360 flows | Alerts: 0
+2025-11-07 23:10:13,413 - NetworkIDS - INFO - [STATS] Real-time: 74,508 packets | 107.9 pps | 92 sources | 13 alerts
+2025-11-07 23:10:15,989 - INFO - ✓ Processed 1370 flows | Alerts: 0
+2025-11-07 23:10:22,030 - INFO - ✓ Processed 1380 flows | Alerts: 0
+2025-11-07 23:10:23,419 - NetworkIDS - INFO - [STATS] Real-time: 75,944 packets | 108.4 pps | 92 sources | 13 alerts
+2025-11-07 23:10:28,752 - INFO - ✓ Processed 1390 flows | Alerts: 0
+2025-11-07 23:10:33,424 - NetworkIDS - INFO - [STATS] Real-time: 77,381 packets | 108.9 pps | 93 sources | 13 alerts
+2025-11-07 23:10:40,027 - INFO - ✓ Processed 1400 flows | Alerts: 0
+2025-11-07 23:10:43,424 - NetworkIDS - INFO - [STATS] Real-time: 78,786 packets | 109.3 pps | 93 sources | 13 alerts
+2025-11-07 23:10:44,436 - INFO - ✓ Processed 1410 flows | Alerts: 0
+2025-11-07 23:10:53,435 - NetworkIDS - INFO - [STATS] Real-time: 80,023 packets | 109.5 pps | 93 sources | 13 alerts
+2025-11-07 23:10:53,544 - INFO - ✓ Processed 1420 flows | Alerts: 0
+2025-11-07 23:10:57,060 - INFO - ✓ Processed 1430 flows | Alerts: 0
+2025-11-07 23:11:02,720 - INFO - ✓ Processed 1440 flows | Alerts: 0
+2025-11-07 23:11:02,747 - INFO - ✓ Processed 1450 flows | Alerts: 0
+2025-11-07 23:11:03,452 - NetworkIDS - INFO - [STATS] Real-time: 80,686 packets | 108.9 pps | 94 sources | 13 alerts
+2025-11-07 23:11:11,020 - INFO - ✓ Processed 1460 flows | Alerts: 0
+2025-11-07 23:11:13,452 - NetworkIDS - INFO - [STATS] Real-time: 81,312 packets | 108.3 pps | 94 sources | 13 alerts
+2025-11-07 23:11:15,911 - INFO - ✓ Processed 1470 flows | Alerts: 0
+2025-11-07 23:11:23,453 - NetworkIDS - INFO - [STATS] Real-time: 81,934 packets | 107.7 pps | 95 sources | 13 alerts
+2025-11-07 23:11:25,433 - INFO - ✓ Processed 1480 flows | Alerts: 0
+2025-11-07 23:11:29,473 - INFO - ✓ Processed 1490 flows | Alerts: 0
+2025-11-07 23:11:33,454 - NetworkIDS - INFO - [STATS] Real-time: 83,016 packets | 107.7 pps | 96 sources | 13 alerts
+2025-11-07 23:11:34,477 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 23:11:35,263 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-07 23:11:37,471 - INFO - ✓ Processed 1500 flows | Alerts: 0
+2025-11-07 23:11:40,419 - INFO - ✓ Processed 1510 flows | Alerts: 0
+2025-11-07 23:11:42,256 - INFO - ✓ Processed 1520 flows | Alerts: 0
+2025-11-07 23:11:43,459 - NetworkIDS - INFO - [STATS] Real-time: 84,865 packets | 108.7 pps | 97 sources | 15 alerts
+2025-11-07 23:11:47,450 - INFO - ✓ Processed 1530 flows | Alerts: 0
+2025-11-07 23:11:53,473 - NetworkIDS - INFO - [STATS] Real-time: 86,440 packets | 109.3 pps | 100 sources | 15 alerts
+2025-11-07 23:11:54,262 - INFO - ✓ Processed 1540 flows | Alerts: 0
+2025-11-07 23:11:56,536 - INFO - ✓ Processed 1550 flows | Alerts: 0
+2025-11-07 23:12:01,298 - INFO - ✓ Processed 1560 flows | Alerts: 0
+2025-11-07 23:12:03,473 - NetworkIDS - INFO - [STATS] Real-time: 87,852 packets | 109.7 pps | 100 sources | 15 alerts
+2025-11-07 23:12:04,302 - INFO - ✓ Processed 1570 flows | Alerts: 0
+2025-11-07 23:12:13,494 - NetworkIDS - INFO - [STATS] Real-time: 88,958 packets | 109.7 pps | 100 sources | 15 alerts
+2025-11-07 23:12:14,584 - INFO - ✓ Processed 1580 flows | Alerts: 0
+2025-11-07 23:12:16,623 - INFO - ✓ Processed 1590 flows | Alerts: 0
+2025-11-07 23:12:17,616 - INFO - ✓ Processed 1600 flows | Alerts: 0
+2025-11-07 23:12:23,513 - NetworkIDS - INFO - [STATS] Real-time: 89,593 packets | 109.2 pps | 102 sources | 15 alerts
+2025-11-07 23:12:28,639 - INFO - ✓ Processed 1610 flows | Alerts: 0
+2025-11-07 23:12:32,203 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 192.168.1.100 -> 192.168.1.102
+2025-11-07 23:12:32,214 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-07 23:12:33,533 - NetworkIDS - INFO - [STATS] Real-time: 91,110 packets | 109.7 pps | 102 sources | 17 alerts
+2025-11-07 23:12:36,246 - INFO - ✓ Processed 1620 flows | Alerts: 0
+2025-11-07 23:12:37,444 - INFO - ✓ Processed 1630 flows | Alerts: 0
+2025-11-07 23:12:37,533 - INFO - ✓ Processed 1640 flows | Alerts: 0
+2025-11-07 23:12:38,391 - INFO - ✓ Processed 1650 flows | Alerts: 0
+2025-11-07 23:12:38,504 - INFO - ✓ Processed 1660 flows | Alerts: 0
+2025-11-07 23:12:38,537 - INFO - ✓ Processed 1670 flows | Alerts: 0
+2025-11-07 23:12:38,572 - INFO - ✓ Processed 1680 flows | Alerts: 0
+2025-11-07 23:12:38,604 - INFO - ✓ Processed 1690 flows | Alerts: 0
+2025-11-07 23:12:38,636 - INFO - ✓ Processed 1700 flows | Alerts: 0
+2025-11-07 23:12:38,667 - INFO - ✓ Processed 1710 flows | Alerts: 0
+2025-11-07 23:12:38,698 - INFO - ✓ Processed 1720 flows | Alerts: 0
+2025-11-07 23:12:38,727 - INFO - ✓ Processed 1730 flows | Alerts: 0
+2025-11-07 23:12:38,755 - INFO - ✓ Processed 1740 flows | Alerts: 0
+2025-11-07 23:12:38,785 - INFO - ✓ Processed 1750 flows | Alerts: 0
+2025-11-07 23:12:38,813 - INFO - ✓ Processed 1760 flows | Alerts: 0
+2025-11-07 23:12:38,846 - INFO - ✓ Processed 1770 flows | Alerts: 0
+2025-11-07 23:12:38,876 - INFO - ✓ Processed 1780 flows | Alerts: 0
+2025-11-07 23:12:38,906 - INFO - ✓ Processed 1790 flows | Alerts: 0
+2025-11-07 23:12:38,938 - INFO - ✓ Processed 1800 flows | Alerts: 0
+2025-11-07 23:12:38,974 - INFO - ✓ Processed 1810 flows | Alerts: 0
+2025-11-07 23:12:39,005 - INFO - ✓ Processed 1820 flows | Alerts: 0
+2025-11-07 23:12:39,040 - INFO - ✓ Processed 1830 flows | Alerts: 0
+2025-11-07 23:12:39,077 - INFO - ✓ Processed 1840 flows | Alerts: 0
+2025-11-07 23:12:39,109 - INFO - ✓ Processed 1850 flows | Alerts: 0
+2025-11-07 23:12:39,147 - INFO - ✓ Processed 1860 flows | Alerts: 0
+2025-11-07 23:12:39,181 - INFO - ✓ Processed 1870 flows | Alerts: 0
+2025-11-07 23:12:39,214 - INFO - ✓ Processed 1880 flows | Alerts: 0
+2025-11-07 23:12:39,250 - INFO - ✓ Processed 1890 flows | Alerts: 0
+2025-11-07 23:12:39,463 - INFO - ✓ Processed 1900 flows | Alerts: 0
+2025-11-07 23:12:39,564 - INFO - ✓ Processed 1910 flows | Alerts: 0
+2025-11-07 23:12:39,598 - INFO - ✓ Processed 1920 flows | Alerts: 0
+2025-11-07 23:12:39,632 - INFO - ✓ Processed 1930 flows | Alerts: 0
+2025-11-07 23:12:39,665 - INFO - ✓ Processed 1940 flows | Alerts: 0
+2025-11-07 23:12:39,696 - INFO - ✓ Processed 1950 flows | Alerts: 0
+2025-11-07 23:12:39,724 - INFO - ✓ Processed 1960 flows | Alerts: 0
+2025-11-07 23:12:39,757 - INFO - ✓ Processed 1970 flows | Alerts: 0
+2025-11-07 23:12:39,792 - INFO - ✓ Processed 1980 flows | Alerts: 0
+2025-11-07 23:12:39,823 - INFO - ✓ Processed 1990 flows | Alerts: 0
+2025-11-07 23:12:39,859 - INFO - ✓ Processed 2000 flows | Alerts: 0
+2025-11-07 23:12:39,889 - INFO - ✓ Processed 2010 flows | Alerts: 0
+2025-11-07 23:12:39,919 - INFO - ✓ Processed 2020 flows | Alerts: 0
+2025-11-07 23:12:39,953 - INFO - ✓ Processed 2030 flows | Alerts: 0
+2025-11-07 23:12:39,986 - INFO - ✓ Processed 2040 flows | Alerts: 0
+2025-11-07 23:12:40,019 - INFO - ✓ Processed 2050 flows | Alerts: 0
+2025-11-07 23:12:40,052 - INFO - ✓ Processed 2060 flows | Alerts: 0
+2025-11-07 23:12:40,085 - INFO - ✓ Processed 2070 flows | Alerts: 0
+2025-11-07 23:12:40,115 - INFO - ✓ Processed 2080 flows | Alerts: 0
+2025-11-07 23:12:40,149 - INFO - ✓ Processed 2090 flows | Alerts: 0
+2025-11-07 23:12:40,183 - INFO - ✓ Processed 2100 flows | Alerts: 0
+2025-11-07 23:12:40,219 - INFO - ✓ Processed 2110 flows | Alerts: 0
+2025-11-07 23:12:40,259 - INFO - ✓ Processed 2120 flows | Alerts: 0
+2025-11-07 23:12:40,305 - INFO - ✓ Processed 2130 flows | Alerts: 0
+2025-11-07 23:12:40,567 - INFO - ✓ Processed 2140 flows | Alerts: 0
+2025-11-07 23:12:40,607 - INFO - ✓ Processed 2150 flows | Alerts: 0
+2025-11-07 23:12:40,642 - INFO - ✓ Processed 2160 flows | Alerts: 0
+2025-11-07 23:12:40,670 - INFO - ✓ Processed 2170 flows | Alerts: 0
+2025-11-07 23:12:40,705 - INFO - ✓ Processed 2180 flows | Alerts: 0
+2025-11-07 23:12:40,739 - INFO - ✓ Processed 2190 flows | Alerts: 0
+2025-11-07 23:12:40,770 - INFO - ✓ Processed 2200 flows | Alerts: 0
+2025-11-07 23:12:40,806 - INFO - ✓ Processed 2210 flows | Alerts: 0
+2025-11-07 23:12:40,837 - INFO - ✓ Processed 2220 flows | Alerts: 0
+2025-11-07 23:12:40,869 - INFO - ✓ Processed 2230 flows | Alerts: 0
+2025-11-07 23:12:40,902 - INFO - ✓ Processed 2240 flows | Alerts: 0
+2025-11-07 23:12:40,930 - INFO - ✓ Processed 2250 flows | Alerts: 0
+2025-11-07 23:12:40,964 - INFO - ✓ Processed 2260 flows | Alerts: 0
+2025-11-07 23:12:40,995 - INFO - ✓ Processed 2270 flows | Alerts: 0
+2025-11-07 23:12:41,024 - INFO - ✓ Processed 2280 flows | Alerts: 0
+2025-11-07 23:12:41,060 - INFO - ✓ Processed 2290 flows | Alerts: 0
+2025-11-07 23:12:41,089 - INFO - ✓ Processed 2300 flows | Alerts: 0
+2025-11-07 23:12:41,120 - INFO - ✓ Processed 2310 flows | Alerts: 0
+2025-11-07 23:12:41,155 - INFO - ✓ Processed 2320 flows | Alerts: 0
+2025-11-07 23:12:41,185 - INFO - ✓ Processed 2330 flows | Alerts: 0
+2025-11-07 23:12:41,220 - INFO - ✓ Processed 2340 flows | Alerts: 0
+2025-11-07 23:12:41,254 - INFO - ✓ Processed 2350 flows | Alerts: 0
+2025-11-07 23:12:41,317 - INFO - ✓ Processed 2360 flows | Alerts: 0
+2025-11-07 23:12:41,550 - INFO - ✓ Processed 2370 flows | Alerts: 0
+2025-11-07 23:12:41,605 - INFO - ✓ Processed 2380 flows | Alerts: 0
+2025-11-07 23:12:41,636 - INFO - ✓ Processed 2390 flows | Alerts: 0
+2025-11-07 23:12:41,667 - INFO - ✓ Processed 2400 flows | Alerts: 0
+2025-11-07 23:12:41,703 - INFO - ✓ Processed 2410 flows | Alerts: 0
+2025-11-07 23:12:41,737 - INFO - ✓ Processed 2420 flows | Alerts: 0
+2025-11-07 23:12:41,768 - INFO - ✓ Processed 2430 flows | Alerts: 0
+2025-11-07 23:12:41,800 - INFO - ✓ Processed 2440 flows | Alerts: 0
+2025-11-07 23:12:41,834 - INFO - ✓ Processed 2450 flows | Alerts: 0
+2025-11-07 23:12:41,864 - INFO - ✓ Processed 2460 flows | Alerts: 0
+2025-11-07 23:12:41,890 - INFO - ✓ Processed 2470 flows | Alerts: 0
+2025-11-07 23:12:41,929 - INFO - ✓ Processed 2480 flows | Alerts: 0
+2025-11-07 23:12:41,960 - INFO - ✓ Processed 2490 flows | Alerts: 0
+2025-11-07 23:12:41,988 - INFO - ✓ Processed 2500 flows | Alerts: 0
+2025-11-07 23:12:42,020 - INFO - ✓ Processed 2510 flows | Alerts: 0
+2025-11-07 23:12:42,054 - INFO - ✓ Processed 2520 flows | Alerts: 0
+2025-11-07 23:12:42,084 - INFO - ✓ Processed 2530 flows | Alerts: 0
+2025-11-07 23:12:42,114 - INFO - ✓ Processed 2540 flows | Alerts: 0
+2025-11-07 23:12:42,144 - INFO - ✓ Processed 2550 flows | Alerts: 0
+2025-11-07 23:12:42,173 - INFO - ✓ Processed 2560 flows | Alerts: 0
+2025-11-07 23:12:42,204 - INFO - ✓ Processed 2570 flows | Alerts: 0
+2025-11-07 23:12:42,235 - INFO - ✓ Processed 2580 flows | Alerts: 0
+2025-11-07 23:12:42,270 - INFO - ✓ Processed 2590 flows | Alerts: 0
+2025-11-07 23:12:42,306 - INFO - ✓ Processed 2600 flows | Alerts: 0
+2025-11-07 23:12:42,491 - INFO - ✓ Processed 2610 flows | Alerts: 0
+2025-11-07 23:12:42,674 - INFO - ✓ Processed 2620 flows | Alerts: 0
+2025-11-07 23:12:42,705 - INFO - ✓ Processed 2630 flows | Alerts: 0
+2025-11-07 23:12:42,734 - INFO - ✓ Processed 2640 flows | Alerts: 0
+2025-11-07 23:12:42,763 - INFO - ✓ Processed 2650 flows | Alerts: 0
+2025-11-07 23:12:42,790 - INFO - ✓ Processed 2660 flows | Alerts: 0
+2025-11-07 23:12:42,820 - INFO - ✓ Processed 2670 flows | Alerts: 0
+2025-11-07 23:12:42,852 - INFO - ✓ Processed 2680 flows | Alerts: 0
+2025-11-07 23:12:42,881 - INFO - ✓ Processed 2690 flows | Alerts: 0
+2025-11-07 23:12:42,911 - INFO - ✓ Processed 2700 flows | Alerts: 0
+2025-11-07 23:12:42,942 - INFO - ✓ Processed 2710 flows | Alerts: 0
+2025-11-07 23:12:42,974 - INFO - ✓ Processed 2720 flows | Alerts: 0
+2025-11-07 23:12:43,003 - INFO - ✓ Processed 2730 flows | Alerts: 0
+2025-11-07 23:12:43,030 - INFO - ✓ Processed 2740 flows | Alerts: 0
+2025-11-07 23:12:43,058 - INFO - ✓ Processed 2750 flows | Alerts: 0
+2025-11-07 23:12:43,088 - INFO - ✓ Processed 2760 flows | Alerts: 0
+2025-11-07 23:12:43,119 - INFO - ✓ Processed 2770 flows | Alerts: 0
+2025-11-07 23:12:43,146 - INFO - ✓ Processed 2780 flows | Alerts: 0
+2025-11-07 23:12:43,172 - INFO - ✓ Processed 2790 flows | Alerts: 0
+2025-11-07 23:12:43,202 - INFO - ✓ Processed 2800 flows | Alerts: 0
+2025-11-07 23:12:43,234 - INFO - ✓ Processed 2810 flows | Alerts: 0
+2025-11-07 23:12:43,263 - INFO - ✓ Processed 2820 flows | Alerts: 0
+2025-11-07 23:12:43,292 - INFO - ✓ Processed 2830 flows | Alerts: 0
+2025-11-07 23:12:43,452 - INFO - ✓ Processed 2840 flows | Alerts: 0
+2025-11-07 23:12:43,533 - NetworkIDS - INFO - [STATS] Real-time: 96,194 packets | 114.4 pps | 103 sources | 17 alerts
+2025-11-07 23:12:43,608 - INFO - ✓ Processed 2850 flows | Alerts: 0
+2025-11-07 23:12:43,664 - INFO - ✓ Processed 2860 flows | Alerts: 0
+2025-11-07 23:12:43,699 - INFO - ✓ Processed 2870 flows | Alerts: 0
+2025-11-07 23:12:43,736 - INFO - ✓ Processed 2880 flows | Alerts: 0
+2025-11-07 23:12:43,766 - INFO - ✓ Processed 2890 flows | Alerts: 0
+2025-11-07 23:12:43,795 - INFO - ✓ Processed 2900 flows | Alerts: 0
+2025-11-07 23:12:43,822 - INFO - ✓ Processed 2910 flows | Alerts: 0
+2025-11-07 23:12:43,867 - INFO - ✓ Processed 2920 flows | Alerts: 0
+2025-11-07 23:12:43,902 - INFO - ✓ Processed 2930 flows | Alerts: 0
+2025-11-07 23:12:43,930 - INFO - ✓ Processed 2940 flows | Alerts: 0
+2025-11-07 23:12:43,959 - INFO - ✓ Processed 2950 flows | Alerts: 0
+2025-11-07 23:12:43,986 - INFO - ✓ Processed 2960 flows | Alerts: 0
+2025-11-07 23:12:44,022 - INFO - ✓ Processed 2970 flows | Alerts: 0
+2025-11-07 23:12:44,052 - INFO - ✓ Processed 2980 flows | Alerts: 0
+2025-11-07 23:12:44,083 - INFO - ✓ Processed 2990 flows | Alerts: 0
+2025-11-07 23:12:44,109 - INFO - ✓ Processed 3000 flows | Alerts: 0
+2025-11-07 23:12:44,142 - INFO - ✓ Processed 3010 flows | Alerts: 0
+2025-11-07 23:12:44,172 - INFO - ✓ Processed 3020 flows | Alerts: 0
+2025-11-07 23:12:44,205 - INFO - ✓ Processed 3030 flows | Alerts: 0
+2025-11-07 23:12:44,236 - INFO - ✓ Processed 3040 flows | Alerts: 0
+2025-11-07 23:12:44,267 - INFO - ✓ Processed 3050 flows | Alerts: 0
+2025-11-07 23:12:44,299 - INFO - ✓ Processed 3060 flows | Alerts: 0
+2025-11-07 23:12:44,329 - INFO - ✓ Processed 3070 flows | Alerts: 0
+2025-11-07 23:12:44,484 - INFO - ✓ Processed 3080 flows | Alerts: 0
+2025-11-07 23:12:44,645 - INFO - ✓ Processed 3090 flows | Alerts: 0
+2025-11-07 23:12:44,675 - INFO - ✓ Processed 3100 flows | Alerts: 0
+2025-11-07 23:12:44,709 - INFO - ✓ Processed 3110 flows | Alerts: 0
+2025-11-07 23:12:44,739 - INFO - ✓ Processed 3120 flows | Alerts: 0
+2025-11-07 23:12:44,771 - INFO - ✓ Processed 3130 flows | Alerts: 0
+2025-11-07 23:12:44,803 - INFO - ✓ Processed 3140 flows | Alerts: 0
+2025-11-07 23:12:44,835 - INFO - ✓ Processed 3150 flows | Alerts: 0
+2025-11-07 23:12:44,882 - INFO - ✓ Processed 3160 flows | Alerts: 0
+2025-11-07 23:12:44,920 - INFO - ✓ Processed 3170 flows | Alerts: 0
+2025-11-07 23:12:44,952 - INFO - ✓ Processed 3180 flows | Alerts: 0
+2025-11-07 23:12:44,986 - INFO - ✓ Processed 3190 flows | Alerts: 0
+2025-11-07 23:12:45,018 - INFO - ✓ Processed 3200 flows | Alerts: 0
+2025-11-07 23:12:45,052 - INFO - ✓ Processed 3210 flows | Alerts: 0
+2025-11-07 23:12:45,082 - INFO - ✓ Processed 3220 flows | Alerts: 0
+2025-11-07 23:12:45,109 - INFO - ✓ Processed 3230 flows | Alerts: 0
+2025-11-07 23:12:45,140 - INFO - ✓ Processed 3240 flows | Alerts: 0
+2025-11-07 23:12:45,166 - INFO - ✓ Processed 3250 flows | Alerts: 0
+2025-11-07 23:12:45,198 - INFO - ✓ Processed 3260 flows | Alerts: 0
+2025-11-07 23:12:45,226 - INFO - ✓ Processed 3270 flows | Alerts: 0
+2025-11-07 23:12:45,252 - INFO - ✓ Processed 3280 flows | Alerts: 0
+2025-11-07 23:12:45,280 - INFO - ✓ Processed 3290 flows | Alerts: 0
+2025-11-07 23:12:45,309 - INFO - ✓ Processed 3300 flows | Alerts: 0
+2025-11-07 23:12:45,347 - INFO - ✓ Processed 3310 flows | Alerts: 0
+2025-11-07 23:12:45,456 - INFO - ✓ Processed 3320 flows | Alerts: 0
+2025-11-07 23:12:45,676 - INFO - ✓ Processed 3330 flows | Alerts: 0
+2025-11-07 23:12:45,707 - INFO - ✓ Processed 3340 flows | Alerts: 0
+2025-11-07 23:12:45,736 - INFO - ✓ Processed 3350 flows | Alerts: 0
+2025-11-07 23:12:45,764 - INFO - ✓ Processed 3360 flows | Alerts: 0
+2025-11-07 23:12:45,796 - INFO - ✓ Processed 3370 flows | Alerts: 0
+2025-11-07 23:12:45,820 - INFO - ✓ Processed 3380 flows | Alerts: 0
+2025-11-07 23:12:45,850 - INFO - ✓ Processed 3390 flows | Alerts: 0
+2025-11-07 23:12:45,880 - INFO - ✓ Processed 3400 flows | Alerts: 0
+2025-11-07 23:12:45,908 - INFO - ✓ Processed 3410 flows | Alerts: 0
+2025-11-07 23:12:45,950 - INFO - ✓ Processed 3420 flows | Alerts: 0
+2025-11-07 23:12:45,995 - INFO - ✓ Processed 3430 flows | Alerts: 0
+2025-11-07 23:12:46,030 - INFO - ✓ Processed 3440 flows | Alerts: 0
+2025-11-07 23:12:46,065 - INFO - ✓ Processed 3450 flows | Alerts: 0
+2025-11-07 23:12:46,100 - INFO - ✓ Processed 3460 flows | Alerts: 0
+2025-11-07 23:12:46,140 - INFO - ✓ Processed 3470 flows | Alerts: 0
+2025-11-07 23:12:46,177 - INFO - ✓ Processed 3480 flows | Alerts: 0
+2025-11-07 23:12:46,215 - INFO - ✓ Processed 3490 flows | Alerts: 0
+2025-11-07 23:12:46,247 - INFO - ✓ Processed 3500 flows | Alerts: 0
+2025-11-07 23:12:46,278 - INFO - ✓ Processed 3510 flows | Alerts: 0
+2025-11-07 23:12:46,308 - INFO - ✓ Processed 3520 flows | Alerts: 0
+2025-11-07 23:12:46,343 - INFO - ✓ Processed 3530 flows | Alerts: 0
+2025-11-07 23:12:46,376 - INFO - ✓ Processed 3540 flows | Alerts: 0
+2025-11-07 23:12:46,566 - INFO - ✓ Processed 3550 flows | Alerts: 0
+2025-11-07 23:12:46,725 - INFO - ✓ Processed 3560 flows | Alerts: 0
+2025-11-07 23:12:46,756 - INFO - ✓ Processed 3570 flows | Alerts: 0
+2025-11-07 23:12:46,787 - INFO - ✓ Processed 3580 flows | Alerts: 0
+2025-11-07 23:12:46,820 - INFO - ✓ Processed 3590 flows | Alerts: 0
+2025-11-07 23:12:46,856 - INFO - ✓ Processed 3600 flows | Alerts: 0
+2025-11-07 23:12:46,895 - INFO - ✓ Processed 3610 flows | Alerts: 0
+2025-11-07 23:12:46,930 - INFO - ✓ Processed 3620 flows | Alerts: 0
+2025-11-07 23:12:46,968 - INFO - ✓ Processed 3630 flows | Alerts: 0
+2025-11-07 23:12:47,002 - INFO - ✓ Processed 3640 flows | Alerts: 0
+2025-11-07 23:12:47,036 - INFO - ✓ Processed 3650 flows | Alerts: 0
+2025-11-07 23:12:47,080 - INFO - ✓ Processed 3660 flows | Alerts: 0
+2025-11-07 23:12:47,378 - INFO - ✓ Processed 3670 flows | Alerts: 0
+2025-11-07 23:12:47,864 - INFO - ✓ Processed 3680 flows | Alerts: 0
+2025-11-07 23:12:48,104 - INFO - ✓ Processed 3690 flows | Alerts: 0
+2025-11-07 23:12:48,336 - INFO - ✓ Processed 3700 flows | Alerts: 0
+2025-11-07 23:12:48,385 - INFO - ✓ Processed 3710 flows | Alerts: 0
+2025-11-07 23:12:48,578 - INFO - ✓ Processed 3720 flows | Alerts: 0
+2025-11-07 23:12:48,813 - INFO - ✓ Processed 3730 flows | Alerts: 0
+2025-11-07 23:12:48,876 - INFO - ✓ Processed 3740 flows | Alerts: 0
+2025-11-07 23:12:48,926 - INFO - ✓ Processed 3750 flows | Alerts: 0
+2025-11-07 23:12:48,984 - INFO - ✓ Processed 3760 flows | Alerts: 0
+2025-11-07 23:12:49,041 - INFO - ✓ Processed 3770 flows | Alerts: 0
+2025-11-07 23:12:49,088 - INFO - ✓ Processed 3780 flows | Alerts: 0
+2025-11-07 23:12:49,168 - INFO - ✓ Processed 3790 flows | Alerts: 0
+2025-11-07 23:12:49,517 - INFO - ✓ Processed 3800 flows | Alerts: 0
+2025-11-07 23:12:49,802 - INFO - ✓ Processed 3810 flows | Alerts: 0
+2025-11-07 23:12:49,966 - INFO - ✓ Processed 3820 flows | Alerts: 0
+2025-11-07 23:12:50,140 - INFO - ✓ Processed 3830 flows | Alerts: 0
+2025-11-07 23:12:50,181 - INFO - ✓ Processed 3840 flows | Alerts: 0
+2025-11-07 23:12:50,236 - INFO - ✓ Processed 3850 flows | Alerts: 0
+2025-11-07 23:12:50,285 - INFO - ✓ Processed 3860 flows | Alerts: 0
+2025-11-07 23:12:50,329 - INFO - ✓ Processed 3870 flows | Alerts: 0
+2025-11-07 23:12:50,367 - INFO - ✓ Processed 3880 flows | Alerts: 0
+2025-11-07 23:12:50,409 - INFO - ✓ Processed 3890 flows | Alerts: 0
+2025-11-07 23:12:50,546 - INFO - ✓ Processed 3900 flows | Alerts: 0
+2025-11-07 23:12:50,733 - INFO - ✓ Processed 3910 flows | Alerts: 0
+2025-11-07 23:12:50,840 - INFO - ✓ Processed 3920 flows | Alerts: 0
+2025-11-07 23:12:50,880 - INFO - ✓ Processed 3930 flows | Alerts: 0
+2025-11-07 23:12:50,918 - INFO - ✓ Processed 3940 flows | Alerts: 0
+2025-11-07 23:12:50,965 - INFO - ✓ Processed 3950 flows | Alerts: 0
+2025-11-07 23:12:51,002 - INFO - ✓ Processed 3960 flows | Alerts: 0
+2025-11-07 23:12:51,039 - INFO - ✓ Processed 3970 flows | Alerts: 0
+2025-11-07 23:12:51,075 - INFO - ✓ Processed 3980 flows | Alerts: 0
+2025-11-07 23:12:51,112 - INFO - ✓ Processed 3990 flows | Alerts: 0
+2025-11-07 23:12:51,153 - INFO - ✓ Processed 4000 flows | Alerts: 0
+2025-11-07 23:12:51,197 - INFO - ✓ Processed 4010 flows | Alerts: 0
+2025-11-07 23:12:51,237 - INFO - ✓ Processed 4020 flows | Alerts: 0
+2025-11-07 23:12:51,285 - INFO - ✓ Processed 4030 flows | Alerts: 0
+2025-11-07 23:12:51,335 - INFO - ✓ Processed 4040 flows | Alerts: 0
+2025-11-07 23:12:51,382 - INFO - ✓ Processed 4050 flows | Alerts: 0
+2025-11-07 23:12:51,427 - INFO - ✓ Processed 4060 flows | Alerts: 0
+2025-11-07 23:12:51,669 - INFO - ✓ Processed 4070 flows | Alerts: 0
+2025-11-07 23:12:51,956 - INFO - ✓ Processed 4080 flows | Alerts: 0
+2025-11-07 23:12:52,399 - INFO - ✓ Processed 4090 flows | Alerts: 0
+2025-11-07 23:12:52,642 - INFO - ✓ Processed 4100 flows | Alerts: 0
+2025-11-07 23:12:52,906 - INFO - ✓ Processed 4110 flows | Alerts: 0
+2025-11-07 23:12:53,030 - INFO - ✓ Processed 4120 flows | Alerts: 0
+2025-11-07 23:12:53,078 - INFO - ✓ Processed 4130 flows | Alerts: 0
+2025-11-07 23:12:53,130 - INFO - ✓ Processed 4140 flows | Alerts: 0
+2025-11-07 23:12:53,173 - INFO - ✓ Processed 4150 flows | Alerts: 0
+2025-11-07 23:12:53,215 - INFO - ✓ Processed 4160 flows | Alerts: 0
+2025-11-07 23:12:53,252 - INFO - ✓ Processed 4170 flows | Alerts: 0
+2025-11-07 23:12:53,300 - INFO - ✓ Processed 4180 flows | Alerts: 0
+2025-11-07 23:12:53,340 - INFO - ✓ Processed 4190 flows | Alerts: 0
+2025-11-07 23:12:53,380 - INFO - ✓ Processed 4200 flows | Alerts: 0
+2025-11-07 23:12:53,460 - INFO - ✓ Processed 4210 flows | Alerts: 0
+2025-11-07 23:12:53,534 - NetworkIDS - INFO - [STATS] Real-time: 102,003 packets | 119.9 pps | 103 sources | 17 alerts
+2025-11-07 23:12:53,646 - INFO - ✓ Processed 4220 flows | Alerts: 0
+2025-11-07 23:12:53,930 - INFO - ✓ Processed 4230 flows | Alerts: 0
+2025-11-07 23:12:54,008 - INFO - ✓ Processed 4240 flows | Alerts: 0
+2025-11-07 23:12:54,051 - INFO - ✓ Processed 4250 flows | Alerts: 0
+2025-11-07 23:12:54,098 - INFO - ✓ Processed 4260 flows | Alerts: 0
+2025-11-07 23:12:54,147 - INFO - ✓ Processed 4270 flows | Alerts: 0
+2025-11-07 23:12:54,198 - INFO - ✓ Processed 4280 flows | Alerts: 0
+2025-11-07 23:12:54,242 - INFO - ✓ Processed 4290 flows | Alerts: 0
+2025-11-07 23:12:54,283 - INFO - ✓ Processed 4300 flows | Alerts: 0
+2025-11-07 23:12:54,336 - INFO - ✓ Processed 4310 flows | Alerts: 0
+2025-11-07 23:12:54,417 - INFO - ✓ Processed 4320 flows | Alerts: 0
+2025-11-07 23:12:54,578 - INFO - ✓ Processed 4330 flows | Alerts: 0
+2025-11-07 23:12:54,759 - INFO - ✓ Processed 4340 flows | Alerts: 0
+2025-11-07 23:12:54,935 - INFO - ✓ Processed 4350 flows | Alerts: 0
+2025-11-07 23:12:54,977 - INFO - ✓ Processed 4360 flows | Alerts: 0
+2025-11-07 23:12:55,029 - INFO - ✓ Processed 4370 flows | Alerts: 0
+2025-11-07 23:12:55,067 - INFO - ✓ Processed 4380 flows | Alerts: 0
+2025-11-07 23:12:55,102 - INFO - ✓ Processed 4390 flows | Alerts: 0
+2025-11-07 23:12:55,150 - INFO - ✓ Processed 4400 flows | Alerts: 0
+2025-11-07 23:12:55,186 - INFO - ✓ Processed 4410 flows | Alerts: 0
+2025-11-07 23:12:55,222 - INFO - ✓ Processed 4420 flows | Alerts: 0
+2025-11-07 23:12:55,276 - INFO - ✓ Processed 4430 flows | Alerts: 0
+2025-11-07 23:12:55,312 - INFO - ✓ Processed 4440 flows | Alerts: 0
+2025-11-07 23:12:55,362 - INFO - ✓ Processed 4450 flows | Alerts: 0
+2025-11-07 23:12:55,400 - INFO - ✓ Processed 4460 flows | Alerts: 0
+2025-11-07 23:12:55,444 - INFO - ✓ Processed 4470 flows | Alerts: 0
+2025-11-07 23:12:55,488 - INFO - ✓ Processed 4480 flows | Alerts: 0
+2025-11-07 23:12:55,567 - INFO - ✓ Processed 4490 flows | Alerts: 0
+2025-11-07 23:12:55,783 - INFO - ✓ Processed 4500 flows | Alerts: 0
+2025-11-07 23:12:55,886 - INFO - ✓ Processed 4510 flows | Alerts: 0
+2025-11-07 23:12:55,929 - INFO - ✓ Processed 4520 flows | Alerts: 0
+2025-11-07 23:12:55,967 - INFO - ✓ Processed 4530 flows | Alerts: 0
+2025-11-07 23:12:56,009 - INFO - ✓ Processed 4540 flows | Alerts: 0
+2025-11-07 23:12:56,049 - INFO - ✓ Processed 4550 flows | Alerts: 0
+2025-11-07 23:12:56,088 - INFO - ✓ Processed 4560 flows | Alerts: 0
+2025-11-07 23:12:56,133 - INFO - ✓ Processed 4570 flows | Alerts: 0
+2025-11-07 23:12:56,168 - INFO - ✓ Processed 4580 flows | Alerts: 0
+2025-11-07 23:12:56,212 - INFO - ✓ Processed 4590 flows | Alerts: 0
+2025-11-07 23:12:56,266 - INFO - ✓ Processed 4600 flows | Alerts: 0
+2025-11-07 23:12:56,312 - INFO - ✓ Processed 4610 flows | Alerts: 0
+2025-11-07 23:12:56,352 - INFO - ✓ Processed 4620 flows | Alerts: 0
+2025-11-07 23:12:56,397 - INFO - ✓ Processed 4630 flows | Alerts: 0
+2025-11-07 23:12:56,437 - INFO - ✓ Processed 4640 flows | Alerts: 0
+2025-11-07 23:12:56,477 - INFO - ✓ Processed 4650 flows | Alerts: 0
+2025-11-07 23:12:56,517 - INFO - ✓ Processed 4660 flows | Alerts: 0
+2025-11-07 23:12:56,649 - INFO - ✓ Processed 4670 flows | Alerts: 0
+2025-11-07 23:12:56,862 - INFO - ✓ Processed 4680 flows | Alerts: 0
+2025-11-07 23:12:56,900 - INFO - ✓ Processed 4690 flows | Alerts: 0
+2025-11-07 23:12:56,938 - INFO - ✓ Processed 4700 flows | Alerts: 0
+2025-11-07 23:12:56,978 - INFO - ✓ Processed 4710 flows | Alerts: 0
+2025-11-07 23:12:57,019 - INFO - ✓ Processed 4720 flows | Alerts: 0
+2025-11-07 23:12:57,060 - INFO - ✓ Processed 4730 flows | Alerts: 0
+2025-11-07 23:12:57,097 - INFO - ✓ Processed 4740 flows | Alerts: 0
+2025-11-07 23:12:57,135 - INFO - ✓ Processed 4750 flows | Alerts: 0
+2025-11-07 23:12:57,173 - INFO - ✓ Processed 4760 flows | Alerts: 0
+2025-11-07 23:12:57,215 - INFO - ✓ Processed 4770 flows | Alerts: 0
+2025-11-07 23:12:57,249 - INFO - ✓ Processed 4780 flows | Alerts: 0
+2025-11-07 23:12:57,297 - INFO - ✓ Processed 4790 flows | Alerts: 0
+2025-11-07 23:12:57,344 - INFO - ✓ Processed 4800 flows | Alerts: 0
+2025-11-07 23:12:57,385 - INFO - ✓ Processed 4810 flows | Alerts: 0
+2025-11-07 23:12:57,424 - INFO - ✓ Processed 4820 flows | Alerts: 0
+2025-11-07 23:12:57,465 - INFO - ✓ Processed 4830 flows | Alerts: 0
+2025-11-07 23:12:57,499 - INFO - ✓ Processed 4840 flows | Alerts: 0
+2025-11-07 23:12:57,539 - INFO - ✓ Processed 4850 flows | Alerts: 0
+2025-11-07 23:12:57,578 - INFO - ✓ Processed 4860 flows | Alerts: 0
+2025-11-07 23:12:57,623 - INFO - ✓ Processed 4870 flows | Alerts: 0
+2025-11-07 23:12:57,668 - INFO - ✓ Processed 4880 flows | Alerts: 0
+2025-11-07 23:12:57,709 - INFO - ✓ Processed 4890 flows | Alerts: 0
+2025-11-07 23:12:57,752 - INFO - ✓ Processed 4900 flows | Alerts: 0
+2025-11-07 23:12:57,790 - INFO - ✓ Processed 4910 flows | Alerts: 0
+2025-11-07 23:12:57,829 - INFO - ✓ Processed 4920 flows | Alerts: 0
+2025-11-07 23:12:57,863 - INFO - ✓ Processed 4930 flows | Alerts: 0
+2025-11-07 23:12:57,897 - INFO - ✓ Processed 4940 flows | Alerts: 0
+2025-11-07 23:12:57,936 - INFO - ✓ Processed 4950 flows | Alerts: 0
+2025-11-07 23:12:57,970 - INFO - ✓ Processed 4960 flows | Alerts: 0
+2025-11-07 23:12:58,007 - INFO - ✓ Processed 4970 flows | Alerts: 0
+2025-11-07 23:12:58,040 - INFO - ✓ Processed 4980 flows | Alerts: 0
+2025-11-07 23:12:58,077 - INFO - ✓ Processed 4990 flows | Alerts: 0
+2025-11-07 23:12:58,119 - INFO - ✓ Processed 5000 flows | Alerts: 0
+2025-11-07 23:12:58,162 - INFO - ✓ Processed 5010 flows | Alerts: 0
+2025-11-07 23:12:58,202 - INFO - ✓ Processed 5020 flows | Alerts: 0
+2025-11-07 23:12:58,248 - INFO - ✓ Processed 5030 flows | Alerts: 0
+2025-11-07 23:12:58,300 - INFO - ✓ Processed 5040 flows | Alerts: 0
+2025-11-07 23:12:58,336 - INFO - ✓ Processed 5050 flows | Alerts: 0
+2025-11-07 23:12:58,371 - INFO - ✓ Processed 5060 flows | Alerts: 0
+2025-11-07 23:12:58,405 - INFO - ✓ Processed 5070 flows | Alerts: 0
+2025-11-07 23:12:58,443 - INFO - ✓ Processed 5080 flows | Alerts: 0
+2025-11-07 23:12:58,474 - INFO - ✓ Processed 5090 flows | Alerts: 0
+2025-11-07 23:12:58,506 - INFO - ✓ Processed 5100 flows | Alerts: 0
+2025-11-07 23:12:58,548 - INFO - ✓ Processed 5110 flows | Alerts: 0
+2025-11-07 23:12:58,583 - INFO - ✓ Processed 5120 flows | Alerts: 0
+2025-11-07 23:12:58,628 - INFO - ✓ Processed 5130 flows | Alerts: 0
+2025-11-07 23:12:58,682 - INFO - ✓ Processed 5140 flows | Alerts: 0
+2025-11-07 23:12:58,729 - INFO - ✓ Processed 5150 flows | Alerts: 0
+2025-11-07 23:12:58,770 - INFO - ✓ Processed 5160 flows | Alerts: 0
+2025-11-07 23:12:58,812 - INFO - ✓ Processed 5170 flows | Alerts: 0
+2025-11-07 23:12:58,855 - INFO - ✓ Processed 5180 flows | Alerts: 0
+2025-11-07 23:12:58,900 - INFO - ✓ Processed 5190 flows | Alerts: 0
+2025-11-07 23:12:58,947 - INFO - ✓ Processed 5200 flows | Alerts: 0
+2025-11-07 23:12:58,999 - INFO - ✓ Processed 5210 flows | Alerts: 0
+2025-11-07 23:12:59,042 - INFO - ✓ Processed 5220 flows | Alerts: 0
+2025-11-07 23:12:59,082 - INFO - ✓ Processed 5230 flows | Alerts: 0
+2025-11-07 23:12:59,118 - INFO - ✓ Processed 5240 flows | Alerts: 0
+2025-11-07 23:12:59,164 - INFO - ✓ Processed 5250 flows | Alerts: 0
+2025-11-07 23:12:59,198 - INFO - ✓ Processed 5260 flows | Alerts: 0
+2025-11-07 23:12:59,240 - INFO - ✓ Processed 5270 flows | Alerts: 0
+2025-11-07 23:12:59,286 - INFO - ✓ Processed 5280 flows | Alerts: 0
+2025-11-07 23:12:59,326 - INFO - ✓ Processed 5290 flows | Alerts: 0
+2025-11-07 23:12:59,386 - INFO - ✓ Processed 5300 flows | Alerts: 0
+2025-11-07 23:12:59,446 - INFO - ✓ Processed 5310 flows | Alerts: 0
+2025-11-07 23:12:59,480 - INFO - ✓ Processed 5320 flows | Alerts: 0
+2025-11-07 23:12:59,524 - INFO - ✓ Processed 5330 flows | Alerts: 0
+2025-11-07 23:12:59,564 - INFO - ✓ Processed 5340 flows | Alerts: 0
+2025-11-07 23:12:59,600 - INFO - ✓ Processed 5350 flows | Alerts: 0
+2025-11-07 23:12:59,641 - INFO - ✓ Processed 5360 flows | Alerts: 0
+2025-11-07 23:12:59,676 - INFO - ✓ Processed 5370 flows | Alerts: 0
+2025-11-07 23:12:59,718 - INFO - ✓ Processed 5380 flows | Alerts: 0
+2025-11-07 23:12:59,763 - INFO - ✓ Processed 5390 flows | Alerts: 0
+2025-11-07 23:12:59,800 - INFO - ✓ Processed 5400 flows | Alerts: 0
+2025-11-07 23:12:59,835 - INFO - ✓ Processed 5410 flows | Alerts: 0
+2025-11-07 23:12:59,879 - INFO - ✓ Processed 5420 flows | Alerts: 0
+2025-11-07 23:12:59,929 - INFO - ✓ Processed 5430 flows | Alerts: 0
+2025-11-07 23:12:59,966 - INFO - ✓ Processed 5440 flows | Alerts: 0
+2025-11-07 23:13:00,010 - INFO - ✓ Processed 5450 flows | Alerts: 0
+2025-11-07 23:13:00,055 - INFO - ✓ Processed 5460 flows | Alerts: 0
+2025-11-07 23:13:00,086 - INFO - ✓ Processed 5470 flows | Alerts: 0
+2025-11-07 23:22:07,088 - NetworkIDS - INFO - [SHIELD] Starting Enhanced Network IDS (Scapy Engine)...
+2025-11-07 23:22:07,088 - NetworkIDS - INFO - Writing alerts to: D:\CapstoneProject-main\CapstoneProject-main\ids-dashboard-frontend\public\ids_alerts.json
+2025-11-07 23:22:07,089 - NetworkIDS - INFO - [OK] IDS started successfully. Monitoring network traffic...
+2025-11-07 23:22:07,089 - NetworkIDS - INFO - [STOP] Press Ctrl+C to stop.
+2025-11-07 23:22:17,093 - NetworkIDS - INFO - [STATS] Real-time: 1,061 packets | 106.1 pps | 17 sources | 0 alerts
+2025-11-07 23:22:25,485 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 23:22:27,094 - NetworkIDS - INFO - [STATS] Real-time: 1,754 packets | 87.7 pps | 27 sources | 1 alerts
+2025-11-07 23:22:37,094 - NetworkIDS - INFO - [STATS] Real-time: 2,377 packets | 79.2 pps | 31 sources | 1 alerts
+2025-11-07 23:22:47,096 - NetworkIDS - INFO - [STATS] Real-time: 3,208 packets | 80.2 pps | 36 sources | 1 alerts
+2025-11-07 23:22:57,100 - NetworkIDS - INFO - [STATS] Real-time: 4,339 packets | 86.8 pps | 41 sources | 1 alerts
+2025-11-07 23:22:58,951 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 192.168.1.100 -> 192.168.1.102
+2025-11-07 23:22:58,985 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-07 23:23:07,101 - NetworkIDS - INFO - [STATS] Real-time: 8,935 packets | 148.9 pps | 41 sources | 3 alerts
+2025-11-07 23:23:17,107 - NetworkIDS - INFO - [STATS] Real-time: 14,650 packets | 209.2 pps | 41 sources | 3 alerts
+2025-11-07 23:23:27,113 - NetworkIDS - INFO - [STATS] Real-time: 20,107 packets | 251.3 pps | 41 sources | 3 alerts
+2025-11-07 23:23:37,115 - NetworkIDS - INFO - [STATS] Real-time: 25,911 packets | 287.8 pps | 41 sources | 3 alerts
+2025-11-07 23:23:47,125 - NetworkIDS - INFO - [STATS] Real-time: 31,880 packets | 318.7 pps | 41 sources | 3 alerts
+2025-11-07 23:23:57,127 - NetworkIDS - INFO - [STATS] Real-time: 35,239 packets | 320.2 pps | 41 sources | 3 alerts
+2025-11-07 23:29:35,885 - NetworkIDS - INFO - [SHIELD] Starting Enhanced Network IDS (Scapy Engine)...
+2025-11-07 23:29:35,885 - NetworkIDS - INFO - Writing alerts to: D:\CapstoneProject-main\CapstoneProject-main\ids-dashboard-frontend\public\ids_alerts.json
+2025-11-07 23:29:35,886 - NetworkIDS - INFO - [OK] IDS started successfully. Monitoring network traffic...
+2025-11-07 23:29:35,886 - NetworkIDS - INFO - [STOP] Press Ctrl+C to stop.
+2025-11-07 23:29:45,886 - NetworkIDS - INFO - [STATS] Real-time: 1,008 packets | 100.8 pps | 24 sources | 0 alerts
+2025-11-07 23:29:47,290 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 23:29:55,888 - NetworkIDS - INFO - [STATS] Real-time: 1,930 packets | 96.5 pps | 33 sources | 1 alerts
+2025-11-07 23:30:05,888 - NetworkIDS - INFO - [STATS] Real-time: 3,033 packets | 101.1 pps | 35 sources | 1 alerts
+2025-11-07 23:30:15,895 - NetworkIDS - INFO - [STATS] Real-time: 4,159 packets | 104.0 pps | 37 sources | 1 alerts
+2025-11-07 23:30:25,896 - NetworkIDS - INFO - [STATS] Real-time: 4,983 packets | 99.6 pps | 39 sources | 1 alerts
+2025-11-07 23:30:35,915 - NetworkIDS - INFO - [STATS] Real-time: 6,132 packets | 102.2 pps | 40 sources | 1 alerts
+2025-11-07 23:30:45,916 - NetworkIDS - INFO - [STATS] Real-time: 7,108 packets | 101.5 pps | 42 sources | 1 alerts
+2025-11-07 23:30:55,916 - NetworkIDS - INFO - [STATS] Real-time: 7,984 packets | 99.8 pps | 43 sources | 1 alerts
+2025-11-07 23:31:05,919 - NetworkIDS - INFO - [STATS] Real-time: 9,041 packets | 100.4 pps | 43 sources | 1 alerts
+2025-11-07 23:31:15,936 - NetworkIDS - INFO - [STATS] Real-time: 10,130 packets | 101.2 pps | 43 sources | 1 alerts
+2025-11-07 23:31:25,940 - NetworkIDS - INFO - [STATS] Real-time: 10,972 packets | 99.7 pps | 43 sources | 1 alerts
+2025-11-07 23:31:35,942 - NetworkIDS - INFO - [STATS] Real-time: 11,898 packets | 99.1 pps | 45 sources | 1 alerts
+2025-11-07 23:31:45,955 - NetworkIDS - INFO - [STATS] Real-time: 13,081 packets | 100.6 pps | 46 sources | 1 alerts
+2025-11-07 23:31:48,139 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-07 23:31:55,957 - NetworkIDS - INFO - [STATS] Real-time: 14,862 packets | 106.1 pps | 48 sources | 2 alerts
+2025-11-07 23:32:05,957 - NetworkIDS - INFO - [STATS] Real-time: 16,928 packets | 112.8 pps | 48 sources | 2 alerts
+2025-11-07 23:32:10,769 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 23:32:15,958 - NetworkIDS - INFO - [STATS] Real-time: 19,463 packets | 121.6 pps | 48 sources | 3 alerts
+2025-11-07 23:32:25,960 - NetworkIDS - INFO - [STATS] Real-time: 21,763 packets | 128.0 pps | 51 sources | 3 alerts
+2025-11-07 23:32:35,960 - NetworkIDS - INFO - [STATS] Real-time: 24,098 packets | 133.8 pps | 53 sources | 3 alerts
+2025-11-07 23:32:45,964 - NetworkIDS - INFO - [STATS] Real-time: 26,575 packets | 139.8 pps | 53 sources | 3 alerts
+2025-11-07 23:32:55,966 - NetworkIDS - INFO - [STATS] Real-time: 28,773 packets | 143.8 pps | 53 sources | 3 alerts
+2025-11-07 23:33:05,974 - NetworkIDS - INFO - [STATS] Real-time: 31,117 packets | 148.1 pps | 56 sources | 3 alerts
+2025-11-07 23:33:15,976 - NetworkIDS - INFO - [STATS] Real-time: 33,441 packets | 151.9 pps | 57 sources | 3 alerts
+2025-11-07 23:33:25,986 - NetworkIDS - INFO - [STATS] Real-time: 35,988 packets | 156.4 pps | 57 sources | 3 alerts
+2025-11-07 23:33:35,985 - NetworkIDS - INFO - [STATS] Real-time: 38,607 packets | 160.8 pps | 57 sources | 3 alerts
+2025-11-07 23:33:45,992 - NetworkIDS - INFO - [STATS] Real-time: 41,126 packets | 164.4 pps | 57 sources | 3 alerts
+2025-11-07 23:33:55,995 - NetworkIDS - INFO - [STATS] Real-time: 43,819 packets | 168.5 pps | 57 sources | 3 alerts
+2025-11-07 23:34:05,997 - NetworkIDS - INFO - [STATS] Real-time: 46,042 packets | 170.5 pps | 58 sources | 3 alerts
+2025-11-07 23:34:16,009 - NetworkIDS - INFO - [STATS] Real-time: 48,237 packets | 172.2 pps | 58 sources | 3 alerts
+2025-11-07 23:34:18,476 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 23:34:18,537 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-07 23:34:26,016 - NetworkIDS - INFO - [STATS] Real-time: 50,667 packets | 174.6 pps | 59 sources | 5 alerts
+2025-11-07 23:34:36,017 - NetworkIDS - INFO - [STATS] Real-time: 52,727 packets | 175.7 pps | 59 sources | 5 alerts
+2025-11-07 23:34:46,018 - NetworkIDS - INFO - [STATS] Real-time: 55,881 packets | 180.2 pps | 61 sources | 5 alerts
+2025-11-07 23:34:49,008 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 34.149.206.255 -> 192.168.1.102
+2025-11-07 23:34:56,023 - NetworkIDS - INFO - [STATS] Real-time: 58,996 packets | 184.3 pps | 65 sources | 6 alerts
+2025-11-07 23:35:06,025 - NetworkIDS - INFO - [STATS] Real-time: 61,736 packets | 187.0 pps | 65 sources | 6 alerts
+2025-11-07 23:35:16,026 - NetworkIDS - INFO - [STATS] Real-time: 64,594 packets | 189.9 pps | 65 sources | 6 alerts
+2025-11-07 23:35:26,028 - NetworkIDS - INFO - [STATS] Real-time: 67,488 packets | 192.7 pps | 65 sources | 6 alerts
+2025-11-07 23:35:36,035 - NetworkIDS - INFO - [STATS] Real-time: 69,537 packets | 193.1 pps | 65 sources | 6 alerts
+2025-11-07 23:35:46,039 - NetworkIDS - INFO - [STATS] Real-time: 70,242 packets | 189.8 pps | 66 sources | 6 alerts
+2025-11-07 23:35:56,040 - NetworkIDS - INFO - [STATS] Real-time: 71,595 packets | 188.3 pps | 68 sources | 6 alerts
+2025-11-07 23:36:06,040 - NetworkIDS - INFO - [STATS] Real-time: 73,951 packets | 189.5 pps | 68 sources | 6 alerts
+2025-11-07 23:36:16,055 - NetworkIDS - INFO - [STATS] Real-time: 76,122 packets | 190.2 pps | 68 sources | 6 alerts
+2025-11-07 23:36:22,486 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 23:36:25,837 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-07 23:36:26,057 - NetworkIDS - INFO - [STATS] Real-time: 77,993 packets | 190.1 pps | 68 sources | 8 alerts
+2025-11-07 23:36:34,349 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 13.107.5.93 -> 192.168.1.102
+2025-11-07 23:36:36,057 - NetworkIDS - INFO - [STATS] Real-time: 79,937 packets | 190.2 pps | 71 sources | 9 alerts
+2025-11-07 23:36:46,058 - NetworkIDS - INFO - [STATS] Real-time: 81,887 packets | 190.4 pps | 74 sources | 9 alerts
+2025-11-07 23:36:56,059 - NetworkIDS - INFO - [STATS] Real-time: 83,708 packets | 190.2 pps | 75 sources | 9 alerts
+2025-11-07 23:37:06,060 - NetworkIDS - INFO - [STATS] Real-time: 85,392 packets | 189.7 pps | 75 sources | 9 alerts
+2025-11-07 23:37:16,061 - NetworkIDS - INFO - [STATS] Real-time: 86,851 packets | 188.7 pps | 75 sources | 9 alerts
+2025-11-07 23:37:26,064 - NetworkIDS - INFO - [STATS] Real-time: 88,510 packets | 188.2 pps | 75 sources | 9 alerts
+2025-11-07 23:37:36,075 - NetworkIDS - INFO - [STATS] Real-time: 90,146 packets | 187.7 pps | 75 sources | 9 alerts
+2025-11-07 23:37:46,075 - NetworkIDS - INFO - [STATS] Real-time: 91,905 packets | 187.5 pps | 75 sources | 9 alerts
+2025-11-07 23:37:56,092 - NetworkIDS - INFO - [STATS] Real-time: 93,815 packets | 187.6 pps | 75 sources | 9 alerts
+2025-11-07 23:38:06,095 - NetworkIDS - INFO - [STATS] Real-time: 96,075 packets | 188.3 pps | 75 sources | 9 alerts
+2025-11-07 23:38:16,112 - NetworkIDS - INFO - [STATS] Real-time: 98,734 packets | 189.8 pps | 76 sources | 9 alerts
+2025-11-07 23:38:26,113 - NetworkIDS - INFO - [STATS] Real-time: 101,019 packets | 190.5 pps | 78 sources | 9 alerts
+2025-11-07 23:38:26,478 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 23:38:36,114 - NetworkIDS - INFO - [STATS] Real-time: 103,197 packets | 191.0 pps | 78 sources | 10 alerts
+2025-11-07 23:38:46,115 - NetworkIDS - INFO - [STATS] Real-time: 105,366 packets | 191.5 pps | 81 sources | 10 alerts
+2025-11-07 23:38:56,116 - NetworkIDS - INFO - [STATS] Real-time: 106,382 packets | 189.9 pps | 81 sources | 10 alerts
+2025-11-07 23:39:06,118 - NetworkIDS - INFO - [STATS] Real-time: 106,992 packets | 187.6 pps | 81 sources | 10 alerts
+2025-11-07 23:39:16,119 - NetworkIDS - INFO - [STATS] Real-time: 107,620 packets | 185.5 pps | 81 sources | 10 alerts
+2025-11-07 23:39:26,135 - NetworkIDS - INFO - [STATS] Real-time: 108,308 packets | 183.5 pps | 83 sources | 10 alerts
+2025-11-07 23:39:36,138 - NetworkIDS - INFO - [STATS] Real-time: 108,930 packets | 181.5 pps | 83 sources | 10 alerts
+2025-11-07 23:39:46,156 - NetworkIDS - INFO - [STATS] Real-time: 109,599 packets | 179.6 pps | 84 sources | 10 alerts
+2025-11-07 23:39:56,156 - NetworkIDS - INFO - [STATS] Real-time: 110,487 packets | 178.1 pps | 84 sources | 10 alerts
+2025-11-07 23:40:06,157 - NetworkIDS - INFO - [STATS] Real-time: 111,135 packets | 176.3 pps | 84 sources | 10 alerts
+2025-11-07 23:40:16,157 - NetworkIDS - INFO - [STATS] Real-time: 113,327 packets | 177.0 pps | 86 sources | 10 alerts
+2025-11-07 23:40:26,158 - NetworkIDS - INFO - [STATS] Real-time: 115,499 packets | 177.6 pps | 86 sources | 10 alerts
+2025-11-07 23:40:30,484 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 23:40:36,158 - NetworkIDS - INFO - [STATS] Real-time: 117,671 packets | 178.2 pps | 86 sources | 11 alerts
+2025-11-07 23:40:46,168 - NetworkIDS - INFO - [STATS] Real-time: 119,217 packets | 177.9 pps | 86 sources | 11 alerts
+2025-11-07 23:40:56,175 - NetworkIDS - INFO - [STATS] Real-time: 120,960 packets | 177.8 pps | 86 sources | 11 alerts
+2025-11-07 23:41:06,177 - NetworkIDS - INFO - [STATS] Real-time: 122,712 packets | 177.8 pps | 87 sources | 11 alerts
+2025-11-07 23:41:16,192 - NetworkIDS - INFO - [STATS] Real-time: 124,377 packets | 177.6 pps | 87 sources | 11 alerts
+2025-11-07 23:41:26,196 - NetworkIDS - INFO - [STATS] Real-time: 126,322 packets | 177.8 pps | 89 sources | 11 alerts
+2025-11-07 23:41:36,197 - NetworkIDS - INFO - [STATS] Real-time: 128,400 packets | 178.3 pps | 90 sources | 11 alerts
+2025-11-07 23:41:46,197 - NetworkIDS - INFO - [STATS] Real-time: 129,621 packets | 177.5 pps | 90 sources | 11 alerts
+2025-11-07 23:41:56,197 - NetworkIDS - INFO - [STATS] Real-time: 130,428 packets | 176.2 pps | 90 sources | 11 alerts
+2025-11-07 23:42:06,215 - NetworkIDS - INFO - [STATS] Real-time: 131,403 packets | 175.1 pps | 90 sources | 11 alerts
+2025-11-07 23:42:16,215 - NetworkIDS - INFO - [STATS] Real-time: 132,235 packets | 173.9 pps | 90 sources | 11 alerts
+2025-11-07 23:42:23,118 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-07 23:42:26,216 - NetworkIDS - INFO - [STATS] Real-time: 133,347 packets | 173.1 pps | 93 sources | 12 alerts
+2025-11-07 23:46:06,296 - NetworkIDS - INFO - [SHIELD] Starting Enhanced Network IDS (Scapy Engine)...
+2025-11-07 23:46:06,297 - NetworkIDS - INFO - Writing alerts to: D:\CapstoneProject-main\CapstoneProject-main\ids-dashboard-frontend\public\ids_alerts.json
+2025-11-07 23:46:06,298 - NetworkIDS - INFO - [OK] IDS started successfully. Monitoring network traffic...
+2025-11-07 23:46:06,298 - NetworkIDS - INFO - [STOP] Press Ctrl+C to stop.
+2025-11-07 23:46:16,296 - NetworkIDS - INFO - [STATS] Real-time: 1,991 packets | 199.1 pps | 14 sources | 0 alerts
+2025-11-07 23:46:17,305 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 23:46:19,450 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-07 23:46:26,299 - NetworkIDS - INFO - [STATS] Real-time: 3,855 packets | 192.7 pps | 22 sources | 2 alerts
+2025-11-07 23:46:36,300 - NetworkIDS - INFO - [STATS] Real-time: 5,788 packets | 192.9 pps | 30 sources | 2 alerts
+2025-11-07 23:46:42,084 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.100 -> 192.168.1.102
+2025-11-07 23:46:42,129 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD (Rule-Based) | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-07 23:46:46,305 - NetworkIDS - INFO - [STATS] Real-time: 9,746 packets | 243.6 pps | 33 sources | 4 alerts
+2025-11-07 23:46:49,571 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 34.149.206.255 -> 192.168.1.102
+2025-11-07 23:46:56,305 - NetworkIDS - INFO - [STATS] Real-time: 15,988 packets | 319.7 pps | 36 sources | 5 alerts
+2025-11-07 23:47:06,305 - NetworkIDS - INFO - [STATS] Real-time: 22,179 packets | 369.6 pps | 36 sources | 5 alerts
+2025-11-07 23:52:34,984 - NetworkIDS - INFO - [SHIELD] Starting Enhanced Network IDS (Scapy Engine)...
+2025-11-07 23:52:34,984 - NetworkIDS - INFO - Writing alerts to: D:\CapstoneProject-main\CapstoneProject-main\ids-dashboard-frontend\public\ids_alerts.json
+2025-11-07 23:52:34,986 - NetworkIDS - INFO - [OK] IDS started successfully. Monitoring network traffic...
+2025-11-07 23:52:34,986 - NetworkIDS - INFO - [STOP] Press Ctrl+C to stop.
+2025-11-07 23:52:44,991 - NetworkIDS - INFO - [STATS] Real-time: 650 packets | 65.0 pps | 15 sources | 0 alerts
+2025-11-07 23:52:54,485 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 23:52:54,992 - NetworkIDS - INFO - [STATS] Real-time: 2,230 packets | 111.5 pps | 26 sources | 1 alerts
+2025-11-07 23:53:04,996 - NetworkIDS - INFO - [STATS] Real-time: 4,070 packets | 135.6 pps | 29 sources | 1 alerts
+2025-11-07 23:53:14,999 - NetworkIDS - INFO - [STATS] Real-time: 6,402 packets | 160.0 pps | 31 sources | 1 alerts
+2025-11-07 23:53:25,022 - NetworkIDS - INFO - [STATS] Real-time: 8,627 packets | 172.4 pps | 32 sources | 1 alerts
+2025-11-07 23:53:35,023 - NetworkIDS - INFO - [STATS] Real-time: 11,054 packets | 184.1 pps | 32 sources | 1 alerts
+2025-11-07 23:53:45,024 - NetworkIDS - INFO - [STATS] Real-time: 13,500 packets | 192.7 pps | 33 sources | 1 alerts
+2025-11-07 23:53:55,025 - NetworkIDS - INFO - [STATS] Real-time: 15,469 packets | 193.3 pps | 35 sources | 1 alerts
+2025-11-07 23:54:05,027 - NetworkIDS - INFO - [STATS] Real-time: 17,086 packets | 189.8 pps | 35 sources | 1 alerts
+2025-11-07 23:54:15,028 - NetworkIDS - INFO - [STATS] Real-time: 19,259 packets | 192.5 pps | 35 sources | 1 alerts
+2025-11-07 23:54:25,036 - NetworkIDS - INFO - [STATS] Real-time: 21,524 packets | 195.6 pps | 35 sources | 1 alerts
+2025-11-07 23:54:35,039 - NetworkIDS - INFO - [STATS] Real-time: 24,056 packets | 200.4 pps | 36 sources | 1 alerts
+2025-11-07 23:54:45,054 - NetworkIDS - INFO - [STATS] Real-time: 26,087 packets | 200.6 pps | 36 sources | 1 alerts
+2025-11-07 23:54:55,059 - NetworkIDS - INFO - [STATS] Real-time: 28,056 packets | 200.3 pps | 39 sources | 1 alerts
+2025-11-07 23:54:58,474 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 23:55:00,645 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-07 23:55:05,060 - NetworkIDS - INFO - [STATS] Real-time: 29,698 packets | 197.9 pps | 42 sources | 3 alerts
+2025-11-07 23:55:07,442 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.100 -> 192.168.1.102
+2025-11-07 23:55:09,449 - NetworkIDS - WARNING - [ALERT] ALERT: BRUTE_FORCE (Rule-Based) | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-07 23:55:11,459 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD (Rule-Based) | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-07 23:55:15,060 - NetworkIDS - INFO - [STATS] Real-time: 33,086 packets | 206.7 pps | 43 sources | 6 alerts
+2025-11-07 23:55:25,062 - NetworkIDS - INFO - [STATS] Real-time: 35,769 packets | 210.3 pps | 43 sources | 6 alerts
+2025-11-07 23:55:35,063 - NetworkIDS - INFO - [STATS] Real-time: 37,933 packets | 210.6 pps | 46 sources | 6 alerts
+2025-11-07 23:55:45,066 - NetworkIDS - INFO - [STATS] Real-time: 40,681 packets | 214.0 pps | 47 sources | 6 alerts
+2025-11-07 23:55:55,067 - NetworkIDS - INFO - [STATS] Real-time: 42,519 packets | 212.5 pps | 48 sources | 6 alerts
+2025-11-07 23:56:05,081 - NetworkIDS - INFO - [STATS] Real-time: 44,090 packets | 209.9 pps | 49 sources | 6 alerts
+2025-11-07 23:56:15,091 - NetworkIDS - INFO - [STATS] Real-time: 45,741 packets | 207.8 pps | 52 sources | 6 alerts
+2025-11-07 23:56:25,093 - NetworkIDS - INFO - [STATS] Real-time: 47,266 packets | 205.4 pps | 52 sources | 6 alerts
+2025-11-07 23:56:35,099 - NetworkIDS - INFO - [STATS] Real-time: 48,637 packets | 202.6 pps | 53 sources | 6 alerts
+2025-11-07 23:56:41,354 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.102 -> 192.168.1.100
+2025-11-07 23:56:45,106 - NetworkIDS - INFO - [STATS] Real-time: 52,310 packets | 209.1 pps | 55 sources | 7 alerts
+2025-11-07 23:56:54,093 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD (Rule-Based) | Severity: HIGH | 192.168.1.102 -> 192.168.1.100
+2025-11-07 23:56:55,127 - NetworkIDS - INFO - [STATS] Real-time: 54,772 packets | 210.5 pps | 56 sources | 8 alerts
+2025-11-07 23:57:02,481 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 23:57:05,128 - NetworkIDS - INFO - [STATS] Real-time: 57,140 packets | 211.5 pps | 56 sources | 9 alerts
+2025-11-07 23:57:15,128 - NetworkIDS - INFO - [STATS] Real-time: 59,441 packets | 212.2 pps | 56 sources | 9 alerts
+2025-11-07 23:57:25,144 - NetworkIDS - INFO - [STATS] Real-time: 60,852 packets | 209.7 pps | 57 sources | 9 alerts
+2025-11-07 23:57:35,145 - NetworkIDS - INFO - [STATS] Real-time: 62,724 packets | 209.0 pps | 57 sources | 9 alerts
+2025-11-07 23:57:45,158 - NetworkIDS - INFO - [STATS] Real-time: 64,775 packets | 208.8 pps | 58 sources | 9 alerts
+2025-11-07 23:57:55,163 - NetworkIDS - INFO - [STATS] Real-time: 66,292 packets | 207.0 pps | 58 sources | 9 alerts
+2025-11-07 23:58:05,164 - NetworkIDS - INFO - [STATS] Real-time: 67,949 packets | 205.8 pps | 58 sources | 9 alerts
+2025-11-07 23:58:15,165 - NetworkIDS - INFO - [STATS] Real-time: 70,352 packets | 206.8 pps | 59 sources | 9 alerts
+2025-11-07 23:58:25,172 - NetworkIDS - INFO - [STATS] Real-time: 73,082 packets | 208.7 pps | 59 sources | 9 alerts
+2025-11-07 23:58:35,173 - NetworkIDS - INFO - [STATS] Real-time: 75,859 packets | 210.6 pps | 60 sources | 9 alerts
+2025-11-07 23:58:45,179 - NetworkIDS - INFO - [STATS] Real-time: 78,750 packets | 212.7 pps | 61 sources | 9 alerts
+2025-11-07 23:58:55,183 - NetworkIDS - INFO - [STATS] Real-time: 81,944 packets | 215.5 pps | 62 sources | 9 alerts
+2025-11-07 23:59:05,183 - NetworkIDS - INFO - [STATS] Real-time: 84,532 packets | 216.6 pps | 62 sources | 9 alerts
+2025-11-07 23:59:05,505 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-07 23:59:15,195 - NetworkIDS - INFO - [STATS] Real-time: 86,681 packets | 216.6 pps | 64 sources | 10 alerts
+2025-11-07 23:59:25,195 - NetworkIDS - INFO - [STATS] Real-time: 88,871 packets | 216.6 pps | 64 sources | 10 alerts
+2025-11-07 23:59:35,202 - NetworkIDS - INFO - [STATS] Real-time: 90,677 packets | 215.8 pps | 64 sources | 10 alerts
+2025-11-07 23:59:45,202 - NetworkIDS - INFO - [STATS] Real-time: 92,511 packets | 215.0 pps | 64 sources | 10 alerts
+2025-11-07 23:59:55,204 - NetworkIDS - INFO - [STATS] Real-time: 94,416 packets | 214.5 pps | 65 sources | 10 alerts
+2025-11-08 00:00:05,206 - NetworkIDS - INFO - [STATS] Real-time: 97,076 packets | 215.6 pps | 66 sources | 10 alerts
+2025-11-08 00:00:15,223 - NetworkIDS - INFO - [STATS] Real-time: 99,212 packets | 215.6 pps | 66 sources | 10 alerts
+2025-11-08 00:00:22,175 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 34.149.206.255 -> 192.168.1.102
+2025-11-08 00:00:24,340 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-08 00:00:25,225 - NetworkIDS - INFO - [STATS] Real-time: 102,188 packets | 217.3 pps | 71 sources | 12 alerts
+2025-11-08 00:00:35,226 - NetworkIDS - INFO - [STATS] Real-time: 105,184 packets | 219.0 pps | 72 sources | 12 alerts
+2025-11-08 00:00:45,231 - NetworkIDS - INFO - [STATS] Real-time: 107,890 packets | 220.1 pps | 74 sources | 12 alerts
+2025-11-08 00:00:55,233 - NetworkIDS - INFO - [STATS] Real-time: 110,640 packets | 221.2 pps | 76 sources | 12 alerts
+2025-11-08 00:01:05,239 - NetworkIDS - INFO - [STATS] Real-time: 113,362 packets | 222.2 pps | 77 sources | 12 alerts
+2025-11-08 00:01:09,493 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-08 00:01:17,442 - NetworkIDS - INFO - [SHIELD] Starting Enhanced Network IDS (Scapy Engine)...
+2025-11-08 00:01:17,442 - NetworkIDS - INFO - Writing alerts to: D:\CapstoneProject-main\CapstoneProject-main\ids-dashboard-frontend\public\ids_alerts.json
+2025-11-08 00:01:17,444 - NetworkIDS - INFO - [OK] IDS started successfully. Monitoring network traffic...
+2025-11-08 00:01:17,445 - NetworkIDS - INFO - [STOP] Press Ctrl+C to stop.
+2025-11-08 00:01:27,443 - NetworkIDS - INFO - [STATS] Real-time: 2,555 packets | 255.5 pps | 22 sources | 0 alerts
+2025-11-08 00:01:37,455 - NetworkIDS - INFO - [STATS] Real-time: 4,616 packets | 230.7 pps | 32 sources | 0 alerts
+2025-11-08 00:01:39,373 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD (Rule-Based) | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-08 00:01:47,459 - NetworkIDS - INFO - [STATS] Real-time: 7,797 packets | 259.8 pps | 37 sources | 1 alerts
+2025-11-08 00:01:57,459 - NetworkIDS - INFO - [STATS] Real-time: 9,687 packets | 242.1 pps | 42 sources | 1 alerts
+2025-11-08 00:02:07,460 - NetworkIDS - INFO - [STATS] Real-time: 11,597 packets | 231.9 pps | 42 sources | 1 alerts
+2025-11-08 00:02:17,461 - NetworkIDS - INFO - [STATS] Real-time: 14,107 packets | 235.1 pps | 42 sources | 1 alerts
+2025-11-08 00:02:27,461 - NetworkIDS - INFO - [STATS] Real-time: 16,667 packets | 238.0 pps | 44 sources | 1 alerts
+2025-11-08 00:02:37,467 - NetworkIDS - INFO - [STATS] Real-time: 18,424 packets | 230.2 pps | 45 sources | 1 alerts
+2025-11-08 00:02:47,467 - NetworkIDS - INFO - [STATS] Real-time: 20,112 packets | 223.4 pps | 45 sources | 1 alerts
+2025-11-08 00:02:57,470 - NetworkIDS - INFO - [STATS] Real-time: 21,755 packets | 217.5 pps | 45 sources | 1 alerts
+2025-11-08 00:03:07,482 - NetworkIDS - INFO - [STATS] Real-time: 23,313 packets | 211.9 pps | 47 sources | 1 alerts
+2025-11-08 00:03:17,483 - NetworkIDS - INFO - [STATS] Real-time: 24,697 packets | 205.7 pps | 47 sources | 1 alerts
+2025-11-08 00:03:27,486 - NetworkIDS - INFO - [STATS] Real-time: 26,106 packets | 200.7 pps | 47 sources | 1 alerts
+2025-11-08 00:03:37,488 - NetworkIDS - INFO - [STATS] Real-time: 27,458 packets | 196.1 pps | 48 sources | 1 alerts
+2025-11-08 00:03:47,492 - NetworkIDS - INFO - [STATS] Real-time: 29,093 packets | 193.9 pps | 50 sources | 1 alerts
+2025-11-08 00:03:57,503 - NetworkIDS - INFO - [STATS] Real-time: 30,657 packets | 191.5 pps | 50 sources | 1 alerts
+2025-11-08 00:04:07,518 - NetworkIDS - INFO - [STATS] Real-time: 32,053 packets | 188.5 pps | 50 sources | 1 alerts
+2025-11-08 00:04:17,523 - NetworkIDS - INFO - [STATS] Real-time: 33,596 packets | 186.6 pps | 50 sources | 1 alerts
+2025-11-08 00:04:27,524 - NetworkIDS - INFO - [STATS] Real-time: 35,370 packets | 186.1 pps | 51 sources | 1 alerts
+2025-11-08 00:04:37,526 - NetworkIDS - INFO - [STATS] Real-time: 37,428 packets | 187.1 pps | 52 sources | 1 alerts
+2025-11-08 00:04:47,538 - NetworkIDS - INFO - [STATS] Real-time: 39,289 packets | 187.0 pps | 54 sources | 1 alerts
+2025-11-08 00:04:57,539 - NetworkIDS - INFO - [STATS] Real-time: 42,496 packets | 193.1 pps | 55 sources | 1 alerts
+2025-11-08 00:05:07,539 - NetworkIDS - INFO - [STATS] Real-time: 46,782 packets | 203.3 pps | 55 sources | 1 alerts
+2025-11-08 00:05:17,539 - NetworkIDS - INFO - [STATS] Real-time: 50,924 packets | 212.1 pps | 57 sources | 1 alerts
+2025-11-08 00:05:27,545 - NetworkIDS - INFO - [STATS] Real-time: 54,609 packets | 218.3 pps | 57 sources | 1 alerts
+2025-11-08 00:05:37,558 - NetworkIDS - INFO - [STATS] Real-time: 58,221 packets | 223.8 pps | 58 sources | 1 alerts
+2025-11-08 00:05:52,604 - NetworkIDS - INFO - [SHIELD] Starting Enhanced Network IDS (Scapy Engine)...
+2025-11-08 00:05:52,605 - NetworkIDS - INFO - Writing alerts to: D:\CapstoneProject-main\CapstoneProject-main\ids-dashboard-frontend\public\ids_alerts.json
+2025-11-08 00:05:52,605 - NetworkIDS - INFO - [OK] IDS started successfully. Monitoring network traffic...
+2025-11-08 00:05:52,605 - NetworkIDS - INFO - [STOP] Press Ctrl+C to stop.
+2025-11-08 00:06:02,621 - NetworkIDS - INFO - [STATS] Real-time: 1,847 packets | 184.4 pps | 16 sources | 0 alerts
+2025-11-08 00:06:12,489 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-08 00:06:12,623 - NetworkIDS - INFO - [STATS] Real-time: 3,640 packets | 181.8 pps | 21 sources | 1 alerts
+2025-11-08 00:06:22,625 - NetworkIDS - INFO - [STATS] Real-time: 5,471 packets | 182.2 pps | 26 sources | 1 alerts
+2025-11-08 00:06:32,625 - NetworkIDS - INFO - [STATS] Real-time: 7,372 packets | 184.2 pps | 33 sources | 1 alerts
+2025-11-08 00:06:33,100 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.100 -> 192.168.1.102
+2025-11-08 00:06:33,131 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD (Rule-Based) | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-08 00:06:33,383 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-08 00:06:35,907 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 13.107.5.93 -> 192.168.1.102
+2025-11-08 00:06:42,626 - NetworkIDS - INFO - [STATS] Real-time: 14,317 packets | 286.2 pps | 37 sources | 5 alerts
+2025-11-08 00:06:52,627 - NetworkIDS - INFO - [STATS] Real-time: 21,668 packets | 361.0 pps | 40 sources | 5 alerts
+2025-11-08 00:07:02,628 - NetworkIDS - INFO - [STATS] Real-time: 28,680 packets | 409.6 pps | 40 sources | 5 alerts
+2025-11-08 00:07:12,628 - NetworkIDS - INFO - [STATS] Real-time: 35,687 packets | 446.0 pps | 41 sources | 5 alerts
+2025-11-08 00:07:22,628 - NetworkIDS - INFO - [STATS] Real-time: 42,201 packets | 468.8 pps | 41 sources | 5 alerts
+2025-11-08 00:07:32,629 - NetworkIDS - INFO - [STATS] Real-time: 48,799 packets | 487.9 pps | 42 sources | 5 alerts
+2025-11-08 00:08:23,554 - NetworkIDS - INFO - [SHIELD] Starting Enhanced Network IDS (Scapy Engine)...
+2025-11-08 00:08:23,555 - NetworkIDS - INFO - Writing alerts to: D:\CapstoneProject-main\CapstoneProject-main\ids-dashboard-frontend\public\ids_alerts.json
+2025-11-08 00:08:23,556 - NetworkIDS - INFO - [OK] IDS started successfully. Monitoring network traffic...
+2025-11-08 00:08:23,556 - NetworkIDS - INFO - [STOP] Press Ctrl+C to stop.
+2025-11-08 00:08:23,572 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Model-Based) | Severity: MEDIUM | 192.168.1.100 -> 192.168.1.102
+2025-11-08 00:08:23,593 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD (Model-Based) | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-08 00:08:33,563 - NetworkIDS - INFO - [STATS] Real-time: 6,999 packets | 699.3 pps | 15 sources | 2 alerts
+2025-11-08 00:08:43,564 - NetworkIDS - INFO - [STATS] Real-time: 13,829 packets | 691.1 pps | 23 sources | 2 alerts
+2025-11-08 00:08:53,566 - NetworkIDS - INFO - [STATS] Real-time: 20,716 packets | 690.3 pps | 26 sources | 2 alerts
+2025-11-08 00:08:53,792 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Model-Based) | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-08 00:08:55,882 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Model-Based) | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-08 00:09:03,568 - NetworkIDS - INFO - [STATS] Real-time: 27,990 packets | 699.5 pps | 33 sources | 4 alerts
+2025-11-08 00:09:13,568 - NetworkIDS - INFO - [STATS] Real-time: 34,887 packets | 697.6 pps | 33 sources | 4 alerts
+2025-11-08 00:09:23,574 - NetworkIDS - INFO - [STATS] Real-time: 40,094 packets | 668.0 pps | 34 sources | 4 alerts
+2025-11-08 00:09:33,584 - NetworkIDS - INFO - [STATS] Real-time: 42,108 packets | 601.3 pps | 35 sources | 4 alerts
+2025-11-08 00:09:43,585 - NetworkIDS - INFO - [STATS] Real-time: 44,313 packets | 553.7 pps | 38 sources | 4 alerts
+2025-11-08 00:09:53,588 - NetworkIDS - INFO - [STATS] Real-time: 47,019 packets | 522.2 pps | 41 sources | 4 alerts
+2025-11-08 00:10:03,591 - NetworkIDS - INFO - [STATS] Real-time: 49,901 packets | 498.8 pps | 42 sources | 4 alerts
+2025-11-08 00:10:08,651 - NetworkIDS - INFO - [SHIELD] Starting Enhanced Network IDS (Scapy Engine)...
+2025-11-08 00:10:08,652 - NetworkIDS - INFO - Writing alerts to: D:\CapstoneProject-main\CapstoneProject-main\ids-dashboard-frontend\public\ids_alerts.json
+2025-11-08 00:10:08,653 - NetworkIDS - INFO - [OK] IDS started successfully. Monitoring network traffic...
+2025-11-08 00:10:08,654 - NetworkIDS - INFO - [STOP] Press Ctrl+C to stop.
+2025-11-08 00:10:18,128 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (ML-Based) | Severity: MEDIUM | 192.168.1.100 -> 192.168.1.102
+2025-11-08 00:10:18,144 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD (ML-Based) | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-08 00:10:18,656 - NetworkIDS - INFO - [STATS] Real-time: 2,613 packets | 261.2 pps | 19 sources | 2 alerts
+2025-11-08 00:10:28,480 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (ML-Based) | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-08 00:10:28,662 - NetworkIDS - INFO - [STATS] Real-time: 5,997 packets | 299.7 pps | 22 sources | 3 alerts
+2025-11-08 00:10:36,286 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (ML-Based) | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-08 00:10:38,669 - NetworkIDS - INFO - [STATS] Real-time: 8,565 packets | 285.3 pps | 32 sources | 4 alerts
+2025-11-08 00:10:48,670 - NetworkIDS - INFO - [STATS] Real-time: 11,516 packets | 287.8 pps | 36 sources | 4 alerts
+2025-11-08 00:10:49,677 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (ML-Based) | Severity: MEDIUM | 20.189.173.5 -> 192.168.1.102
+2025-11-08 00:10:58,683 - NetworkIDS - INFO - [STATS] Real-time: 14,767 packets | 295.2 pps | 39 sources | 5 alerts
+2025-11-08 00:11:07,030 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (ML-Based) | Severity: MEDIUM | 13.89.178.27 -> 192.168.1.102
+2025-11-08 00:11:08,691 - NetworkIDS - INFO - [STATS] Real-time: 17,278 packets | 287.8 pps | 39 sources | 6 alerts
+2025-11-08 00:11:18,691 - NetworkIDS - INFO - [STATS] Real-time: 19,476 packets | 278.1 pps | 39 sources | 6 alerts
+2025-11-08 00:12:15,609 - NetworkIDS - INFO - [SHIELD] Starting Enhanced Network IDS (Scapy Engine)...
+2025-11-08 00:12:15,609 - NetworkIDS - INFO - Writing alerts to: D:\CapstoneProject-main\CapstoneProject-main\ids-dashboard-frontend\public\ids_alerts.json
+2025-11-08 00:12:15,611 - NetworkIDS - INFO - [OK] IDS started successfully. Monitoring network traffic...
+2025-11-08 00:12:15,611 - NetworkIDS - INFO - [STOP] Press Ctrl+C to stop.
+2025-11-08 00:12:25,617 - NetworkIDS - INFO - [STATS] Real-time: 1,727 packets | 172.6 pps | 12 sources | 0 alerts
+2025-11-08 00:12:30,211 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.100 -> 192.168.1.102
+2025-11-08 00:12:30,213 - NetworkIDS - ERROR - Error loading existing alerts: Expecting value: line 1 column 1 (char 0)
+2025-11-08 00:12:30,231 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD (Rule-Based) | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-08 00:12:32,484 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-08 00:12:35,624 - NetworkIDS - INFO - [STATS] Real-time: 6,103 packets | 304.9 pps | 22 sources | 3 alerts
+2025-11-08 00:12:45,628 - NetworkIDS - INFO - [STATS] Real-time: 13,265 packets | 441.9 pps | 27 sources | 3 alerts
+2025-11-08 00:12:55,628 - NetworkIDS - INFO - [STATS] Real-time: 20,842 packets | 520.8 pps | 29 sources | 3 alerts
+2025-11-08 00:13:05,628 - NetworkIDS - INFO - [STATS] Real-time: 27,389 packets | 547.6 pps | 30 sources | 3 alerts
+2025-11-08 00:13:15,641 - NetworkIDS - INFO - [STATS] Real-time: 35,017 packets | 583.3 pps | 30 sources | 3 alerts
+2025-11-08 00:13:25,642 - NetworkIDS - INFO - [STATS] Real-time: 42,666 packets | 609.2 pps | 32 sources | 3 alerts
+2025-11-08 00:13:35,642 - NetworkIDS - INFO - [STATS] Real-time: 49,128 packets | 613.8 pps | 33 sources | 3 alerts
+2025-11-08 00:13:45,646 - NetworkIDS - INFO - [STATS] Real-time: 56,125 packets | 623.4 pps | 33 sources | 3 alerts
+2025-11-08 00:13:55,647 - NetworkIDS - INFO - [STATS] Real-time: 63,457 packets | 634.3 pps | 34 sources | 3 alerts
+2025-11-08 00:14:05,649 - NetworkIDS - INFO - [STATS] Real-time: 68,609 packets | 623.5 pps | 35 sources | 3 alerts
+2025-11-08 00:14:15,651 - NetworkIDS - INFO - [STATS] Real-time: 71,895 packets | 598.9 pps | 37 sources | 3 alerts
+2025-11-08 00:14:25,660 - NetworkIDS - INFO - [STATS] Real-time: 75,475 packets | 580.3 pps | 38 sources | 3 alerts
+2025-11-08 00:14:35,486 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-08 00:14:35,664 - NetworkIDS - INFO - [STATS] Real-time: 77,381 packets | 552.5 pps | 38 sources | 4 alerts
+2025-11-08 00:14:45,666 - NetworkIDS - INFO - [STATS] Real-time: 78,844 packets | 525.4 pps | 38 sources | 4 alerts
+2025-11-08 00:14:55,668 - NetworkIDS - INFO - [STATS] Real-time: 82,325 packets | 514.3 pps | 42 sources | 4 alerts
+2025-11-08 00:15:05,669 - NetworkIDS - INFO - [STATS] Real-time: 86,372 packets | 507.9 pps | 44 sources | 4 alerts
+2025-11-08 00:20:16,277 - NetworkIDS - INFO - [SHIELD] Starting Enhanced Network IDS (Scapy Engine)...
+2025-11-08 00:20:16,278 - NetworkIDS - INFO - Writing alerts to: D:\CapstoneProject-main\CapstoneProject-main\ids-dashboard-frontend\public\ids_alerts.json
+2025-11-08 00:20:16,278 - NetworkIDS - INFO - [OK] IDS started successfully. Monitoring network traffic...
+2025-11-08 00:20:16,279 - NetworkIDS - INFO - [STOP] Press Ctrl+C to stop.
+2025-11-08 00:20:26,289 - NetworkIDS - INFO - [STATS] Real-time: 639 packets | 63.8 pps | 16 sources | 0 alerts
+2025-11-08 00:20:35,909 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.100 -> 192.168.1.102
+2025-11-08 00:20:35,921 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD (Rule-Based) | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-08 00:20:36,305 - NetworkIDS - INFO - [STATS] Real-time: 1,669 packets | 83.3 pps | 26 sources | 2 alerts
+2025-11-08 00:20:40,812 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-08 00:20:46,307 - NetworkIDS - INFO - [STATS] Real-time: 3,111 packets | 103.6 pps | 35 sources | 3 alerts
+2025-11-08 00:20:56,316 - NetworkIDS - INFO - [STATS] Real-time: 4,157 packets | 103.8 pps | 37 sources | 3 alerts
+2025-11-08 00:21:06,322 - NetworkIDS - INFO - [STATS] Real-time: 5,339 packets | 106.7 pps | 38 sources | 3 alerts
+2025-11-08 00:21:16,322 - NetworkIDS - INFO - [STATS] Real-time: 6,243 packets | 104.0 pps | 39 sources | 3 alerts
+2025-11-08 00:21:26,327 - NetworkIDS - INFO - [STATS] Real-time: 7,164 packets | 102.3 pps | 41 sources | 3 alerts
+2025-11-08 00:21:36,326 - NetworkIDS - INFO - [STATS] Real-time: 9,127 packets | 114.0 pps | 44 sources | 3 alerts
+2025-11-08 00:21:46,326 - NetworkIDS - INFO - [STATS] Real-time: 11,350 packets | 126.0 pps | 46 sources | 3 alerts
+2025-11-08 00:21:56,328 - NetworkIDS - INFO - [STATS] Real-time: 13,650 packets | 136.4 pps | 48 sources | 3 alerts
+2025-11-08 00:22:06,329 - NetworkIDS - INFO - [STATS] Real-time: 15,915 packets | 144.6 pps | 48 sources | 3 alerts
+2025-11-08 00:22:16,337 - NetworkIDS - INFO - [STATS] Real-time: 16,878 packets | 140.6 pps | 48 sources | 3 alerts
+2025-11-08 00:22:26,358 - NetworkIDS - INFO - [STATS] Real-time: 17,573 packets | 135.1 pps | 49 sources | 3 alerts
+2025-11-08 00:22:36,360 - NetworkIDS - INFO - [STATS] Real-time: 18,436 packets | 131.6 pps | 49 sources | 3 alerts
+2025-11-08 00:22:46,362 - NetworkIDS - INFO - [STATS] Real-time: 19,342 packets | 128.9 pps | 49 sources | 3 alerts
+2025-11-08 00:22:52,478 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-08 00:22:56,377 - NetworkIDS - INFO - [STATS] Real-time: 20,309 packets | 126.9 pps | 52 sources | 4 alerts
+2025-11-08 00:23:06,382 - NetworkIDS - INFO - [STATS] Real-time: 21,089 packets | 124.0 pps | 52 sources | 4 alerts
+2025-11-08 00:23:14,059 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 34.149.206.255 -> 192.168.1.102
+2025-11-08 00:23:16,384 - NetworkIDS - INFO - [STATS] Real-time: 22,263 packets | 123.6 pps | 52 sources | 5 alerts
+2025-11-08 00:23:26,399 - NetworkIDS - INFO - [STATS] Real-time: 23,273 packets | 122.4 pps | 57 sources | 5 alerts
+2025-11-08 00:23:36,401 - NetworkIDS - INFO - [STATS] Real-time: 24,497 packets | 122.4 pps | 60 sources | 5 alerts
+2025-11-08 00:23:46,402 - NetworkIDS - INFO - [STATS] Real-time: 25,491 packets | 121.3 pps | 60 sources | 5 alerts
+2025-11-08 00:23:56,404 - NetworkIDS - INFO - [STATS] Real-time: 26,541 packets | 120.6 pps | 60 sources | 5 alerts
+2025-11-08 00:24:06,418 - NetworkIDS - INFO - [STATS] Real-time: 27,532 packets | 119.6 pps | 60 sources | 5 alerts
+2025-11-08 00:24:20,275 - NetworkIDS - INFO - [SHIELD] Starting Enhanced Network IDS (Scapy Engine)...
+2025-11-08 00:24:20,275 - NetworkIDS - INFO - Writing alerts to: D:\CapstoneProject-main\CapstoneProject-main\ids-dashboard-frontend\public\ids_alerts.json
+2025-11-08 00:24:20,275 - NetworkIDS - INFO - [OK] IDS started successfully. Monitoring network traffic...
+2025-11-08 00:24:20,277 - NetworkIDS - INFO - [STOP] Press Ctrl+C to stop.
+2025-11-08 00:24:29,914 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.100 -> 192.168.1.102
+2025-11-08 00:24:29,953 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD (Rule-Based) | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-08 00:24:30,278 - NetworkIDS - INFO - [STATS] Real-time: 2,652 packets | 265.1 pps | 16 sources | 2 alerts
+2025-11-08 00:24:40,279 - NetworkIDS - INFO - [STATS] Real-time: 9,840 packets | 491.9 pps | 22 sources | 2 alerts
+2025-11-08 00:24:50,279 - NetworkIDS - INFO - [STATS] Real-time: 16,641 packets | 554.6 pps | 27 sources | 2 alerts
+2025-11-08 00:24:56,672 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 34.208.187.143 -> 192.168.1.102
+2025-11-08 00:25:00,283 - NetworkIDS - INFO - [STATS] Real-time: 24,383 packets | 609.5 pps | 31 sources | 3 alerts
+2025-11-08 00:25:10,283 - NetworkIDS - INFO - [STATS] Real-time: 31,368 packets | 627.3 pps | 32 sources | 3 alerts
+2025-11-08 00:25:20,293 - NetworkIDS - INFO - [STATS] Real-time: 38,011 packets | 633.3 pps | 33 sources | 3 alerts
+2025-11-08 00:25:30,293 - NetworkIDS - INFO - [STATS] Real-time: 45,175 packets | 645.2 pps | 34 sources | 3 alerts
+2025-11-08 00:25:40,294 - NetworkIDS - INFO - [STATS] Real-time: 51,832 packets | 647.7 pps | 34 sources | 3 alerts
+2025-11-08 00:25:50,295 - NetworkIDS - INFO - [STATS] Real-time: 57,922 packets | 643.4 pps | 34 sources | 3 alerts
+2025-11-08 00:26:00,295 - NetworkIDS - INFO - [STATS] Real-time: 63,995 packets | 639.8 pps | 36 sources | 3 alerts
+2025-11-08 00:26:10,299 - NetworkIDS - INFO - [STATS] Real-time: 70,052 packets | 636.7 pps | 36 sources | 3 alerts
+2025-11-08 00:26:12,052 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.1 -> 192.168.1.102
+2025-11-08 00:26:20,318 - NetworkIDS - INFO - [STATS] Real-time: 77,159 packets | 642.8 pps | 46 sources | 4 alerts
+2025-11-08 00:26:29,926 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.100 -> 192.168.1.102
+2025-11-08 00:26:29,976 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD (Rule-Based) | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
+2025-11-08 00:26:30,321 - NetworkIDS - INFO - [STATS] Real-time: 83,132 packets | 639.3 pps | 49 sources | 6 alerts

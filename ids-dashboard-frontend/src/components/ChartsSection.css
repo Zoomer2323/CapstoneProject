@@ -1,0 +1,21 @@
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on small screens */
+  gap: 1.5rem;
+}
+
+/* On medium screens and up, switch to 2 columns */
+@media (min-width: 768px) {
+  .charts-grid {
+    /* The first chart takes 2/3 and the second 1/3 */
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .charts-grid > *:first-child {
+    grid-column: span 2 / span 2; /* Bar chart takes 2 spans */
+  }
+
+  .charts-grid > *:last-child {
+    grid-column: span 1 / span 1; /* Doughnut chart takes 1 span */
+  }
+}

@@ -15,14 +15,38 @@ import logging
 from pathlib import Path
 import warnings
 import time
-import argparse
-import platform
-
-warnings.filterwarnings('ignore', category=UserWarning)
+import argparse  # <-- MOVED TO TOP
+import platform  # <-- MOVED TO TOP
 
 # --- CONSTANTS ---
-LOG_FILE = 'ids_alerts.log'
-JSON_FILE = 'ids_alerts.json'
+DEFAULT_LOG_FILE = 'ids_alerts.log'
+DEFAULT_JSON_FILE = 'ids_alerts.json'
+
+# --- PARSE ARGUMENTS ---
+# We do this at the top so file paths are globally defined *before* they are used.
+parser = argparse.ArgumentParser(description='ML-Based Network IDS')
+parser.add_argument('-i', '--interface', type=str, default=None,
+                    help='Network interface to monitor (default: auto-detect)')
+parser.add_argument('--model', type=str, default='rf_model_MULTI_CLASS.pkl',
+                    help='Path to ML model file')
+parser.add_argument('--scaler', type=str, default='ids_scaler_MULTI_CLASS.pkl',
+                    help='Path to scaler file')
+# --- NEW ARGUMENTS ---
+parser.add_argument('--json-file', type=str, default=DEFAULT_JSON_FILE,
+                    help=f'Path to save the JSON alerts file (default: {DEFAULT_JSON_FILE})')
+parser.add_argument('--log-file', type=str, default=DEFAULT_LOG_FILE,
+                    help=f'Path to save the log file (default: {DEFAULT_LOG_FILE})')
+
+args = parser.parse_args()
+
+# --- SET GLOBAL FILE PATHS ---
+# These are now defined by the command-line arguments
+LOG_FILE = args.log_file
+JSON_FILE = args.json_file
+# --- END OF NEW/MOVED CODE ---
+
+
+warnings.filterwarnings('ignore', category=UserWarning)
 
 CIC_IDS_2017_FEATURES = [
     ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets',
@@ -51,13 +75,15 @@ CIC_IDS_2017_FEATURES = [
 # --- LOGGING SETUP ---
 def setup_logging():
     log_format = '%(asctime)s - %(levelname)s - %(message)s'
-    log_dir = Path('logs')
+    # Use Path to handle directory creation
+    log_path = Path(LOG_FILE)
+    log_dir = log_path.parent
     log_dir.mkdir(exist_ok=True)
     
     logger = logging.getLogger('IDS')
     logger.setLevel(logging.INFO)
     
-    fh = logging.FileHandler(log_dir / LOG_FILE, encoding='utf-8')
+    fh = logging.FileHandler(log_path, encoding='utf-8') # Uses global LOG_FILE
     fh.setFormatter(logging.Formatter(log_format))
     
     ch = logging.StreamHandler(sys.stdout)
@@ -67,11 +93,12 @@ def setup_logging():
     logger.addHandler(ch)
     return logger
 
-logger = setup_logging()
+logger = setup_logging() # Now this uses the LOG_FILE path from args
 
 # --- ALERT FUNCTIONS ---
 def save_alert(alert):
     alerts = []
+    # This function now uses the global JSON_FILE path from args
     if os.path.exists(JSON_FILE):
         try:
             with open(JSON_FILE, 'r') as f:
@@ -83,6 +110,11 @@ def save_alert(alert):
     alerts = alerts[-1000:]
     
     try:
+        # Ensure the directory exists before writing
+        json_path = Path(JSON_FILE)
+        json_dir = json_path.parent
+        json_dir.mkdir(exist_ok=True)
+        
         with open(JSON_FILE, 'w') as f:
             json.dump(alerts, f, indent=2)
     except Exception as e:
@@ -361,6 +393,8 @@ class NetworkIDS:
     def start(self):
         """Start the IDS"""
         logger.info(f"Starting packet capture on: {self.interface or 'default interface'}")
+        logger.info(f"Writing alerts to: {JSON_FILE}") # <-- Added this log
+        logger.info(f"Writing logs to: {LOG_FILE}") # <-- Added this log
         logger.info("🔍 Monitoring network traffic...")
         logger.info("Press Ctrl+C to stop.\n")
         
@@ -400,7 +434,7 @@ def get_default_interface():
         import subprocess
         try:
             result = subprocess.run(['ip', 'route', 'get', '8.8.8.8'], 
-                                  capture_output=True, text=True, timeout=2)
+                                    capture_output=True, text=True, timeout=2)
             if result.returncode == 0:
                 for line in result.stdout.split('\n'):
                     if 'dev' in line:
@@ -414,15 +448,7 @@ def get_default_interface():
         return None
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='ML-Based Network IDS')
-    parser.add_argument('-i', '--interface', type=str, default=None,
-                       help='Network interface to monitor (default: auto-detect)')
-    parser.add_argument('--model', type=str, default='rf_model_MULTI_CLASS.pkl',
-                       help='Path to ML model file')
-    parser.add_argument('--scaler', type=str, default='ids_scaler_MULTI_CLASS.pkl',
-                       help='Path to scaler file')
-    
-    args = parser.parse_args()
+    # --- This block is now much smaller ---
     
     # Auto-detect interface if not provided
     interface = args.interface
