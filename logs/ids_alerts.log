@@ -21825,3 +21825,4 @@
 2025-11-08 00:26:29,926 - NetworkIDS - WARNING - [ALERT] ALERT: PORT_SCAN (Rule-Based) | Severity: MEDIUM | 192.168.1.100 -> 192.168.1.102
 2025-11-08 00:26:29,976 - NetworkIDS - WARNING - [ALERT] ALERT: CONNECTION_FLOOD (Rule-Based) | Severity: HIGH | 192.168.1.100 -> 192.168.1.102
 2025-11-08 00:26:30,321 - NetworkIDS - INFO - [STATS] Real-time: 83,132 packets | 639.3 pps | 49 sources | 6 alerts
+2025-11-08 00:26:40,326 - NetworkIDS - INFO - [STATS] Real-time: 89,596 packets | 639.7 pps | 51 sources | 6 alerts
