@@ -1,0 +1,62 @@
+2025-11-08 05:48:02,616 - INFO - ======================================================================
+2025-11-08 05:48:02,616 - INFO - 🛡️  ML-Based IDS (Alert Generator) Initializing...
+2025-11-08 05:48:02,616 - INFO - ======================================================================
+2025-11-08 05:48:02,616 - INFO - Model: rf_model_MULTI_CLASS.pkl (Ignored)
+2025-11-08 05:48:02,616 - INFO - Scaler: ids_scaler_MULTI_CLASS.pkl (Ignored)
+2025-11-08 05:48:02,616 - INFO - Interface: Intel(R) Wi-Fi 6 AX201 160MHz (Ignored)
+2025-11-08 05:48:02,617 - INFO - Writing alerts to: D:\CapstoneProject-main\CapstoneProject-main\ids-dashboard-frontend\public\ids_alerts.json
+2025-11-08 05:48:02,617 - INFO - Writing logs to: logs/ml_ids_alerts.log
+2025-11-08 05:48:02,619 - INFO - ✅ ML engine (Alert Generator) started. Generating alerts...
+2025-11-08 05:48:14,629 - WARNING - 🚨 [ML] ALERT: DDoS | 10.200.235.109 -> 192.168.1.189
+2025-11-08 05:48:26,656 - WARNING - 🚨 [ML] ALERT: DDoS | 10.200.28.64 -> 192.168.1.159
+2025-11-08 05:48:37,690 - WARNING - 🚨 [ML] ALERT: INFILTRATION | 10.200.108.27 -> 192.168.1.160
+2025-11-08 05:48:55,724 - WARNING - 🚨 [ML] ALERT: BOTNET | 10.200.119.154 -> 192.168.1.199
+2025-11-08 05:49:05,764 - WARNING - 🚨 [ML] ALERT: DDoS | 10.200.84.33 -> 192.168.1.140
+2025-11-08 05:49:21,792 - WARNING - 🚨 [ML] ALERT: BOTNET | 10.200.182.239 -> 192.168.1.133
+2025-11-08 05:49:35,901 - WARNING - 🚨 [ML] ALERT: BOTNET | 10.200.26.180 -> 192.168.1.117
+2025-11-08 05:49:52,953 - WARNING - 🚨 [ML] ALERT: BOTNET | 10.200.153.111 -> 192.168.1.185
+2025-11-08 05:50:08,978 - WARNING - 🚨 [ML] ALERT: INFILTRATION | 10.200.42.135 -> 192.168.1.192
+2025-11-08 05:50:25,999 - WARNING - 🚨 [ML] ALERT: DDoS | 10.200.135.5 -> 192.168.1.133
+2025-11-08 05:50:45,037 - WARNING - 🚨 [ML] ALERT: BOTNET | 10.200.144.33 -> 192.168.1.199
+2025-11-08 05:50:59,073 - WARNING - 🚨 [ML] ALERT: BOTNET | 10.200.64.219 -> 192.168.1.159
+2025-11-08 05:51:16,116 - WARNING - 🚨 [ML] ALERT: BOTNET | 10.200.37.242 -> 192.168.1.132
+2025-11-08 05:51:32,158 - WARNING - 🚨 [ML] ALERT: INFILTRATION | 10.200.189.253 -> 192.168.1.153
+2025-11-08 05:51:48,212 - WARNING - 🚨 [ML] ALERT: DDoS | 10.200.246.65 -> 192.168.1.177
+2025-11-08 05:52:06,257 - WARNING - 🚨 [ML] ALERT: BOTNET | 10.200.108.146 -> 192.168.1.141
+2025-11-08 05:52:26,287 - WARNING - 🚨 [ML] ALERT: BOTNET | 10.200.12.102 -> 192.168.1.158
+2025-11-08 05:52:44,324 - WARNING - 🚨 [ML] ALERT: BOTNET | 10.200.234.13 -> 192.168.1.175
+2025-11-08 05:53:00,346 - WARNING - 🚨 [ML] ALERT: INFILTRATION | 10.200.176.24 -> 192.168.1.149
+2025-11-08 05:53:18,369 - WARNING - 🚨 [ML] ALERT: BOTNET | 10.200.25.38 -> 192.168.1.103
+2025-11-08 05:53:28,400 - WARNING - 🚨 [ML] ALERT: BOTNET | 10.200.238.205 -> 192.168.1.119
+2025-11-08 05:53:46,423 - WARNING - 🚨 [ML] ALERT: BOTNET | 10.200.112.206 -> 192.168.1.175
+2025-11-08 05:54:04,450 - WARNING - 🚨 [ML] ALERT: DDoS | 10.200.171.228 -> 192.168.1.200
+2025-11-08 05:54:15,480 - WARNING - 🚨 [ML] ALERT: INFILTRATION | 10.200.167.12 -> 192.168.1.122
+2025-11-08 05:54:26,554 - WARNING - 🚨 [ML] ALERT: DDoS | 10.200.186.113 -> 192.168.1.198
+2025-11-08 05:54:36,595 - WARNING - 🚨 [ML] ALERT: DDoS | 10.200.180.205 -> 192.168.1.113
+2025-11-08 05:54:54,630 - WARNING - 🚨 [ML] ALERT: DDoS | 10.200.40.201 -> 192.168.1.191
+2025-11-08 05:55:05,968 - INFO - ======================================================================
+2025-11-08 05:55:05,968 - INFO - 🛡️  ML-Based IDS (Alert Generator) Initializing...
+2025-11-08 05:55:05,970 - INFO - ======================================================================
+2025-11-08 05:55:05,970 - INFO - Model: rf_model_MULTI_CLASS.pkl (Ignored)
+2025-11-08 05:55:05,970 - INFO - Scaler: ids_scaler_MULTI_CLASS.pkl (Ignored)
+2025-11-08 05:55:05,970 - INFO - Interface: Intel(R) Wi-Fi 6 AX201 160MHz (Ignored)
+2025-11-08 05:55:05,970 - INFO - Writing alerts to: D:\CapstoneProject-main\CapstoneProject-main\ids-dashboard-frontend\public\ids_alerts.json
+2025-11-08 05:55:05,971 - INFO - Writing logs to: logs/ml_ids_alerts.log
+2025-11-08 05:55:05,971 - INFO - ✅ ML engine (Alert Generator) started. Generating alerts...
+
+2025-11-08 06:15:05,548 - INFO - ======================================================================
+2025-11-08 06:15:05,549 - INFO - 🛡️  ML-Based IDS (Alert Generator) Initializing...
+2025-11-08 06:15:05,549 - INFO - ======================================================================
+2025-11-08 06:15:05,549 - INFO - Model: rf_model_MULTI_CLASS.pkl (Ignored)
+2025-11-08 06:15:05,549 - INFO - Scaler: ids_scaler_MULTI_CLASS.pkl (Ignored)
+2025-11-08 06:15:05,549 - INFO - Interface: Intel(R) Wi-Fi 6 AX201 160MHz (Ignored)
+2025-11-08 06:15:05,550 - INFO - Writing alerts to: D:\CapstoneProject-main\CapstoneProject-main\ids-dashboard-frontend\public\ids_alerts.json
+2025-11-08 06:15:05,550 - INFO - Writing logs to: logs/ml_ids_alerts.log
+2025-11-08 06:15:05,550 - INFO - ✅ ML engine (Alert Generator) started. Generating alerts...
+2025-11-08 06:15:53,563 - WARNING - 🚨 [ML] ALERT: BOTNET | 10.200.177.184 -> 192.168.1.102
+2025-11-08 06:16:34,606 - WARNING - 🚨 [ML] ALERT: DDoS | 10.200.54.179 -> 192.168.1.102
+2025-11-08 06:17:22,647 - WARNING - 🚨 [ML] ALERT: BOTNET | 10.200.242.93 -> 192.168.1.102
+2025-11-08 06:18:11,693 - WARNING - 🚨 [ML] ALERT: INFILTRATION | 10.200.30.131 -> 192.168.1.102
+2025-11-08 06:18:56,725 - WARNING - 🚨 [ML] ALERT: DDoS | 10.200.86.68 -> 192.168.1.102
+2025-11-08 06:19:39,757 - WARNING - 🚨 [ML] ALERT: BOTNET | 10.200.89.38 -> 192.168.1.102
+2025-11-08 06:20:28,788 - WARNING - 🚨 [ML] ALERT: BOTNET | 10.200.98.73 -> 192.168.1.102

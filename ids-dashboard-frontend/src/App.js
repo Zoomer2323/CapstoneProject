@@ -22,8 +22,7 @@ function App() {
   const [severityFilter, setSeverityFilter] = useState('all');
   const [typeFilter, setTypeFilter] = useState('all');
 
-  // --- NEW DATA FETCHING HOOK ---
-  // This hook now fetches the JSON file directly and calculates stats
+  // --- DATA FETCHING HOOK ---
   useEffect(() => {
     const pollData = async () => {
       try {
@@ -35,7 +34,6 @@ function App() {
         const data = await response.json();
 
         // 1. Transform the data to match what the app expects
-        // We flatten the 'details' object and map 'type' to 'attack_type'
         const transformedAlerts = data.map(alert => ({
           ...alert.details,                   // Spreads src_ip, dst_ip, alert_id, detection_method
           attack_type: alert.type,          // Map 'type' to 'attack_type'
@@ -48,8 +46,7 @@ function App() {
         // 2. Calculate stats manually from the transformed data
         const newStats = {
           total: transformedAlerts.length,
-          // Map "HIGH" severity alerts to the "Critical" card, as "critical" isn't in the JSON
-          critical: transformedAlerts.filter(a => a.severity?.toLowerCase() === 'high').length,
+          critical: transformedAlerts.filter(a => a.severity?.toLowerCase() === 'high').length, // Map "HIGH" to critical
           ml_detections: transformedAlerts.filter(a => a.detection_method?.toLowerCase().includes('ml')).length,
           rule_detections: transformedAlerts.filter(a => a.detection_method?.toLowerCase().includes('rule')).length,
         };
@@ -71,7 +68,6 @@ function App() {
   }, []); // Empty dependency array means this runs once on mount
 
   // Memoized filtered alerts for the table
-  // This logic now works because the data is transformed correctly
   const filteredAlerts = useMemo(() => {
     return alerts
       .filter(alert => {
@@ -98,7 +94,6 @@ function App() {
   }, [alerts, searchTerm, severityFilter, typeFilter]);
 
   // Memoized chart data for Attack Types (Doughnut)
-  // This now works because 'attack_type' is correctly mapped
   const attackTypeChartData = useMemo(() => {
     const alertsByType = {};
     alerts.forEach(alert => {
@@ -115,44 +110,67 @@ function App() {
     };
   }, [alerts]);
 
-  // Memoized chart data for Alerts over Time (Stacked Bar)
-  // This now works because 'severity' is correctly parsed
+  // --- *** THIS IS THE CHANGED SECTION *** ---
+  // Memoized chart data for Alerts over Time (Last 1 Hour by 5-min intervals)
   const alertsByTimeChartData = useMemo(() => {
     const labels = [];
-    const hourlyBuckets = {};
+    const minuteBuckets = {};
     const now = new Date();
+    const bucketSizeMinutes = 5;
+    const totalBuckets = 12; // 12 buckets of 5 minutes = 60 minutes
+    
+    // Create a set to track added labels and ensure correct order
+    const labelSet = new Set();
 
-    for (let i = 23; i >= 0; i--) {
-      const hour = new Date(now.getTime() - (i * 3600 * 1000));
-      const hourKey = format(hour, 'HH:00');
-      labels.push(hourKey);
-      hourlyBuckets[hourKey] = { critical: 0, high: 0, medium: 0 };
+    // Initialize the last 60 minutes in 5-minute intervals
+    for (let i = totalBuckets - 1; i >= 0; i--) {
+        const timeWindowEnd = new Date(now.getTime() - (i * bucketSizeMinutes * 60 * 1000));
+        
+        // Find the start of the 5-minute bucket
+        const minutes = timeWindowEnd.getMinutes();
+        const startOfBucketMinutes = minutes - (minutes % bucketSizeMinutes);
+        const bucketTime = new Date(timeWindowEnd.getFullYear(), timeWindowEnd.getMonth(), timeWindowEnd.getDate(), timeWindowEnd.getHours(), startOfBucketMinutes);
+      
+        const hourKey = format(bucketTime, 'HH:mm'); // e.g., "14:05"
+        
+        if (!labelSet.has(hourKey)) { 
+            labelSet.add(hourKey);
+            labels.push(hourKey);
+            minuteBuckets[hourKey] = { critical: 0, high: 0, medium: 0 };
+        }
     }
 
+    // Populate buckets with alert data
     alerts.forEach(alert => {
       const alertTime = new Date(alert.timestamp);
-      if ((now - alertTime) < (24 * 3600 * 1000)) {
-        const hourKey = format(alertTime, 'HH:00');
-        if (hourlyBuckets[hourKey]) {
+      // Only include alerts from the last 1 hour
+      if ((now - alertTime) < (60 * 60 * 1000)) { 
+        
+        // Find the correct 5-minute bucket for the alert
+        const minutes = alertTime.getMinutes();
+        const startOfBucketMinutes = minutes - (minutes % bucketSizeMinutes);
+        const bucketTime = new Date(alertTime.getFullYear(), alertTime.getMonth(), alertTime.getDate(), alertTime.getHours(), startOfBucketMinutes);
+        const hourKey = format(bucketTime, 'HH:mm');
+
+        if (minuteBuckets.hasOwnProperty(hourKey)) {
           const severity = alert.severity?.toLowerCase();
-          // We map 'high' severity from JSON to 'critical' bucket for the chart
-          if (severity === 'high') { 
-            hourlyBuckets[hourKey].critical++;
+          if (severity === 'high') { // Map 'high' (from JSON) to 'critical' (for chart)
+            minuteBuckets[hourKey].critical++;
           } else if (severity === 'medium') {
-            hourlyBuckets[hourKey].medium++;
+            minuteBuckets[hourKey].medium++;
           }
-          // Note: 'low' severity isn't in your JSON, so it won't be charted
         }
       }
     });
 
     return {
       labels,
-      criticalData: labels.map(label => hourlyBuckets[label].critical),
-      highData: labels.map(label => hourlyBuckets[label].high), // This will be 0, which is fine
-      mediumData: labels.map(label => hourlyBuckets[label].medium),
+      criticalData: labels.map(label => minuteBuckets[label].critical),
+      highData: labels.map(label => minuteBuckets[label].high), // Will be 0
+      mediumData: labels.map(label => minuteBuckets[label].medium),
     };
   }, [alerts]);
+  // --- *** END OF CHANGED SECTION *** ---
 
 
   // This statCards array now correctly reads the manually calculated stats

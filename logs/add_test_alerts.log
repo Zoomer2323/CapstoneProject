@@ -1,0 +1,31 @@
+2025-11-08 06:15:20,508 - INFO - Starting alert generation...
+2025-11-08 06:15:20,508 - INFO - Target file: ids-dashboard-frontend/public/ids_alerts.json
+2025-11-08 06:15:20,508 - INFO - Generating Alert: INFILTRATION | 10.200.156.167 -> 192.168.1.102
+2025-11-08 06:15:20,548 - INFO - Generating Alert: BOTNET | 10.200.157.241 -> 192.168.1.102
+2025-11-08 06:15:20,609 - INFO - Generating Alert: DDoS | 10.200.57.234 -> 192.168.1.102
+2025-11-08 06:15:20,657 - INFO - Generating Alert: BOTNET | 10.200.87.200 -> 192.168.1.102
+2025-11-08 06:15:20,703 - INFO - Generating Alert: DDoS | 10.200.60.47 -> 192.168.1.102
+2025-11-08 06:15:20,750 - INFO - Generating Alert: BOTNET | 10.200.201.26 -> 192.168.1.102
+2025-11-08 06:15:20,797 - INFO - Generating Alert: BOTNET | 10.200.208.62 -> 192.168.1.102
+2025-11-08 06:15:20,843 - INFO - Generating Alert: INFILTRATION | 10.200.7.169 -> 192.168.1.102
+2025-11-08 06:15:20,890 - INFO - Generating Alert: INFILTRATION | 10.200.127.245 -> 192.168.1.102
+2025-11-08 06:15:20,921 - INFO - Generating Alert: DDoS | 10.200.78.249 -> 192.168.1.102
+2025-11-08 06:15:20,968 - INFO - Generating Alert: DDoS | 10.200.54.177 -> 192.168.1.102
+2025-11-08 06:15:21,016 - INFO - Generating Alert: INFILTRATION | 10.200.89.172 -> 192.168.1.102
+2025-11-08 06:15:21,063 - INFO - Generating Alert: DDoS | 10.200.77.73 -> 192.168.1.102
+2025-11-08 06:15:21,142 - INFO - Generating Alert: BOTNET | 10.200.163.138 -> 192.168.1.102
+2025-11-08 06:15:21,190 - INFO - Generating Alert: BOTNET | 10.200.252.227 -> 192.168.1.102
+2025-11-08 06:15:21,237 - INFO - Generating Alert: INFILTRATION | 10.200.18.239 -> 192.168.1.102
+2025-11-08 06:15:21,283 - INFO - Generating Alert: DDoS | 10.200.173.224 -> 192.168.1.102
+2025-11-08 06:15:21,360 - INFO - Generating Alert: INFILTRATION | 10.200.75.22 -> 192.168.1.102
+2025-11-08 06:15:21,408 - INFO - Generating Alert: BOTNET | 10.200.149.176 -> 192.168.1.102
+2025-11-08 06:15:21,455 - INFO - Generating Alert: DDoS | 10.200.137.147 -> 192.168.1.102
+2025-11-08 06:15:21,501 - INFO - ✅ Success! Added 20 new alerts to ids-dashboard-frontend/public/ids_alerts.json.
+2025-11-08 06:15:29,495 - INFO - Starting alert generation...
+2025-11-08 06:15:29,495 - INFO - Target file: ids-dashboard-frontend/public/ids_alerts.json
+2025-11-08 06:15:29,495 - INFO - Generating Alert: BOTNET | 10.200.154.158 -> 192.168.1.102
+2025-11-08 06:15:29,540 - INFO - Generating Alert: INFILTRATION | 10.200.85.228 -> 192.168.1.102
+2025-11-08 06:15:29,601 - INFO - Generating Alert: BOTNET | 10.200.192.49 -> 192.168.1.102
+2025-11-08 06:15:29,648 - INFO - Generating Alert: INFILTRATION | 10.200.166.101 -> 192.168.1.102
+2025-11-08 06:15:29,695 - INFO - Generating Alert: BOTNET | 10.200.97.119 -> 192.168.1.102
+2025-11-08 06:15:29,741 - INFO - ✅ Success! Added 5 new alerts to ids-dashboard-frontend/public/ids_alerts.json.

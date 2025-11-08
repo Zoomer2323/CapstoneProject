@@ -22,26 +22,30 @@ ChartJS.register(
 );
 
 const AlertsByTimeChart = ({ chartData }) => {
+  
+  // --- THIS IS THE FIX ---
+  // We define the colors directly here instead of using CSS variables
   const data = {
     labels: chartData.labels,
     datasets: [
       {
         label: 'Critical',
         data: chartData.criticalData,
-        backgroundColor: 'var(--alert-critical)',
+        backgroundColor: '#ef4444', // Red
       },
       {
         label: 'High',
         data: chartData.highData,
-        backgroundColor: 'var(--alert-high)',
+        backgroundColor: '#f59e0b', // Orange
       },
       {
         label: 'Medium',
         data: chartData.mediumData,
-        backgroundColor: 'var(--alert-medium)',
+        backgroundColor: '#3b82f6', // Blue
       },
     ],
   };
+  // --- END OF FIX ---
 
   const options = {
     responsive: true,
@@ -74,7 +78,7 @@ const AlertsByTimeChart = ({ chartData }) => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Alerts Over Time (Last 24h)</CardTitle>
+        <CardTitle>Alerts Over Time (Last 1 Hour)</CardTitle>
       </CardHeader>
       <CardContent>
         <div style={{ height: '300px' }}>

@@ -756,5 +756,2130 @@
       "local_time": "2025-11-08 05:25:57",
       "detection_method": "Rule-Based"
     }
+  },
+  {
+    "timestamp": "2025-11-08T05:42:08.302886",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.82.45",
+      "dst_ip": "192.168.1.139",
+      "src_port": 32918,
+      "dst_port": 8080,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 1543,
+      "alert_id": "BOTNET_1762560728_8542",
+      "local_time": "2025-11-08 05:42:08"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:42:18.520023",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        60802,
+        56996,
+        54662,
+        59370,
+        65201
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762560738_8814",
+      "local_time": "2025-11-08 05:42:18",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:42:23.313055",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.155.246",
+      "dst_ip": "192.168.1.104",
+      "src_port": 25559,
+      "dst_port": 443,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 5336,
+      "alert_id": "BOTNET_1762560743_7367",
+      "local_time": "2025-11-08 05:42:23"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:42:38.338326",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.202.153",
+      "dst_ip": "192.168.1.160",
+      "src_port": 45548,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 3205,
+      "alert_id": "INFILTRATION_1762560758_3167",
+      "local_time": "2025-11-08 05:42:38"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:42:53.369735",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.192.77",
+      "dst_ip": "192.168.1.173",
+      "src_port": 13702,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 9190,
+      "alert_id": "INFILTRATION_1762560773_4486",
+      "local_time": "2025-11-08 05:42:53"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:43:03.398376",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.22.14",
+      "dst_ip": "192.168.1.150",
+      "src_port": 10212,
+      "dst_port": 443,
+      "protocol": 6,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 7155,
+      "alert_id": "DDoS_1762560783_2673",
+      "local_time": "2025-11-08 05:43:03"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:43:17.419188",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.231.222",
+      "dst_ip": "192.168.1.193",
+      "src_port": 60147,
+      "dst_port": 80,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 7510,
+      "alert_id": "BOTNET_1762560797_6520",
+      "local_time": "2025-11-08 05:43:17"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:43:28.455837",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.1.193",
+      "dst_ip": "192.168.1.164",
+      "src_port": 21071,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 2013,
+      "alert_id": "INFILTRATION_1762560808_655",
+      "local_time": "2025-11-08 05:43:28"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:43:41.485360",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.122.157",
+      "dst_ip": "192.168.1.197",
+      "src_port": 56396,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 1675,
+      "alert_id": "INFILTRATION_1762560821_2203",
+      "local_time": "2025-11-08 05:43:41"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:43:51.518542",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.80.166",
+      "dst_ip": "192.168.1.177",
+      "src_port": 37598,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 4783,
+      "alert_id": "DDoS_1762560831_635",
+      "local_time": "2025-11-08 05:43:51"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:44:02.553539",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.80.190",
+      "dst_ip": "192.168.1.118",
+      "src_port": 14239,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 2023,
+      "alert_id": "INFILTRATION_1762560842_7797",
+      "local_time": "2025-11-08 05:44:02"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:44:14.571451",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.157.91",
+      "dst_ip": "192.168.1.110",
+      "src_port": 20725,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 5294,
+      "alert_id": "INFILTRATION_1762560854_4184",
+      "local_time": "2025-11-08 05:44:14"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:44:20.650068",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        56866,
+        50852,
+        55277,
+        56374,
+        53786
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762560860_6062",
+      "local_time": "2025-11-08 05:44:20",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:44:25.601958",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.6.3",
+      "dst_ip": "192.168.1.169",
+      "src_port": 54048,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 7090,
+      "alert_id": "INFILTRATION_1762560865_8261",
+      "local_time": "2025-11-08 05:44:25"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:44:41.619637",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.237.161",
+      "dst_ip": "192.168.1.137",
+      "src_port": 43145,
+      "dst_port": 80,
+      "protocol": 17,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 3678,
+      "alert_id": "INFILTRATION_1762560881_8495",
+      "local_time": "2025-11-08 05:44:41"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:44:52.652589",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.239.248",
+      "dst_ip": "192.168.1.140",
+      "src_port": 35394,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 1884,
+      "alert_id": "DDoS_1762560892_1129",
+      "local_time": "2025-11-08 05:44:52"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:45:10.682004",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.52.54",
+      "dst_ip": "192.168.1.129",
+      "src_port": 42201,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 5848,
+      "alert_id": "DDoS_1762560910_2942",
+      "local_time": "2025-11-08 05:45:10"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:45:21.703189",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.53.54",
+      "dst_ip": "192.168.1.104",
+      "src_port": 15824,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 9490,
+      "alert_id": "INFILTRATION_1762560921_926",
+      "local_time": "2025-11-08 05:45:21"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:45:32.739743",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.174.112",
+      "dst_ip": "192.168.1.186",
+      "src_port": 13745,
+      "dst_port": 80,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 6455,
+      "alert_id": "BOTNET_1762560932_7296",
+      "local_time": "2025-11-08 05:45:32"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:45:52.769488",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.220.48",
+      "dst_ip": "192.168.1.126",
+      "src_port": 49363,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 8505,
+      "alert_id": "DDoS_1762560952_3595",
+      "local_time": "2025-11-08 05:45:52"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:46:09.796007",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.60.115",
+      "dst_ip": "192.168.1.157",
+      "src_port": 13821,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 4691,
+      "alert_id": "INFILTRATION_1762560969_7950",
+      "local_time": "2025-11-08 05:46:09"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:46:22.814630",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.222.112",
+      "dst_ip": "192.168.1.180",
+      "src_port": 40989,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 6256,
+      "alert_id": "BOTNET_1762560982_1925",
+      "local_time": "2025-11-08 05:46:22"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:46:34.413426",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        55395,
+        61575,
+        56440,
+        63230,
+        59199
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762560994_7468",
+      "local_time": "2025-11-08 05:46:34",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:46:42.838884",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.92.24",
+      "dst_ip": "192.168.1.108",
+      "src_port": 20993,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 5068,
+      "alert_id": "INFILTRATION_1762561002_9450",
+      "local_time": "2025-11-08 05:46:42"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:46:52.885775",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.70.48",
+      "dst_ip": "192.168.1.102",
+      "src_port": 15626,
+      "dst_port": 443,
+      "protocol": 6,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 5595,
+      "alert_id": "INFILTRATION_1762561012_9996",
+      "local_time": "2025-11-08 05:46:52"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:47:03.920025",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.187.174",
+      "dst_ip": "192.168.1.130",
+      "src_port": 34646,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 1020,
+      "alert_id": "BOTNET_1762561023_7791",
+      "local_time": "2025-11-08 05:47:03"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:47:18.937205",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.243.142",
+      "dst_ip": "192.168.1.131",
+      "src_port": 24227,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 5379,
+      "alert_id": "BOTNET_1762561038_955",
+      "local_time": "2025-11-08 05:47:18"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:47:28.954668",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.191.224",
+      "dst_ip": "192.168.1.142",
+      "src_port": 25561,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 5913,
+      "alert_id": "BOTNET_1762561048_8096",
+      "local_time": "2025-11-08 05:47:28"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:48:14.629106",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.235.109",
+      "dst_ip": "192.168.1.189",
+      "src_port": 28197,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 6129,
+      "alert_id": "DDoS_1762561094_623",
+      "local_time": "2025-11-08 05:48:14"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:48:26.656188",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.28.64",
+      "dst_ip": "192.168.1.159",
+      "src_port": 30600,
+      "dst_port": 443,
+      "protocol": 6,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 4540,
+      "alert_id": "DDoS_1762561106_3353",
+      "local_time": "2025-11-08 05:48:26"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:48:31.110722",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.100",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        2,
+        4,
+        5,
+        7,
+        12
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762561111_851",
+      "local_time": "2025-11-08 05:48:31",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:48:31.141875",
+    "type": "CONNECTION_FLOOD",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "192.168.1.100",
+      "dst_ip": "192.168.1.102",
+      "dst_port": "multiple",
+      "service": "Multiple services",
+      "connection_count": 40,
+      "time_window": 5,
+      "flood_type": "Destination-wide flood",
+      "alert_id": "CONNECTION_FLOOD_1762561111_6820",
+      "local_time": "2025-11-08 05:48:31",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:48:37.690179",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.108.27",
+      "dst_ip": "192.168.1.160",
+      "src_port": 13405,
+      "dst_port": 80,
+      "protocol": 17,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 9001,
+      "alert_id": "INFILTRATION_1762561117_6816",
+      "local_time": "2025-11-08 05:48:37"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:48:39.363941",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        51591,
+        65447,
+        64781,
+        57999,
+        59199
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762561119_6260",
+      "local_time": "2025-11-08 05:48:39",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:48:55.724340",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.119.154",
+      "dst_ip": "192.168.1.199",
+      "src_port": 34914,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 7941,
+      "alert_id": "BOTNET_1762561135_340",
+      "local_time": "2025-11-08 05:48:55"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:49:05.764276",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.84.33",
+      "dst_ip": "192.168.1.140",
+      "src_port": 59435,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 2678,
+      "alert_id": "DDoS_1762561145_1345",
+      "local_time": "2025-11-08 05:49:05"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:49:21.792931",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.182.239",
+      "dst_ip": "192.168.1.133",
+      "src_port": 35134,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 6114,
+      "alert_id": "BOTNET_1762561161_4370",
+      "local_time": "2025-11-08 05:49:21"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:49:35.901905",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.26.180",
+      "dst_ip": "192.168.1.117",
+      "src_port": 23045,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 3250,
+      "alert_id": "BOTNET_1762561175_1505",
+      "local_time": "2025-11-08 05:49:35"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:49:52.953932",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.153.111",
+      "dst_ip": "192.168.1.185",
+      "src_port": 49246,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 1364,
+      "alert_id": "BOTNET_1762561192_4875",
+      "local_time": "2025-11-08 05:49:52"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:50:08.978399",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.42.135",
+      "dst_ip": "192.168.1.192",
+      "src_port": 45495,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 2553,
+      "alert_id": "INFILTRATION_1762561208_2329",
+      "local_time": "2025-11-08 05:50:08"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:50:25.999997",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.135.5",
+      "dst_ip": "192.168.1.133",
+      "src_port": 63783,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 1930,
+      "alert_id": "DDoS_1762561225_6568",
+      "local_time": "2025-11-08 05:50:25"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:50:31.300131",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.100",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        5088,
+        4870,
+        5194,
+        5199,
+        5200
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762561231_9118",
+      "local_time": "2025-11-08 05:50:31",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:50:31.320195",
+    "type": "CONNECTION_FLOOD",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "192.168.1.100",
+      "dst_ip": "192.168.1.102",
+      "dst_port": "multiple",
+      "service": "Multiple services",
+      "connection_count": 40,
+      "time_window": 5,
+      "flood_type": "Destination-wide flood",
+      "alert_id": "CONNECTION_FLOOD_1762561231_6820",
+      "local_time": "2025-11-08 05:50:31",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:50:45.037386",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.144.33",
+      "dst_ip": "192.168.1.199",
+      "src_port": 40207,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 9505,
+      "alert_id": "BOTNET_1762561245_7181",
+      "local_time": "2025-11-08 05:50:45"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:50:56.336806",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        61923,
+        60100,
+        56551,
+        63856,
+        53502
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762561256_1524",
+      "local_time": "2025-11-08 05:50:56",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:50:59.073269",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.64.219",
+      "dst_ip": "192.168.1.159",
+      "src_port": 13122,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 2692,
+      "alert_id": "BOTNET_1762561259_3170",
+      "local_time": "2025-11-08 05:50:59"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:51:16.116705",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.37.242",
+      "dst_ip": "192.168.1.132",
+      "src_port": 36192,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 8053,
+      "alert_id": "BOTNET_1762561276_714",
+      "local_time": "2025-11-08 05:51:16"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:51:32.158825",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.189.253",
+      "dst_ip": "192.168.1.153",
+      "src_port": 28355,
+      "dst_port": 80,
+      "protocol": 17,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 9147,
+      "alert_id": "INFILTRATION_1762561292_237",
+      "local_time": "2025-11-08 05:51:32"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:51:48.212519",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.246.65",
+      "dst_ip": "192.168.1.177",
+      "src_port": 48012,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 6268,
+      "alert_id": "DDoS_1762561308_8374",
+      "local_time": "2025-11-08 05:51:48"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:52:06.257405",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.108.146",
+      "dst_ip": "192.168.1.141",
+      "src_port": 49196,
+      "dst_port": 443,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 1833,
+      "alert_id": "BOTNET_1762561326_4025",
+      "local_time": "2025-11-08 05:52:06"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:52:26.287724",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.12.102",
+      "dst_ip": "192.168.1.158",
+      "src_port": 30346,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 5905,
+      "alert_id": "BOTNET_1762561346_4737",
+      "local_time": "2025-11-08 05:52:26"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:52:44.324117",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.234.13",
+      "dst_ip": "192.168.1.175",
+      "src_port": 19839,
+      "dst_port": 8080,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 1943,
+      "alert_id": "BOTNET_1762561364_2977",
+      "local_time": "2025-11-08 05:52:44"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:53:00.346960",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.176.24",
+      "dst_ip": "192.168.1.149",
+      "src_port": 17780,
+      "dst_port": 8080,
+      "protocol": 6,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 3324,
+      "alert_id": "INFILTRATION_1762561380_7800",
+      "local_time": "2025-11-08 05:53:00"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:53:05.115473",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        61506,
+        62630,
+        64689,
+        57374,
+        58975
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762561385_6399",
+      "local_time": "2025-11-08 05:53:05",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:53:18.369012",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.25.38",
+      "dst_ip": "192.168.1.103",
+      "src_port": 50726,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 5775,
+      "alert_id": "BOTNET_1762561398_8057",
+      "local_time": "2025-11-08 05:53:18"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:53:28.400747",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.238.205",
+      "dst_ip": "192.168.1.119",
+      "src_port": 64922,
+      "dst_port": 443,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 2148,
+      "alert_id": "BOTNET_1762561408_5043",
+      "local_time": "2025-11-08 05:53:28"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:53:46.423214",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.112.206",
+      "dst_ip": "192.168.1.175",
+      "src_port": 35751,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 7514,
+      "alert_id": "BOTNET_1762561426_56",
+      "local_time": "2025-11-08 05:53:46"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:54:04.450907",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.171.228",
+      "dst_ip": "192.168.1.200",
+      "src_port": 21458,
+      "dst_port": 80,
+      "protocol": 17,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 4892,
+      "alert_id": "DDoS_1762561444_1802",
+      "local_time": "2025-11-08 05:54:04"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:54:15.480924",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.167.12",
+      "dst_ip": "192.168.1.122",
+      "src_port": 60190,
+      "dst_port": 80,
+      "protocol": 17,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 6429,
+      "alert_id": "INFILTRATION_1762561455_6256",
+      "local_time": "2025-11-08 05:54:15"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:54:26.554319",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.186.113",
+      "dst_ip": "192.168.1.198",
+      "src_port": 11578,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 5393,
+      "alert_id": "DDoS_1762561466_2136",
+      "local_time": "2025-11-08 05:54:26"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:54:36.595589",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.180.205",
+      "dst_ip": "192.168.1.113",
+      "src_port": 64487,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 8268,
+      "alert_id": "DDoS_1762561476_5292",
+      "local_time": "2025-11-08 05:54:36"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:54:50.311420",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "140.82.112.21",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        2795,
+        2796,
+        2797,
+        2798,
+        2799
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762561490_5118",
+      "local_time": "2025-11-08 05:54:50",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:54:54.630720",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.40.201",
+      "dst_ip": "192.168.1.191",
+      "src_port": 18138,
+      "dst_port": 80,
+      "protocol": 17,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 7105,
+      "alert_id": "DDoS_1762561494_2227",
+      "local_time": "2025-11-08 05:54:54"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:54:55.748126",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "51.11.192.51",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        16101,
+        46711,
+        46712,
+        46713,
+        46714
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762561495_2477",
+      "local_time": "2025-11-08 05:54:55",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:55:22.978033",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.211.22",
+      "dst_ip": "192.168.1.102",
+      "src_port": 41551,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 8298,
+      "alert_id": "DDoS_1762561522_8395",
+      "local_time": "2025-11-08 05:55:22"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:55:23.087933",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        61088,
+        55568,
+        60881,
+        54930,
+        63352
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762561523_5031",
+      "local_time": "2025-11-08 05:55:23",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:55:34.020281",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.196.159",
+      "dst_ip": "192.168.1.102",
+      "src_port": 21856,
+      "dst_port": 8080,
+      "protocol": 6,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 7636,
+      "alert_id": "DDoS_1762561534_1949",
+      "local_time": "2025-11-08 05:55:34"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:55:44.059366",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.163.77",
+      "dst_ip": "192.168.1.102",
+      "src_port": 16320,
+      "dst_port": 443,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 3852,
+      "alert_id": "BOTNET_1762561544_7412",
+      "local_time": "2025-11-08 05:55:44"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:55:59.114638",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.198.5",
+      "dst_ip": "192.168.1.102",
+      "src_port": 60980,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 2583,
+      "alert_id": "BOTNET_1762561559_2268",
+      "local_time": "2025-11-08 05:55:59"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:56:15.142123",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.180.38",
+      "dst_ip": "192.168.1.102",
+      "src_port": 61730,
+      "dst_port": 443,
+      "protocol": 6,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 7779,
+      "alert_id": "DDoS_1762561575_933",
+      "local_time": "2025-11-08 05:56:15"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:56:28.169350",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.138.114",
+      "dst_ip": "192.168.1.102",
+      "src_port": 54978,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 6995,
+      "alert_id": "BOTNET_1762561588_9903",
+      "local_time": "2025-11-08 05:56:28"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:56:48.208694",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.213.30",
+      "dst_ip": "192.168.1.102",
+      "src_port": 31350,
+      "dst_port": 8080,
+      "protocol": 6,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 9870,
+      "alert_id": "DDoS_1762561608_2123",
+      "local_time": "2025-11-08 05:56:48"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:57:08.241076",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.53.1",
+      "dst_ip": "192.168.1.102",
+      "src_port": 12747,
+      "dst_port": 8080,
+      "protocol": 6,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 7345,
+      "alert_id": "INFILTRATION_1762561628_390",
+      "local_time": "2025-11-08 05:57:08"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:57:27.275247",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.15.125",
+      "dst_ip": "192.168.1.102",
+      "src_port": 27369,
+      "dst_port": 8080,
+      "protocol": 6,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 8228,
+      "alert_id": "INFILTRATION_1762561647_9397",
+      "local_time": "2025-11-08 05:57:27"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:57:27.362112",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        58915,
+        49284,
+        64630,
+        58615,
+        49752
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762561647_1996",
+      "local_time": "2025-11-08 05:57:27",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:57:31.207546",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "40.79.197.34",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        19526,
+        52363,
+        58418,
+        58419,
+        2585
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762561651_9667",
+      "local_time": "2025-11-08 05:57:31",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:57:42.326126",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.14.107",
+      "dst_ip": "192.168.1.102",
+      "src_port": 27501,
+      "dst_port": 8080,
+      "protocol": 6,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 4216,
+      "alert_id": "DDoS_1762561662_8497",
+      "local_time": "2025-11-08 05:57:42"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:58:01.391582",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.45.89",
+      "dst_ip": "192.168.1.102",
+      "src_port": 59088,
+      "dst_port": 80,
+      "protocol": 17,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 7219,
+      "alert_id": "INFILTRATION_1762561681_2161",
+      "local_time": "2025-11-08 05:58:01"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:58:19.442797",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.156.220",
+      "dst_ip": "192.168.1.102",
+      "src_port": 40779,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 6711,
+      "alert_id": "BOTNET_1762561699_9196",
+      "local_time": "2025-11-08 05:58:19"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:58:30.472661",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.142.107",
+      "dst_ip": "192.168.1.102",
+      "src_port": 11389,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 3457,
+      "alert_id": "DDoS_1762561710_1654",
+      "local_time": "2025-11-08 05:58:30"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:58:47.504907",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.76.230",
+      "dst_ip": "192.168.1.102",
+      "src_port": 46050,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 8282,
+      "alert_id": "BOTNET_1762561727_6106",
+      "local_time": "2025-11-08 05:58:47"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:59:00.539706",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.246.218",
+      "dst_ip": "192.168.1.102",
+      "src_port": 36054,
+      "dst_port": 80,
+      "protocol": 17,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 3942,
+      "alert_id": "DDoS_1762561740_928",
+      "local_time": "2025-11-08 05:59:00"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:59:19.572174",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.216.243",
+      "dst_ip": "192.168.1.102",
+      "src_port": 56582,
+      "dst_port": 443,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 9101,
+      "alert_id": "BOTNET_1762561759_61",
+      "local_time": "2025-11-08 05:59:19"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:59:30.611415",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.119.140",
+      "dst_ip": "192.168.1.102",
+      "src_port": 16421,
+      "dst_port": 80,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 1251,
+      "alert_id": "BOTNET_1762561770_5046",
+      "local_time": "2025-11-08 05:59:30"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:59:32.467722",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        60768,
+        56842,
+        60699,
+        59163,
+        61213
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762561772_875",
+      "local_time": "2025-11-08 05:59:32",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T05:59:50.654276",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.220.123",
+      "dst_ip": "192.168.1.102",
+      "src_port": 31772,
+      "dst_port": 8080,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 9907,
+      "alert_id": "BOTNET_1762561790_1480",
+      "local_time": "2025-11-08 05:59:50"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:17.426736",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        60644,
+        49164,
+        60786,
+        52502,
+        58813
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762562717_661",
+      "local_time": "2025-11-08 06:15:17",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:20.508708",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.156.167",
+      "dst_ip": "192.168.1.102",
+      "src_port": 63970,
+      "dst_port": 443,
+      "protocol": 6,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 3120,
+      "alert_id": "INFILTRATION_1762562720_1250",
+      "local_time": "2025-11-08 06:15:20"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:20.548009",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.157.241",
+      "dst_ip": "192.168.1.102",
+      "src_port": 57734,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 2365,
+      "alert_id": "BOTNET_1762562720_2412",
+      "local_time": "2025-11-08 06:15:20"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:20.609913",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.57.234",
+      "dst_ip": "192.168.1.102",
+      "src_port": 37369,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 4469,
+      "alert_id": "DDoS_1762562720_3579",
+      "local_time": "2025-11-08 06:15:20"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:20.657332",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.87.200",
+      "dst_ip": "192.168.1.102",
+      "src_port": 16224,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 7596,
+      "alert_id": "BOTNET_1762562720_3486",
+      "local_time": "2025-11-08 06:15:20"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:20.703663",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.60.47",
+      "dst_ip": "192.168.1.102",
+      "src_port": 42556,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 5854,
+      "alert_id": "DDoS_1762562720_2830",
+      "local_time": "2025-11-08 06:15:20"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:20.750762",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.201.26",
+      "dst_ip": "192.168.1.102",
+      "src_port": 43572,
+      "dst_port": 443,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 5568,
+      "alert_id": "BOTNET_1762562720_493",
+      "local_time": "2025-11-08 06:15:20"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:20.797755",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.208.62",
+      "dst_ip": "192.168.1.102",
+      "src_port": 25510,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 1275,
+      "alert_id": "BOTNET_1762562720_2341",
+      "local_time": "2025-11-08 06:15:20"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:20.843704",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.7.169",
+      "dst_ip": "192.168.1.102",
+      "src_port": 12298,
+      "dst_port": 80,
+      "protocol": 17,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 8262,
+      "alert_id": "INFILTRATION_1762562720_5084",
+      "local_time": "2025-11-08 06:15:20"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:20.890819",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.127.245",
+      "dst_ip": "192.168.1.102",
+      "src_port": 40809,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 8412,
+      "alert_id": "INFILTRATION_1762562720_7452",
+      "local_time": "2025-11-08 06:15:20"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:20.921943",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.78.249",
+      "dst_ip": "192.168.1.102",
+      "src_port": 29268,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 1433,
+      "alert_id": "DDoS_1762562720_9938",
+      "local_time": "2025-11-08 06:15:20"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:20.968799",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.54.177",
+      "dst_ip": "192.168.1.102",
+      "src_port": 23229,
+      "dst_port": 80,
+      "protocol": 17,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 6673,
+      "alert_id": "DDoS_1762562720_8284",
+      "local_time": "2025-11-08 06:15:20"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:21.016316",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.89.172",
+      "dst_ip": "192.168.1.102",
+      "src_port": 58527,
+      "dst_port": 443,
+      "protocol": 6,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 8632,
+      "alert_id": "INFILTRATION_1762562721_1263",
+      "local_time": "2025-11-08 06:15:21"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:21.063817",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.77.73",
+      "dst_ip": "192.168.1.102",
+      "src_port": 50858,
+      "dst_port": 80,
+      "protocol": 17,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 2591,
+      "alert_id": "DDoS_1762562721_3912",
+      "local_time": "2025-11-08 06:15:21"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:21.142784",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.163.138",
+      "dst_ip": "192.168.1.102",
+      "src_port": 35404,
+      "dst_port": 8080,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 8825,
+      "alert_id": "BOTNET_1762562721_8054",
+      "local_time": "2025-11-08 06:15:21"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:21.190169",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.252.227",
+      "dst_ip": "192.168.1.102",
+      "src_port": 20091,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 1218,
+      "alert_id": "BOTNET_1762562721_2327",
+      "local_time": "2025-11-08 06:15:21"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:21.237150",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.18.239",
+      "dst_ip": "192.168.1.102",
+      "src_port": 43633,
+      "dst_port": 80,
+      "protocol": 17,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 6544,
+      "alert_id": "INFILTRATION_1762562721_3246",
+      "local_time": "2025-11-08 06:15:21"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:21.283610",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.173.224",
+      "dst_ip": "192.168.1.102",
+      "src_port": 35169,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 7776,
+      "alert_id": "DDoS_1762562721_3854",
+      "local_time": "2025-11-08 06:15:21"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:21.360641",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.75.22",
+      "dst_ip": "192.168.1.102",
+      "src_port": 38945,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 2842,
+      "alert_id": "INFILTRATION_1762562721_3204",
+      "local_time": "2025-11-08 06:15:21"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:21.408267",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.149.176",
+      "dst_ip": "192.168.1.102",
+      "src_port": 16052,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 8495,
+      "alert_id": "BOTNET_1762562721_5386",
+      "local_time": "2025-11-08 06:15:21"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:21.455034",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.137.147",
+      "dst_ip": "192.168.1.102",
+      "src_port": 56903,
+      "dst_port": 443,
+      "protocol": 6,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 2743,
+      "alert_id": "DDoS_1762562721_4297",
+      "local_time": "2025-11-08 06:15:21"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:29.495345",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.154.158",
+      "dst_ip": "192.168.1.102",
+      "src_port": 17780,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 6181,
+      "alert_id": "BOTNET_1762562729_2962",
+      "local_time": "2025-11-08 06:15:29"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:29.540210",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.85.228",
+      "dst_ip": "192.168.1.102",
+      "src_port": 38962,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 2241,
+      "alert_id": "INFILTRATION_1762562729_9745",
+      "local_time": "2025-11-08 06:15:29"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:29.601876",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.192.49",
+      "dst_ip": "192.168.1.102",
+      "src_port": 10870,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 2715,
+      "alert_id": "BOTNET_1762562729_8287",
+      "local_time": "2025-11-08 06:15:29"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:29.648324",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.166.101",
+      "dst_ip": "192.168.1.102",
+      "src_port": 41855,
+      "dst_port": 80,
+      "protocol": 17,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 8911,
+      "alert_id": "INFILTRATION_1762562729_2159",
+      "local_time": "2025-11-08 06:15:29"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:29.695673",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.97.119",
+      "dst_ip": "192.168.1.102",
+      "src_port": 31030,
+      "dst_port": 8080,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 4805,
+      "alert_id": "BOTNET_1762562729_7212",
+      "local_time": "2025-11-08 06:15:29"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:15:53.563977",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.177.184",
+      "dst_ip": "192.168.1.102",
+      "src_port": 62173,
+      "dst_port": 80,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 5950,
+      "alert_id": "BOTNET_1762562753_2931",
+      "local_time": "2025-11-08 06:15:53"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:16:34.606192",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.54.179",
+      "dst_ip": "192.168.1.102",
+      "src_port": 23701,
+      "dst_port": 443,
+      "protocol": 6,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 5489,
+      "alert_id": "DDoS_1762562794_4911",
+      "local_time": "2025-11-08 06:16:34"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:17:22.647156",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.242.93",
+      "dst_ip": "192.168.1.102",
+      "src_port": 43001,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 9441,
+      "alert_id": "BOTNET_1762562842_9880",
+      "local_time": "2025-11-08 06:17:22"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:18:11.693370",
+    "type": "INFILTRATION",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.30.131",
+      "dst_ip": "192.168.1.102",
+      "src_port": 11123,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "INFILTRATION",
+      "detection_method": "ML",
+      "flow_id": 2290,
+      "alert_id": "INFILTRATION_1762562891_5376",
+      "local_time": "2025-11-08 06:18:11"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:18:56.725390",
+    "type": "DDOS",
+    "severity": "CRITICAL",
+    "details": {
+      "src_ip": "10.200.86.68",
+      "dst_ip": "192.168.1.102",
+      "src_port": 20735,
+      "dst_port": 8080,
+      "protocol": 17,
+      "predicted_attack_type": "DDoS",
+      "detection_method": "ML",
+      "flow_id": 1342,
+      "alert_id": "DDoS_1762562936_8706",
+      "local_time": "2025-11-08 06:18:56"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:19:09.242469",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        53868,
+        54541,
+        53298,
+        57331,
+        60786
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762562949_4078",
+      "local_time": "2025-11-08 06:19:09",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:19:39.757670",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.89.38",
+      "dst_ip": "192.168.1.102",
+      "src_port": 18670,
+      "dst_port": 443,
+      "protocol": 6,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 2581,
+      "alert_id": "BOTNET_1762562979_5521",
+      "local_time": "2025-11-08 06:19:39"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:19:48.487801",
+    "type": "PORT_SCAN",
+    "severity": "MEDIUM",
+    "details": {
+      "src_ip": "13.89.179.14",
+      "dst_ip": "192.168.1.102",
+      "ports_scanned": [
+        9156,
+        9157,
+        9161,
+        9163,
+        9164
+      ],
+      "count": 5,
+      "time_window": 15,
+      "alert_id": "PORT_SCAN_1762562988_4372",
+      "local_time": "2025-11-08 06:19:48",
+      "detection_method": "Rule-Based"
+    }
+  },
+  {
+    "timestamp": "2025-11-08T06:20:28.788975",
+    "type": "BOTNET",
+    "severity": "HIGH",
+    "details": {
+      "src_ip": "10.200.98.73",
+      "dst_ip": "192.168.1.102",
+      "src_port": 24829,
+      "dst_port": 443,
+      "protocol": 17,
+      "predicted_attack_type": "BOTNET",
+      "detection_method": "ML",
+      "flow_id": 6416,
+      "alert_id": "BOTNET_1762563028_3604",
+      "local_time": "2025-11-08 06:20:28"
+    }
   }
 ]
